@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO INFORMATICA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div>
+            <header id="cabezera">
+                <h1> Tienda Online de Productos</h1>
+                <img src="img/imagentitulo.png" alt="imagen titulo"/>
+            </header>
+
+            <nav id="navegacion">
+                
+            </nav>
+
+            <section id="seccion">
+                <br/><h2>Formulario</h2>
+                
+                <form id="f" onsubmit="return validar();" novalidate>
+                    <div id="msgGeneral"></div>
+                    
+                    <label for="correo" class="formato">Correo Electrónico: </label> 
+                    <input type="email" id="correo" name="correo" required/> <span id="spanCorreo" class="obligatorio">*</span> <br/> 
+
+                    <label for="clave" class="formato">Contraseña: </label>
+                    <input type="password" id="clave" name="clave" required/> <span id="spanClave" class="obligatorio">*</span> <br/> 
+                    <label for="Repclave" class="formato">Repetir contraseña: </label>
+                    <input type="password" id="Repclave" name="Repclave" required/> <span id="spanRepClave" class="obligatorio">*</span> <br/> 
+
+                    <label for="name" class="formato">Nombre: </label>
+                    <input type="text" id="name" name="name" required/> <span id="spanNombre" class="obligatorio">*</span> <br/> 
+
+                    <label for="direccion" class="formato">Dirección: </label>
+                    <input type="text" id="direccion" name="direccion" class="opcional"/> <br/> 
+
+                    <label for="cp" class="formato"> Código Postal: </label>
+                    <input type="text" id="cp" pattern="[0-9]{2}.[0-9]{3}" placeholder="Formato: 99.999" class="opcional"/> <br/>
+
+                    <label for="provincia" class="formato">Provincia </label>
+                    <select name="provincia" id="prov" class="opcional">
+                        <option value="-1">Elige</option>
+                    </select> <br/>
+
+                    <label for="facebook" class="formato">Facebook: </label>
+                    <input type="url" id="facebook" name="facebook" title="Debe poner la URL de su Facebook" class="opcional"/> <br/> 
+
+                    <label for="telf" class="formato">Teléfono: </label>
+                    <input type="text" id="telf" name="telf" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}" placeholder="Formato: 999.999.999" class="opcional"/> <br/>
+
+                    <p class="formato">¿Qué categoría/s prefieres? <br/>
+                        <input type="checkbox" name="categorias" id="electronica" value="Electronica"/>
+                        <label for="electronica">Electronica</label> 
+                        <input type="checkbox" name="categorias" id="lectura" value="Lectura"/>
+                        <label for="lectura">Lectura</label> 
+                        <input type="checkbox" name="categorias" id="juegos" value="Juegos"/>
+                        <label for="juegos">Juegos</label> 
+                        <input type="checkbox" name="categorias" id="otros" value="Otros"/>
+                        <label for="otros">Otros</label>
+                    </p>
+
+                    <p class="formato">¿Cómo conociste este sitio web? <br/>
+                        <input type="radio" name="acceso" id="buscador" value="Buscador" checked/>
+                        <label for="buscador">Buscador</label> 
+                        <input type="radio" name="acceso" id="amigo" value="Amigo"/>
+                        <label for="amigo">Amigo</label> 
+                        <input type="radio" name="acceso" id="radio" value="Radio"/>
+                        <label for="radio">Radio</label>
+                        <input type="radio" name="acceso" id="tv" value="Televisión"/>
+                        <label for="tv">Televisión</label>
+                        <input type="radio" name="acceso" id="prensa" value="Prensa"/>
+                        <label for="prensa">Prensa</label>
+                    </p> <br/>
+
+                    <input type="submit" value="Enviar" id="boton"/>
+                </form>
+            </section>
+
+            <footer id="pieSeccion">
+                <p> &copy; 2022 Ismael Da Palma Fernández</p>
+            </footer>
+        </div>
+        
+        <script src="js/funciones.js"></script>
+        
+    </body>
+</html>

@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1588157790 source:c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\practica4.cpp
+	<iostream>
+	<cstdlib>
+	"grafo.h"
+	"conjunto.h"
+	<queue>
+	<sstream>
+	<map>
+
+1367496006 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\grafo.h
+	"vertice.h"
+	"arista.h"
+	"conjunto.h"
+	"excep_grafo.h"
+	<map>
+
+1367229138 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\vertice.h
+
+1367495998 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\arista.h
+	"vertice.h"
+
+1367317150 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\conjunto.h
+	"excep_conjunto.h"
+
+1367310762 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\excep_conjunto.h
+	"excepcion.h"
+
+1331040854 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\excepcion.h
+	<string>
+	<stdexcept>
+
+1367489298 c:\users\ismae\onedrive\escritorio\ed2\práctcia 4\excep_grafo.h
+	"excepcion.h"
+

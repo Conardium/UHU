@@ -1,0 +1,1 @@
+Este fichero se usa como referencia para crear la cola de mensajes

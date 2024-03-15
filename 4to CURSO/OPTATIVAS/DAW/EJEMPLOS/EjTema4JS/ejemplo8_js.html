@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo 10 JS. Clases</title>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Ejemplo JS: Clases</h1>
+
+
+<script type="text/javascript">
+
+let numeros=new Array(5,2,1,4,3); // Array con 5 elementos
+numeros[5]=0;  // Array [5,2,1,4,3,0]
+numeros.push(6); // Array [5,2,1,4,3,0,6]
+numeros.unshift(7); // Array [7,5,2,1,4,3,0,6]
+for (x in numeros) { 
+	document.write(numeros[x]+" ");
+} 
+
+let ultimo = numeros.pop(); // Extraido: 6 - Array [7,5,2,1,4,3,0]
+document.write("<p>"+numeros.toString()+"</p>");
+
+let primero = numeros.shift(); // Extraido: 7 - Array [5,2,1,4,3,0]
+document.write("<p>"+numeros.toString()+"</p>");
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+
+--MF 13,14 perdidos
+
+--MF 10
+SELECT TO_CHAR(fecha_hora, 'dd/mm/yyyy') AS Fecha
+FROM MF.LLAMADA
+WHERE duracion >=ALL(SELECT duracion
+                    FROM MF.LLAMADA);
+
+
+--MF 11
+SELECT C.nombre
+FROM (MF.CLIENTE C INNER JOIN MF.TELEFONO Tf ON C.dni=Tf.cliente)
+        INNER JOIN MF.COMPAÑIA CO ON CO.cif=Tf.compañia
+WHERE CO.nombre='Aotra' AND Tf.tarifa=(SELECT DISTINCT Tarifa
+                                       FROM MF.TARIFA T INNER JOIN MF.TELEFONO Tf USING(tarifa)
+                                       WHERE Tf.numero='654123321');
+
+
+--MF 12
+SELECT DISTINCT Tf.numero, Tf.f_contrato, Tf.tipo
+FROM MF.TELEFONO Tf INNER JOIN MF.LLAMADA LL ON LL.tf_origen=Tf.numero
+        INNER JOIN MF.CLIENTE C ON C.dni=Tf.cliente
+WHERE TO_CHAR(LL.fecha_hora, 'mm/yy')='10/06' AND
+      LL.tf_destino NOT IN(SELECT Tf.numero
+                         FROM MF.CLIENTE C INNER JOIN MF.TELEFONO Tf ON Tf.cliente=C.dni
+                         WHERE provincia='La Coruña');
+
+
+--MF 13
+SELECT DISTINCT C.nombre
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO Tf ON Tf.cliente=C.dni
+            INNER JOIN MF.TARIFA T USING(tarifa)
+WHERE C.nombre IN(SELECT C.nombre
+                  FROM MF.TARIFA T INNER JOIN MF.TELEFONO Tf USING(tarifa)
+                        INNER JOIN MF.CLIENTE C ON Tf.cliente=C.dni
+                  WHERE tarifa='dúo')
+                  
+AND C.nombre NOT IN(SELECT C.nombre
+                  FROM MF.TARIFA T INNER JOIN MF.TELEFONO Tf USING(tarifa)
+                        INNER JOIN MF.CLIENTE C ON Tf.cliente=C.dni
+                  WHERE tarifa='autónomos');
+
+
+--MF 14
+SELECT DISTINCT C.nombre, Tf.numero
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO Tf ON Tf.cliente=C.dni
+WHERE Tf.numero IN(SELECT LL.tf_origen
+                    FROM MF.LLAMADA LL INNER JOIN MF.TELEFONO Tf ON LL.tf_destino=Tf.numero
+                        INNER JOIN MF.COMPAÑIA CO ON CO.cif=Tf.compañia
+                    WHERE CO.nombre='Petafón')
+ AND Tf.numero NOT IN(SELECT LL.tf_origen
+                    FROM MF.LLAMADA LL INNER JOIN MF.TELEFONO Tf ON LL.tf_destino=Tf.numero
+                        INNER JOIN MF.COMPAÑIA CO ON CO.cif=Tf.compañia
+                    WHERE CO.nombre='Aotra');
+
+
+--MF 15
+
+SELECT C.nombre
+FROM ((MF.CLIENTE C INNER JOIN MF.TELEFONO T ON C.dni=T.cliente)
+       INNER JOIN MF.COMPAÑIA CO ON T.compañia=CO.cif)
+       INNER JOIN MF.LLAMADA LL ON T.numero=LL.tf_origen
+WHERE CO.nombre = 'Kietostar' AND TO_CHAR(LL.fecha_hora, 'mm/yyyy') = '09/06'
+AND LL.duracion >=ALL (SELECT duracion
+		       FROM (MF.TELEFONO T INNER JOIN MF.COMPAÑIA CO ON T.compañia=CO.cif)
+			INNER JOIN MF.LLAMADA LL ON T.numero = LL.tf_origen
+		       WHERE CO.nombre = 'Kietostar' AND TO_CHAR(LL.fecha_hora, 'mm/yy')='09/06');
+
+--MF 16
+
+SELECT DISTINCT C.nombre
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO T ON T.cliente=C.dni
+WHERE C.nombre <> 'Ramón Martínez Sabina'
+    AND T.f_contrato < ANY(SELECT T.f_contrato
+			   FROM MF.TELEFONO T INNER JOIN MF.CLIENTE C ON C.dni=T.cliente
+			   WHERE C.nombre='Ramón Martínez Sabina');

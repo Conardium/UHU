@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GestorJuegos_Web" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GestorJuegos_Web" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="TipoDificultad">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VACIO" />
+      <xs:enumeration value="MUY_FACIL" />
+      <xs:enumeration value="FACIL" />
+      <xs:enumeration value="MEDIA" />
+      <xs:enumeration value="DIFICIL" />
+      <xs:enumeration value="MUY_DIFICIL" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TipoDificultad" nillable="true" type="tns:TipoDificultad" />
+</xs:schema>

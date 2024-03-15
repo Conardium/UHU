@@ -1,0 +1,8 @@
+<nav id="barraLateral">
+    <h3 >- Menú -</h3 >
+    <ul >
+        <li><a href="home" title="Home">Home</a></li >
+        <li><a href="articulos" title="Listado de artículos">Artículos</a></li >
+        <li><a href="favoritos" title="Artículos Favoritos">Favoritos</a></li >
+    </ul >
+</nav>

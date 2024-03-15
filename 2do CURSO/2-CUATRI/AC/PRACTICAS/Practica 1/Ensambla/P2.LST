@@ -1,0 +1,97 @@
+Turbo Assembler	 Version 3.2	    03/14/22 16:03:09	    Page 1
+P2.asm
+
+
+
+      1	0000			     .model small
+      2
+      3
+      4	0000			     .code
+      5
+      6					 org 100h
+      7
+      8
+      9	0100			     Programa_Int:
+     10
+     11	0100  EB 1C 90			 JMP Reside
+     12
+     13	0103  12			 contador DB 18
+     14
+     15
+     16	0104			     Rutina_Servicio PROC
+     17
+     18	0104  FA			 CLI
+     19
+     20
+     21
+     22	0105  2E: FE 0E	0103r		 DEC contador
+     23
+     24	010A  2E: 80 3E	0103r 00	 CMP contador, 0
+     25	0110  77 0A			 JA FIN
+     26	0112  2E: C6 06	0103r 12	 MOV contador, 18
+     27
+     28					 ;Interrupcion que espera hasta	pulsar una tecla para cerrar la	pestania
+     29	0118  B4 00			 mov ah, 00h
+     30	011A  CD 16			 int 16h
+     31
+     32	011C				 FIN:
+     33
+     34
+     35	011C  FB			 STI
+     36	011D  CF			 IRET
+     37
+     38	011E			     ENDP
+     39
+     40
+     41	011E			     Reside:
+     42
+     43	011E  BA 0104r			 MOV DX, offset	Rutina_Servicio
+     44	0121  B8 0000			 MOV AX, 0
+     45	0124  8E C0			 MOV ES, AX
+     46	0126  BE 0070			 MOV SI, 1Ch*4
+     47	0129  FA			 CLI
+     48	012A  26: 89 14			 MOV ES:[SI], DX
+     49	012D  26: 8C 4C	02		 MOV ES:[SI+2],	CS
+     50	0131  FB			 STI
+     51	0132  BA 011Er			 MOV DX, offset	Reside
+     52	0135  CD 27			 INT 27h
+     53
+     54
+     55
+     56				     END Programa_Int
+Turbo Assembler	 Version 3.2	    03/14/22 16:03:09	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "03/14/22"
+??FILENAME			  Text	 "P2	  "
+??TIME				  Text	 "16:03:09"
+??VERSION			  Number 0314
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 P2
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+CONTADOR			  Byte	 _TEXT:0103
+FIN				  Near	 _TEXT:011C
+PROGRAMA_INT			  Near	 _TEXT:0100
+RESIDE				  Near	 _TEXT:011E
+RUTINA_SERVICIO			  Near	 _TEXT:0104
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  16  0000 Word	  Public  DATA
+_TEXT				  16  0137 Word	  Public  CODE
+

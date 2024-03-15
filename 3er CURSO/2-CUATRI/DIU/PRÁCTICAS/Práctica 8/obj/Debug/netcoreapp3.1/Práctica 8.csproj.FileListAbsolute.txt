@@ -1,0 +1,23 @@
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\bin\Debug\netcoreapp3.1\Práctica 8.exe
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\bin\Debug\netcoreapp3.1\Práctica 8.deps.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\bin\Debug\netcoreapp3.1\Práctica 8.runtimeconfig.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\bin\Debug\netcoreapp3.1\Práctica 8.runtimeconfig.dev.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\bin\Debug\netcoreapp3.1\Práctica 8.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\bin\Debug\netcoreapp3.1\Práctica 8.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.csprojAssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8_MarkupCompile.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8_MarkupCompile.lref
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.g.resources
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.AssemblyInfoInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.AssemblyInfo.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Práctica 8.genruntimeconfig.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Alumnos.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Profesores.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Alumnos.baml
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 8\obj\Debug\netcoreapp3.1\Profesores.baml

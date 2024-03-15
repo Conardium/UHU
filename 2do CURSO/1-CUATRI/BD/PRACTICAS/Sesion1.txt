@@ -1,0 +1,98 @@
+--EJERCICIO 1
+SELECT idAsig AS codigo, nombre, esp AS especialidad 
+FROM EI.ASIGNATURA
+WHERE curso=3 AND créditos>4.5;
+
+--EJERCICIO 2
+SELECT *
+FROM EI.PROFESOR;
+
+--EJERCICIO 3
+SELECT DISTINCT tipo
+FROM EI.ORDENADOR;
+
+--EJERCICIO 4
+SELECT nombre, nH, nh*300 AS descuento
+FROM EI.ALUMNO
+ORDER BY descuento DESC, nombre ASC;
+
+--EJERCICIO 5
+SELECT dni, nombre
+FROM EI.ALUMNO
+WHERE fechaNac BETWEEN '1/1/1970' AND '31/12/1974'
+                   AND lugar IN('Huelva','Cádiz');
+                   
+--EJERCICIO 6
+SELECT nombre
+FROM EI.ALUMNO
+WHERE nombre LIKE 'M%' AND lugar LIKE '______%' --6 guiones bajos
+                       AND lugar NOT LIKE 'P%';
+                       
+--EJERCICIO 7
+SELECT DISTINCT EXTRACT(YEAR from fechaNac) AS años
+FROM EI.ALUMNO
+ORDER BY años;
+
+
+---------------TRABAJAMOS CON LAS TABLAS DE LA PRACTICA 1(MF)--------------------
+--MF 1
+SELECT nombre
+FROM MF.COMPAÑIA
+WHERE web LIKE '%et%' AND web LIKE '%com';
+
+--MF 2
+SELECT nombre, direccion
+FROM MF.CLIENTE
+WHERE EXTRACT(YEAR from f_nac)='1973' OR EXTRACT(YEAR from f_nac)='1985'
+      AND cp LIKE '15%'
+ORDER BY nombre, direccion DESC;
+
+--MF 3
+SELECT tf_destino
+FROM MF.LLAMADA
+WHERE tf_origen='666010101' AND EXTRACT (YEAR from Fecha_hora)='2006';
+
+--MF 4
+SELECT tf_origen
+FROM MF.LLAMADA
+WHERE tf_destino='666010101' AND EXTRACT(HOUR from fecha_hora)>=10
+                             AND EXTRACT(HOUR from fecha_hora)<12;
+
+--EJEMPLO 8(CON MAS DE UNA TABLA)
+SELECT A.nombre AS NomAsig, P.nombre AS NomProf
+FROM EI.ASIGNATURA A INNER JOIN EI.PROFESOR P ON A.prof=P.nPr;
+
+--EJEMPLO 9
+SELECT alum
+FROM EI.MATRICULA M INNER JOIN EI.ASIGNATURA A USING(idAsig)
+WHERE A.nombre='Bases de Datos I' AND año='2002';
+
+--EJEMPLO 10
+SELECT A.nombre
+FROM (EI.ASIGNATURA ASIG INNER JOIN EI.MATRICULA M USING(idAsig))
+	INNER JOIN EI.ALUMNO A ON M.alum=A.nAl;
+
+--EJEMPLO 11
+SELECT DINSTINCT despacho
+FROM EI.PROFESOR P1 INNER JOIN EI.PROFESOR P2 USING(despacho)
+WHERE P1.nombre <> P2.nombre;
+
+--EJEMPLO 12
+(SELECT A.nombre
+FROM EI.ASIGNATURA A INNER JOIN EI.PROFESOR P ON P.nPr=A.prof
+WHERE P.nombre='Dolores Toscano Barriga');
+
+UNION
+
+SELECT A.nombre
+FROM (EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING(idAsig))
+	INNER JOIN EI.PROFESOR P ON M.prof=P.nPr
+WHERE P.nombre='Dolores Toscano Barriga');
+
+--EJEMPLO 13
+SELECT A.nombre
+FROM (EI.ALUMNO A INNER JOIN EI.MATRICULA M ON A.nAl=M.alum)
+	INNER JOIN EI.ASIGNATURA ASIG USING(idAsig)
+WHERE ASIG.nombre='Bases de Datos I' AND
+      año=2002 AND dic IS NULL AND
+      (feb_jun >=5 OR sep >=5);

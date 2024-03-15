@@ -1,0 +1,75 @@
+﻿<Window x:Class="Practica_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica_4"
+        mc:Ignorable="d"
+        Icon="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\Escudo.png"
+        Title="Mi tercera aplicación" Height="450" Width="928">
+
+    <Grid Background="AntiqueWhite">
+        <Border BorderBrush="Black" BorderThickness="20, 10" CornerRadius="20" Margin="20">
+            <DockPanel Background="LightGray">
+                <DockPanel DockPanel.Dock="Top">
+                    <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="/Escudo.png"/>
+                        </TextBlock.Background></TextBlock>
+                    <TextBlock Background="White" FontSize="30" HorizontalAlignment="Center"> Empresa Líder en el Sector</TextBlock>
+                </DockPanel>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="205*"/>
+                        <RowDefinition Height="119*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Width="350" Height="200" Grid.Row="0">
+                        <TextBlock.Background>
+                            <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 2.jpg"/>
+                        </TextBlock.Background></TextBlock>
+                    <WrapPanel Grid.Row="1" Margin="0,3,0,0">
+                        <Border BorderBrush="White" BorderThickness="7" Margin="10">
+                            <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 1.jpg"/>
+                                </TextBlock.Background></TextBlock>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="7" Margin="10">
+                            <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 3.jpg"/>
+                                </TextBlock.Background></TextBlock>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="7" Margin="10">
+                            <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 4.jpg"/>
+                                </TextBlock.Background></TextBlock>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="7" Margin="10">
+                            <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 5.jpg"/>
+                                </TextBlock.Background></TextBlock>
+                        </Border>
+                        <Border BorderBrush="White" BorderThickness="7" Margin="10">
+                            <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 1.jpg"/>
+                                </TextBlock.Background></TextBlock>
+                        </Border>
+
+                        <Border BorderBrush="White" BorderThickness="7" Margin="10">
+                            <TextBlock HorizontalAlignment="Left" Width="50" Height="50">
+                                <TextBlock.Background>
+                                    <ImageBrush ImageSource="C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 4\Imágenes\DarkSouls 2.jpg"/>
+                                </TextBlock.Background></TextBlock>
+                        </Border>
+                    </WrapPanel>
+                </Grid>
+            </DockPanel>
+        </Border>
+    </Grid>
+</Window>

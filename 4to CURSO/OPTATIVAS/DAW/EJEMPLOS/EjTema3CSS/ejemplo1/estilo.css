@@ -1,0 +1,70 @@
+
+
+#contenedor {
+	width : 700px;
+	margin : 0px auto;
+	text-align : left;
+	background-color : pink;
+}
+
+#cabecera {
+	width : 700px;
+	height : 100px;
+	margin : 0px;
+	padding : 0px;
+	background-color : black;
+	color: white;
+}
+
+#barraLateral {
+	margin-top: 20px;
+	width:150px;
+	padding:10px;
+	float:left;
+	background-color:#C0C0C0;
+}
+
+#principal{
+	margin-top: 20px;
+	margin-left: 175px;
+	margin-right: 6px;
+	min-height: 200px;
+	background-color:#E9967A;
+}
+
+#pie {
+	margin : 0px auto ;
+	text-align : center;
+	background-color : black;
+	color:white;
+}
+
+#barraLateral ul {
+	list-style-type: none ;
+	margin : 0px;
+	padding : 0px;
+	width : 150px;
+	font-family : Arial , sans-serif ;
+	font-size : 0.8em;
+}
+
+#barraLateral ul li {
+	background-color : #666;
+}
+
+#barraLateral ul li a {
+color : white;
+text-decoration : none ;
+display : block ;
+padding : 10px 10px 10px 20px;
+}
+
+#barraLateral ul li a:hover {
+/*background : #000;*/
+border-left : 10px solid #333;
+background: -ms-linear-gradient(bottom, yellow, grey);
+background: -webkit-linear-gradient(bottom, yellow, grey);
+background: -moz-linear-gradient(bottom, yellow, grey);
+color : #fff;
+}
+

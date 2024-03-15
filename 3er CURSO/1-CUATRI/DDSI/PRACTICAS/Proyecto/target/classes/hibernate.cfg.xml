@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.connection.driver_class">oracle.jdbc.OracleDriver</property>
+<property name="hibernate.connection.url">jdbc:oracle:thin:@172.17.20.39:1521:etsi</property>
+<property name="hibernate.connection.username">DDSI_007</property>
+<property name="hibernate.connection.password">DDSI_007</property>
+<property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+<property name="hibernate.show_sql">true</property>
+<mapping class="Modelo.Monitor"/>
+<mapping class="Modelo.Actividad"/>
+<mapping class="Modelo.Socio"/>
+</session-factory>
+</hibernate-configuration>
+
+<root>
+    
+</root>

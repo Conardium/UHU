@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Ejemplo</h1>
+
+<p id="texto"></p>
+
+<script>
+function isNavegador(tipo) {
+	let ok=false;
+	let uA = navigator.userAgent.toLowerCase();
+	if(uA.indexOf(tipo)!=-1) ok=true;
+	return ok;
+}
+let browser = function() {
+	let cadena;
+	let navs = ["Firefox", "Chrome", "MSIE", "Opera"];
+	let i=-1;
+	for (n in navs) {
+		let c = navs[n].toLowerCase();
+		if (isNavegador(c)) {
+			i=n;
+			break;
+		} 
+	}
+	if (i!=-1) cadena = navs[i];
+	else cadena="Desconocido";
+	
+	return cadena;
+}
+
+let txt = new String();
+
+txt = "<p>CodeName: " + navigator.appCodeName + "</p>";
+txt+= "<p>appName: " + navigator.appName + "</p>";
+txt+= "<p>appVersion: " + navigator.appVersion + "</p>";
+txt+= "<p>Cookies: " + navigator.cookieEnabled + "</p>";
+txt+= "<p>Platform: " + navigator.platform + "</p>";
+txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+txt += "<p>Navegador: " + browser() + "</p>"; 
+document.getElementById("texto").innerHTML=txt;
+
+</script>
+
+
+
+</body>
+</html>

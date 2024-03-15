@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>DAW - Práctica 5.a) Servlets y Acceso a Datos mediante un Pool de conexiones</h1>
+        <a href="Listar">Listar Usuarios</a> <br/> <br/>
+        <form id="form1" action="Insertar" method="post" onsubmit="return validar(this);">
+            <table>
+                <tr>
+                    <td><label for="nombre">Nombre</label></td>
+                    <td><input id="nombre" type="text" name="nombre"  required /></td>                    
+                </tr>
+                <tr>
+                    <td><label for="edad">Edad</label></td>
+                    <td><input id="edad" type="number" name="edad" /></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Guardar" /></td>
+                </tr>
+            </table>
+ 
+        </form>
+    </body>
+</html>

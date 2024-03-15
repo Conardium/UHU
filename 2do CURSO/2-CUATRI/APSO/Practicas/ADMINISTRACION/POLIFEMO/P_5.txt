@@ -1,0 +1,138 @@
+
+  ###### SCRIPTS (GUIONES) ######
+
+Un scrip es un fichero de texto EJECUTABLE que contiene comandos
+
+  EJ.:
+    joe ejemplo.txt
+    who|short
+    find $HOME -name "*.txt"
+    ls -l /home
+
+*Para convertir un fihcero en un scrip(guión) hay que dar permisos de ejecucion
+ con chmod (ficheros en verde son ejecutables)
+
+*Para ejecutar un scrip se pone simplemente su nombre o su ruta donde se encuentre
+
+ ·Poniendo solo el nombre, hay que tener en cuenta el PATH ya que es la variable que guarda 
+  direcciones donde se pueden ejecutar los ficheros, si el PATH tiene el "." como una 
+  direccion, entonces permitirá ejecutar los ficheros que se encuentren en la direccion 
+  actual (como Windows).
+
+ ·Si en el PATH no tenemos el "." tenemos que poner la ruta de donde está el fichero
+     EJ.:
+      ./prueba.txt    <======>    /home/so/velez/prueba.txt
+
+
+ ¡¡¡¡ OJO CON EL PATH !!!!
+
+
+
+*Los guiones(scripts) también se pueden parametrizar
+    
+   EJ.: ejemplo 6 hola ---> el "6" y "hola" los detecta como parámetros
+          El primer parametro "6" se guarda en la variable $1, el segundo parametro "hola"
+             se guarda en $2, y así sucesivamente ($n).
+
+   
+   EJ.: joe ejemplo
+        ls -l $1  ----> mostrará el ls de la ruta que pasemos como primer parámetro
+	find $2 -name "*.txt" ---> buscara en la ruta pasada como segundo parametro	
+	
+        ejemplo $HOME/pruebas $HOME/20-21 ----> "$HOME/pruebas" es el primer parametro
+                                                "$HOME/20-21" es el segundo parametro
+
+
+*También se guarda el nombre de fichero como parametro en la variable "$0"
+
+
+Hay una serie de variables especiales para los scripts:
+
+$# ---> muestra cuantos parametros se han pasado en la llamada
+$* ---> muestra todos los parametros que se han pasado en la llamada
+$0 ---> muestra el nombre del script
+PARA VER MÁS VARIABLES MIRAR EL "man bash" 
+
+	EJ.: <en un joe>
+	     echo $1 $2 $3
+             echo $3 $2 $1
+             echo $#   --------> guarda cuantos parametros se han pasado
+             echo $*
+             echo $0
+
+        Muestra los siguiente:
+             prueba 1 2 3
+             1 2 3
+             3 2 1
+             3 ----------------> guarda cuantos parametros se han pasado(en este caso 3)
+             1 2 3 ----> muestra los parametros que se han pasado
+             ./prueba
+
+
+
+##### USO DE LAS COMILLAS #####
+
+*Estan las comillas simples ('') y las comillas dobles ("")
+
+ ·Comillas simples (''): anula el efecto de los caracteres especiales, como el $, *, !, ?, [], |, etc
+
+
+ ·Comillas dobles (""): Hace lo mismo que si no tubiera comillas 
+
+
+
+
+				       ----- PRACTICA 5 -----
+
+1) mkdir -p $HOME/prac5/prac51 $HOME/prac5/prac52 $HOME/prac5/guiones
+
+2) joe .profile
+   PATH="$PATH:$HOME/prac5/guiones"
+   . .profile
+   echo $PATH
+
+3) cd prac5/guiones
+   joe busca   
+   find $1 ! -type d -mtime -$2
+   chmod u+x busca
+   cd
+   prac5/guiones/busca . 10
+
+4) alias listaf='ls $HOME -la'
+   alias gente='who | wc -l'
+   alias saludo='date "+Hola. Son las %H horas y %M minutos del %A %d del %B de %Y. Chao"'
+   . .profile
+
+5) joe prac5/guiones/fnuevos
+   find $2 -newer $1 | wc -l
+   chmod u+x prac5/guiones/fnuevos
+   joe prac5/guiones/fviejos
+   find $2 ! -newer $1 | wc -l
+   chmod u+x prac5/guiones/fviejos
+
+6) cd prac5/prac51
+   joe trataf
+   more $(find $1 -name "*.txt" 2>/dev/null)
+   chmod u+x trataf
+   cd
+   prac5/prac51/trataf $ORIGEN
+
+7) joe .profile
+   PS1='$USER: $PWD> '
+   . .profile
+
+8) cat >prac5/guiones/copiar
+   chmod u+x prac5/guiones/copiar
+   
+9) cd prac5/guiones
+   joe vertodo
+   more $(find . ! -type d -name "s*.[cp]" -newer $1 2>/dev/null | sort)
+   chmod u+x vertodo
+
+10) id -nu
+    id -ng
+    tty
+    date
+    cal -m 3
+    chmod u+x infor
+

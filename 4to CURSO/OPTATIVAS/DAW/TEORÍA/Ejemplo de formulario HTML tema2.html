@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8"
+	</head>
+
+
+	<body>
+	
+		<form enctype="multipart/form-data">
+			<fieldset>
+				<legend> Datos Personales </legend>
+				<label for="nombre"> Nombre: </label>
+				<input type="text" id="nombre" name="nombre" value="" required/> <br/> <br/>
+				<label for="apellidos"> Apellidos: </label>
+				<input type="text" id="apellidos" name="apellidos" value="" required/> <br/> <br/>
+			
+				<label for="sexo"> Elija su sexo </label>
+				<select name="sexo" id="sexo">
+					<option value="Hombre"> Hombre </option>
+					<option value="Mujer"> Mujer </option>
+					<option value="NsN"> Mejor no </option>
+				</select> <br/> <br/>
+			
+				<label for="DNI"> DNI: </label>
+				<input type="text" id="DNI" name="DNI" pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}[A-Z]" placeholder=" Formato: 99.999.999X" required/> <br/> <br/>
+			
+				<label for="Correo"> Correo Electrónico: </label>
+				<input type="email" id="Correo" name="Correo" value=""/> <br/> <br/>
+			
+				<label for="fechaNac"> Fecha de Nacimiento: </label>
+				<input type="date" id="fechaNac" name="fechaNac"/> <br/> <br/>
+			
+				<label for="Pweb"> Página Web: </label>
+				<input type="url" id="Pweb" name="Pweb"/> <br/> <br/>
+			
+				<label for="Fichero"> Subir curriculum: </label>
+				<input type="file" id="Fichero" name="Fichero"/> <br/> <br/>
+			</fieldset> <br/>
+			
+			<fieldset>
+				<legend> Tus intereses </legend>
+				<label for="Salario"> Salario esperado: </label>
+				<input type="number" id="Salario" name="Salario" min=600 max=2000 required/> <br/> <br/>
+				
+				<label for="Agricola"> Interés por trabajo agrícola: </label>
+				<input type="range" id="Agricola" name="Agricola"/> <br/> <br/>
+				
+				<label for="Construc"> Interés por trabajo de constructor: </label>
+				<input type="range" id="Construc" name="Construc"/> <br/> <br/>
+				
+				<label for="Obs"> Observaciones: </label> <br/>
+				<textarea name="Obs" id="Obs" cols="40" rows="10" placeholder="Sample Text."></textarea> <br/> <br/>
+			</fieldset>
+			
+			<input type="submit" value="Enviar"/>
+			<input type="reset" value="Borrar"/>
+		</form>
+		
+	</body>
+
+</html>

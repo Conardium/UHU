@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo Transformacion 2D</title>
+	<meta charset="utf-8" />
+
+<script type="text/javascript">
+function cambiarEstilo(op){
+	var d=document.getElementById("m");
+	if (op.value=="Trasladar") {
+	d.innerHTML = "Trasladado";
+	d.className="Trasladar";
+	}
+	if (op.value=="Rotar") {
+	d.innerHTML = "Rotado";
+	d.className="Rotar";
+	}
+	if (op.value=="Escalar") {
+	d.innerHTML = "Escalado";
+	d.className="Escalar";
+	}
+	if (op.value=="Sesgar") {
+	d.innerHTML = "Sesgado";
+	d.className="Sesgar";
+	}
+
+}
+</script>
+<style> 
+div
+{
+width:100px;
+height:75px;
+margin:20px;
+background-color:blue; color:orange;
+border:1px solid black;
+}
+.Trasladar
+{
+transform:translate(200px,10px);
+-ms-transform:translate(200px,10px); /* IE 9 */
+-webkit-transform:translate(200px,10px); /* Safari and Chrome */
+}
+
+.Rotar
+{
+transform:rotate(30deg);
+-ms-transform:rotate(30deg); /* IE 9 */
+-webkit-transform:rotate(-30deg); /* Safari and Chrome */
+}
+
+.Escalar
+{
+transform: scale(0.5,1.5);
+-ms-transform: scale(0.5,1.5); /* IE 9 */
+-webkit-transform: scale(0.5,1.5); /* Safari and Chrome */
+}
+
+.Sesgar
+{
+transform: skew(-30deg,-20deg);
+-ms-transform: skew(-30deg,-20deg); /* IE 9 */
+-webkit-transform: skew(-30deg,-20deg); /* Safari and Chrome */
+}
+
+</style>
+</head>
+<body>
+
+<div>Original.</div>
+
+<div class="Trasladar">Trasladado</div>
+
+<div class="Rotar">Rotado</div>
+
+<div class="Escalar">Escalado</div>
+
+<div class="Sesgar">Sesgado</div>
+
+<p>Selecciona una opción para ver el resultado en el DIV</p>
+<div id="m" class="original">Tamaño original</div>
+
+<select id="s" name="op" onchange="cambiarEstilo(this);">
+	<option value="Original">Original</option>
+	<option value="Trasladar">Trasladar</option>
+	<option value="Rotar">Rotar</option>
+	<option value="Escalar">Escalar</option>
+	<option value="Sesgar">Sesgar</option>
+</select>
+
+
+
+
+</body>
+</html>

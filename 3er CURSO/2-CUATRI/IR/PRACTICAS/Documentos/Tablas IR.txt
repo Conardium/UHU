@@ -1,0 +1,71 @@
+PNA-001: Identificarse         		    |   RG-001 : Registro de tutorías
+PNA-002: Solicitar Tutoria    		    |   RG-002 : Tratamiento de tutorias
+PNA-003: Aceptar Tutoría       		    |   RG-003 : Gestión de Horarios
+PNA-004: Publicar Tutoría      		    |   RG-004 : Gestión de Usuarios
+PNA-005: Visualizar Tutorias por Profesor   |
+PNA-006: Visualizar Tutorias por Alumno     |
+PNA-007: Cancelar Tutoria      		    |
+-----------------------------------------------------------------
+PNI-001: Autenticar Usuario		|
+PNI-002: Listar Tutorias Reservadas	|
+PNI-003: Pedir Tutoría			|  AS-001: Administador
+PNI-004: Modificar Tutorias		|  AS-002: Usuario
+PNI-005: Mostrar Tutorías		|  AS-003: Profesor
+PNI-006: Rechazar Tutoría		|  AS-004: Alumno
+PNI-007: Listar Horario de tutorías	|
+PNI-008: Confirmar Tutoría		|
+PNI-009: Modificar Horario Tutorias	|
+PNI-010: Modificar Tramos de Tutorías	|
+----------------------------------------------------------------
+                                |
+ANA-001: Alumno			|  ANI-001: Perfil Alumno
+ANA-002: Profesor		|  ANI-002: Perfil Profesor  
+ANA-003: Responsable de centro  |  ANI-003: Perfil Coordinador
+				|  ANI-004: Perfil Coord. Centro
+				|  ANI-005: Perfil Administrador
+----------------------------------------------------------------
+
+ON-001 : Tratamiento de Usuario
+ON-002 : Tratamiento de Horarios
+ON-003 : Procedimientos de Administrador
+ON-004 : Procedimientos de Profesor
+ON-005 : Procedimientos de Alumno
+
+-----------------------------------------------------------------
+
+CU-001 : Identificar Usuario
+CU-002 : Consultar Usuarios
+CU-005 : Consultar base de datos de Tutoría
+CU-006 : Modificar Tutorías
+CU-007 : Cancelar Tutorías
+CU-008 : Consultar Horarios de tutorías
+CU-009 : Consultar Profesorado
+CU-010 : Consultar Horario del Profesor
+CU-011 : Modificar Trama Horaria
+CU-012 : Publicar Tutorías
+CU-013 : Listar Tutorías previstas
+CU-014 : Modificar Tutorías previstas
+CU-015 : Cancelar Tutorías previstas
+CU-016 : Confirmar Tutorías
+CU-017 : Solicitar Tutorías
+CU-018 : Listar Tutorias Solicitadas
+CU-019 : Rechazar Tutoria
+----------------------------------------------------------------
+
+RI-001 : Administrador
+RI-002 : Profesor
+RI-003 : Alumno
+RI-004 : Horarios
+RI-005 : Calendario Escolar
+RI-006 : Centro
+RI-007 : Departamento
+RI-008 : Tutoría
+RI-009 : Asignatura
+RI-010 : Titulación
+RI-011 : Despacho
+RI-012 : Carga de Trabajo
+RI-013 : Fecha
+RI-014 : Asistente
+
+RIs dependen de RG, ON y CU
+RNs y RCsR dependen de RG y RI

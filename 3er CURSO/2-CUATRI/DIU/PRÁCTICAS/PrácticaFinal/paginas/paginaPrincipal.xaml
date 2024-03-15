@@ -1,0 +1,280 @@
+﻿<Page x:Class="PrácticaFinal_Ismael_Da_Palma_Fernández.paginas.paginaPrincipal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PrácticaFinal_Ismael_Da_Palma_Fernández.paginas"
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="809"
+      Title="paginaPrincipal">
+
+    <Grid Name="gridPrincipal">
+        <Grid.Background>
+            <SolidColorBrush Color="{Binding MyColorTab}"/>
+        </Grid.Background>
+        <TabControl Name="TabsPrincipal" BorderThickness="2">
+            <TabItem Header="Lorem Ipsum" Name="tabLorem" FontSize="15">
+                <ScrollViewer>
+                    <ScrollViewer.Background>
+                        <SolidColorBrush Color="{Binding MyColorFondo}"/>
+                    </ScrollViewer.Background>
+                    <StackPanel Margin="30,20,30,0">
+                        <TextBlock FontSize="{Binding MyFuente}" FontWeight="Bold" TextWrapping="Wrap" Name="texto1" TextDecorations="Underline"> ¿Qué es Lorem Ipsum?
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock FontSize="{Binding MyFuente}" Margin="0,10,0,0" TextWrapping="Wrap" Name="texto2"> 
+                        Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar 
+                        de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 
+                        de textos y los mezcló de tal manera que logró hacer un libro de textos especimen.
+
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock FontSize="{Binding MyFuente}" FontWeight="Bold" TextWrapping="Wrap" Margin="0,40,0,0" Name="texto3" TextDecorations="Underline"> ¿Por qué lo usamos?
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <TextBlock FontSize="{Binding MyFuente}" Margin="0,10,0,0" TextWrapping="Wrap" Name="texto4"> 
+                        Es un hecho establecido hace demasiado tiempo que un lector se distraerá con el contenido del texto de un sitio mientras que mira su diseño. 
+                        El punto de usar Lorem Ipsum es que tiene una distribución más o menos normal de las letras, al contrario de usar textos como por ejemplo 
+                        "Contenido aquí, contenido aquí". Estos textos hacen parecerlo un español que se puede leer.
+
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                    </StackPanel>
+                </ScrollViewer>
+            </TabItem>
+
+
+            <TabItem Header="Información" Name="tabInfo" FontSize="15">
+                <StackPanel>
+                    <StackPanel.Background>
+                        <SolidColorBrush Color="{Binding MyColorFondo}"/>
+                    </StackPanel.Background>
+                    
+                        <ScrollViewer>
+                            <StackPanel Margin="10">
+                                <TextBlock TextAlignment="Center" FontSize="{Binding MyFuente}" FontWeight="Bold" Name="textoFormulario"> FORMULARIO
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+
+                                <TextBlock FontSize="{Binding MyFuente}" Margin="0,10,0,0" Name="textoNombre" TextDecorations="Underline"> Apodo:
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                                <TextBox Width="200" HorizontalAlignment="Left" FontSize="{Binding MyFuente}" Name="textoRellenarNombre"></TextBox>
+
+                                <TextBlock FontSize="{Binding MyFuente}" Margin="0,20,0,5" Name="textoSexo" TextDecorations="Underline"> Sexo:
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                                <ListBox FontSize="{Binding MyFuente}" Name="listaSexo" SelectionChanged="ElegirSexo">
+                                    <ListBoxItem Content="Hombre" ></ListBoxItem>
+                                    <ListBoxItem Content="Mujer"></ListBoxItem>
+                                </ListBox>
+
+                                <TextBlock FontSize="{Binding MyFuente}" Margin="0,20,0,5" Name="textoEdad" TextDecorations="Underline"> Edad:
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                                <StackPanel Orientation="Horizontal">
+                                    <Slider Maximum="100" Minimum="0" Value="0" Width="250" HorizontalAlignment="Left" Name="sliderEdad" ValueChanged="ElegirEdad"></Slider>
+                                    <TextBlock FontSize="{Binding MyFuente}" Margin="20,0,0,0" Name="textoValorEdad" Width="30" TextAlignment="Center"> 0
+                                        <TextBlock.Foreground>
+                                            <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                        </TextBlock.Foreground>
+                                    </TextBlock>
+                                </StackPanel>
+
+                                <TextBlock FontSize="{Binding MyFuente}" Margin="0,20,0,0" Name="textoEstadoCivil" TextDecorations="Underline"> Estado Civil:
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                                <ComboBox SelectionChanged="ElegirEstadoCivil" FontSize="{Binding MyFuente}">
+                                    <ComboBoxItem Content="Soltero/a"></ComboBoxItem>
+                                    <ComboBoxItem Content="Casado/a"></ComboBoxItem>
+                                    <ComboBoxItem Content="Divorciado/a"></ComboBoxItem>
+                                    <ComboBoxItem Content="Viudo/a"></ComboBoxItem>
+                                </ComboBox>
+
+                                <TextBlock FontSize="{Binding MyFuente}" Margin="0,20,0,5" Name="textoPasatiempo" TextDecorations="Underline"> Pasatiempo/s:
+                                    <TextBlock.Foreground>
+                                        <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                    </TextBlock.Foreground>
+                                </TextBlock>
+                                <WrapPanel Orientation="Vertical">
+                                    <WrapPanel>
+                                        <CheckBox FontSize="{Binding MyFuente}" Name="check1" Checked="Chequeado" Margin="2" VerticalContentAlignment="Center">Dormir
+                                            <CheckBox.Foreground>
+                                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                            </CheckBox.Foreground>
+                                        </CheckBox>
+                                        <CheckBox FontSize="{Binding MyFuente}" Name="check3" Margin="22,2,8,2" Checked="Chequeado" VerticalContentAlignment="Center">Internet
+                                            <CheckBox.Foreground>
+                                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                            </CheckBox.Foreground>
+                                        </CheckBox>
+                                        <CheckBox FontSize="{Binding MyFuente}" Name="check5" Checked="Chequeado" Margin="15,2,5,2" VerticalContentAlignment="Center">Leer
+                                            <CheckBox.Foreground>
+                                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                            </CheckBox.Foreground>
+                                        </CheckBox>
+                                    </WrapPanel>
+                                    <WrapPanel>
+                                        <CheckBox Margin="2" FontSize="{Binding MyFuente}" Name="check2" Checked="Chequeado" VerticalContentAlignment="Center">Estudiar
+                                            <CheckBox.Foreground>
+                                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                            </CheckBox.Foreground>
+                                        </CheckBox>
+                                        <CheckBox FontSize="{Binding MyFuente}" Name="check4" Checked="Chequeado" Margin="15,2,5,2" VerticalContentAlignment="Center">Películas
+                                            <CheckBox.Foreground>
+                                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                            </CheckBox.Foreground>
+                                        </CheckBox>
+                                        <CheckBox FontSize="{Binding MyFuente}" Name="check6" Checked="Chequeado" Margin="15,2,5,2" VerticalContentAlignment="Center">Jugar
+                                            <CheckBox.Foreground>
+                                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                            </CheckBox.Foreground>
+                                        </CheckBox>
+                                    </WrapPanel>
+                                </WrapPanel>
+                                <Button FontSize="{Binding MyFuente}" Background="#FFFF9A56" HorizontalAlignment="Right" Margin="0,20,0,0" Name="botonFormulario" Click="EnviarFormulario" >Enviar Formulario</Button>
+                            </StackPanel>
+                        </ScrollViewer>
+                   
+                </StackPanel>
+            </TabItem>
+
+
+            <TabItem Header="Opciones" Name="tabOpciones" FontSize="15">
+                <Grid>
+                    <Grid.Background>
+                        <SolidColorBrush Color="{Binding MyColorFondo}"/>
+                    </Grid.Background>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="571*"/>
+                        <ColumnDefinition Width="230*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="311*"/>
+                        <RowDefinition Height="161*"/>
+                    </Grid.RowDefinitions>
+
+                    <WrapPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical">
+                        <TextBlock FontSize="{Binding MyFuente}" Margin="15,30,0,0" FontWeight="Bold" TextDecorations="Underline"> Cambiar color de fondo:
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+
+                        <!--Gama de ROJOS-->
+                        <WrapPanel>
+                            <TextBlock Background="Red" Foreground="White" HorizontalAlignment="Center" FontSize="{Binding MyFuente}" TextAlignment="Center" VerticalAlignment="Top" Margin="15" Name="textoRojo"> ROJO(R)</TextBlock>
+                            <Slider Width="260" Maximum="255" Minimum="0" Value="0" Margin="7,15,0,0" ValueChanged="cambiarColor" Name="SliderR"></Slider>
+                            <TextBlock HorizontalAlignment="Center" FontSize="{Binding MyFuente}" Margin="15,15,0,15" TextAlignment="Center" VerticalAlignment="Top" Name="ValorR"> 0
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </WrapPanel>
+
+                        <WrapPanel>
+                            <TextBlock Background="Green" Foreground="White" HorizontalAlignment="Center" FontSize="{Binding MyFuente}" TextAlignment="Center" VerticalAlignment="Top" Margin="15" Name="textoVerde"> VERDE(G)</TextBlock>
+                            <Slider Width="260" Maximum="255" Minimum="0" Value="0" Margin="0,15,0,0" ValueChanged="cambiarColor" Name="SliderG"></Slider>
+                            <TextBlock HorizontalAlignment="Center" FontSize="{Binding MyFuente}" Margin="15,15,0,15" TextAlignment="Center" VerticalAlignment="Top" Name="ValorG"> 0
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </WrapPanel>
+
+                        <WrapPanel>
+                            <TextBlock Background="Blue" Foreground="White" HorizontalAlignment="Center" FontSize="{Binding MyFuente}" TextAlignment="Center" VerticalAlignment="Top" Margin="15" Name="textoAzul"> AZUL(B)</TextBlock>
+                            <Slider Width="260" Maximum="255" Minimum="0" Value="0" Margin="7,15,0,0" ValueChanged="cambiarColor" Name="SliderB"></Slider>
+                            <TextBlock HorizontalAlignment="Center" FontSize="{Binding MyFuente}" Margin="15,15,0,15" TextAlignment="Center" VerticalAlignment="Top" Name="ValorB"> 0
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </WrapPanel>
+                    </WrapPanel>
+
+                    <WrapPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" Margin="10">
+                        <TextBlock FontSize="{Binding MyFuente}" FontWeight="Bold" TextDecorations="Underline" Name="textoTema"> Tema:
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <RadioButton FontSize="{Binding MyFuente}" Margin="0,10,0,0" IsChecked="True" Name="textoClaro" Checked="CambiarTema">Claro
+                            <RadioButton.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </RadioButton.Foreground>
+                        </RadioButton>
+                        <RadioButton FontSize="{Binding MyFuente}" Margin="0,10,0,0" Name="textoOscuro" Checked="CambiarTema">Oscuro
+                            <RadioButton.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </RadioButton.Foreground>
+                        </RadioButton>
+                    </WrapPanel>
+
+                    <WrapPanel Grid.Column="0" Orientation="Vertical" Margin="0,307,0,0" Grid.RowSpan="2">
+                        <WrapPanel Margin="10">
+                            <TextBlock FontSize="{Binding MyFuente}" FontWeight="Bold" TextDecorations="Underline" Name="textoTamaFuente"> Tamaño de la fuente:
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                            <TextBlock FontSize="{Binding MyFuente}" Name="textoValorFuente" TextAlignment="Center" Margin="10,0,0,0"> 15
+                                <TextBlock.Foreground>
+                                    <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                                </TextBlock.Foreground>
+                            </TextBlock>
+                        </WrapPanel>
+                        <Slider Maximum="35" Minimum="15" Value="15" Width="250" Name="sliderTamaFuente" ValueChanged="CambiarFontSize" Margin="10,0,0,0"></Slider>
+                    </WrapPanel>
+
+                    <WrapPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" Margin="10">
+                        <TextBlock FontSize="{Binding MyFuente}" FontWeight="Bold" TextDecorations="Underline" Name="textoColorTexto" TextWrapping="Wrap"> Color de la fuente:
+                            <TextBlock.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </TextBlock.Foreground>
+                        </TextBlock>
+                        <RadioButton FontSize="{Binding MyFuente}" Margin="0,10,0,0" Name="colorNegro" IsChecked="True" Checked="CambiarColorTexto">Negro
+                            <RadioButton.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </RadioButton.Foreground>
+                        </RadioButton>
+                        <RadioButton FontSize="{Binding MyFuente}" Margin="0,10,0,0" Name="colorBlanco" Checked="CambiarColorTexto">Blanco
+                            <RadioButton.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </RadioButton.Foreground>
+                        </RadioButton>
+                        <RadioButton FontSize="{Binding MyFuente}" Margin="0,10,0,0" Name="colorAmarillo" Checked="CambiarColorTexto">Amarillo
+                            <RadioButton.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </RadioButton.Foreground>
+                        </RadioButton>
+                        <RadioButton FontSize="{Binding MyFuente}" Margin="0,10,0,0" Name="colorRojo" Checked="CambiarColorTexto">Rojo
+                            <RadioButton.Foreground>
+                                <SolidColorBrush Color="{Binding MyColorFuente}"/>
+                            </RadioButton.Foreground>
+                        </RadioButton>
+                    </WrapPanel>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Top" Background="#FFFF9A56" Width="60" Click="Salir">Salir</Button>
+    </Grid>
+</Page>

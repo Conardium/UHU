@@ -1,0 +1,79 @@
+Se recomienda hacer 2 hojas de trabajo, una para el SQL y la otra para el PL
+
+/*Que tipos de consulta necesito:
+-Mostrar numero de telefon, año y el total(SUM) de coste efectuado
+para un numero en concreto y año especifico
+
+-Tablas implicadas: Telefono(numero), Tarifa(coste), LLamada(duracion)*/
+
+
+-- Ejercicio 1(SQL)
+SELECT LL.tf_origen AS Telefono, SUM(LL.duracion/60*T.coste) AS facturación
+FROM MF.TELEFONO Tf INNER JOIN MF.LLAMADA LL ON LL.tf_origen=Tf.numero
+        INNER JOIN MF.TARIFA T USING(tarifa, compañia) 	<-----------------------Se ponen ambos			
+WHERE EXTRACT(Year from LL.fecha_hora)='2006' AND LL.tf_origen='654123321' <--FILTRAMOS
+GROUP BY LL.tf_origen;
+
+--Una vez que funciona correctamente la Selección(SQL) lo adaptamos e insertamos en PL/SQL:
+
+
+--Ejercicio 1 (PL/SQL)
+
+SET serveroutput ON;
+
+CREATE OR REPLACE
+FUNCTION facturacion (p_tf_origen MF.LLAMADA.tf_origen%TYPE, año INTEGER)
+RETURN FLOAT IS
+    --  DEFINICIÓN DE PARAMETROS Y EXCEPCIONES
+    importe number(10,2);
+    facturacionBaja exception;
+BEGIN
+--FUNCION DE SELECCION(SELECT INTO) --> se usa cuando SOLO devuelve UNA tupla
+    SELECT SUM(LL.duracion/60*T.coste) INTO importe
+    FROM MF.TELEFONO Tf INNER JOIN MF.LLAMADA LL ON LL.tf_origen=Tf.numero
+        INNER JOIN MF.TARIFA T USING(tarifa, compañia) 	
+    WHERE EXTRACT(Year from LL.fecha_hora)=año AND LL.tf_origen=p_tf_origen
+    GROUP BY LL.tf_origen;
+    
+    IF importe < 1 THEN
+        RAISE facturacionBaja;
+    END IF;
+    RETURN importe; --> Devolvemos lo que nos interesa
+    
+EXCEPTION --CONTROL DE EXCEPCIONES
+    WHEN facturacionBaja THEN
+        dbms_output.put_line('Facturación demasiado baja');
+        return -1;
+    WHEN NO_DATA_FOUND THEN -->NO DATA FOUND es una excepcion del propio sistema
+        dbms_output.put_line('El telefono no existe o no ha realizado llamadas en ese año');
+        return -1;
+    WHEN OTHERS THEN --Ponerlo siempre para tener una excepcion general
+        RAISE_APLICATION_ERROR(-20001, 'Se a producido el error - '||SQLCODE||' -ERROR- '||SQLERRM);
+        return -1;
+END;
+
+
+
+
+
+--Ejercicio 2(PL/SQL)
+
+SET serveroutput ON;
+
+CREATE OR REPLACE
+PROCEDURE llamadaFacturacion (año INTEGER) IS
+
+  CURSOR c_telefono  IS SELECT DISTINCT tf_origen
+                        FROM MF.LLAMADA
+                        WHERE EXTRACT(year from fecha_hora)=año;
+BEGIN
+  dbms_output.put_line('Nº teléfono       Importe(en €)');
+  dbms_output.put_line('----------------------------------');
+  FOR r_telefono IN c_telefono LOOP
+    dbms_output.put_line(r_telefono.tf_origen||'             '||facturacion(r_telefono.tf_origen, año));
+  END LOOP;
+
+EXCEPTION
+  WHEN OTHERS THEN
+    RAISE_APPLICATION_ERROR(-20002, 'Se a producido el error - '||SQLCODE||' -ERROR- '||SQLERRM);
+END;

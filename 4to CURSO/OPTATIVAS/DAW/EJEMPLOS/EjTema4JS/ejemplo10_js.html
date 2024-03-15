@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo JS. Objeto Date</title>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Ejemplo JS: Date</h1>
+
+<form>
+Inserta dia(1-31)/mes(1-12)/año(XXXX):<br />
+<label for="dia"></label><input id="dia" type="text" name="dia"/> /
+<label for="mes"></label><input id="mes" type="text" name="mes"/> /
+<label for="anio"></label><input id="anio" type="text" name="anio"/>
+<input type="date" />
+</form>
+
+<script>
+let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles",
+                  "Jueves", "Viernes", "Sábado"];
+
+let elto = document.getElementById("anio");
+elto.onchange = function() {
+	let fecha = new Date(anio.value, mes.value-1, dia.value);	
+	let d = diasSemana[fecha.getDay()];
+	document.write("<h1>Naciste un " + d + "</h1>");
+} 
+</script>
+
+</body>
+</html>

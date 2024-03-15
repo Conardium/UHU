@@ -1,0 +1,90 @@
+·passwd -> cambia la contraseña
+·clear -> limpia todo
+
+·more + ruta del fichero a leer -> visualiza el contenido de un fichero, etc
+·tail + [opciones] + ruta fichero -> visualiza las ultimas lineas del fichero
+
+·pwd -> te devuelve la ruta en la que te encuentras
+·rm + ruta del fichero -> borra el fichero que se encuentra en esa ruta
+·chmod 700 + fichero -> cambia los permisos del fichero para que solo yo pueda verlos
+
+·ps -> muestra los procesos activos
+
+·echo + $nomVariable -> muestra el contenido de la variable 'nomVariable'
+·set -> muestra todas las variables y su contenido
+·unset + nomVariable -> borra la variale "nomVAriable"
+
+·alias -> muestra todos los alias que tengas
+·unalias + nomVAriable -> borra el alias 'nomVariable'
+
+
+CONSTRUCCIONES GLOBALES ==> *, ?, [], ...
+
+
+· mkdir + ruta donde lo quiero crear -> crea un directorio en la ruta indicada
+· rmdir + ruta -> borra el directorio que se encuentra en la ruta
+· cp + ruta de fichero + ruta de fichero  + ... + ruta de donde lo quiero copiar(carpeta) -> copia el/los ficheros en la ultima ruta escrita
+· cp + ruta de lo que quiero copiar(fichero) + ruta de donde lo quiero copiar junto con un nombre de fichero no existente (renombrar).
+· man + comando -> abre el manual del comando
+
+· mv + [opciones] + orgien + destino -> mueve el fichero del origen al destino o cambia el nombre del fichero si el origen y el destino es el mismo
+
+· joe + ruta del fichero que quiero editar -> edita un fichero, si no existe lo crea
+
+·cat + ruta de fichero -> Caracter que lee de la entrada estandar, caracter que lee de la salida estandar
+                          Hace lo mismo que. El cat va a depender de la E/S
+
+
+-- BUSQUEDA (find) --
+
+·find + ruta + criterios -> busca apartir de la ruta y en los subdirectorios que contenga esa ruta, los criterios indicados
+
+·find s* -> me busca todos los ficheros que empiezan por s
+
+·find -name s*
+-name es una opcion
+la s* es una condicion(patrón)
+
+·find -name s* -type d
+
+
+
+echo [...algo...] -> busca ficheros con ese (...algo...) o con esas construcciones globales ,
+		     si existe, te devuelve los ficheros que tengan ese algo
+                     sino muestra lo que has escrito.
+
+
+·cd + ruta -> te dirige a la ruta seleccionada
+·cd -> te lleva a la carpeta personal
+
+---EJEMPLO---
+MI carpeta personal es: cd /home/ismael.dapalma060
+
+la primera / es el directorio raiz, la otra es del directorio home
+y el ultimo es una carpeta.
+
+
+SI UNA palabra EMPIEZA POR - es una OPCION DE COMANDO
+
+
+·ls -> muestra lo que tiene la carpeta/directorio/...
+tambien se puede poner de l siguiente forma: ls -l (muestra los contenidos
+más detallados que con ls y muestra los ficheros fila por fila)
+
+LO QUE PONE ls -l:
+drwxr-xr-x (DIRECTORIO)  root(dueño de la carpeta)
+lrwxrwxrwx (LINK)
+
+
+·ls -l -a (el -a muestra las ficheros ocultos, aunque en verdad muestra los ficheros
+que empiezan por .)
+
+
+·ls -la  <===> ls -l -a      OJO con poner: ls -l-a (¡lo toma como una sola opcion!)
+
+
+El orden correcto para la construccion de comandos es: Comando + Opcion + Parametro
+EJEMPLO: ls -la /home
+
+
+#EL ORDEN DE LAS OPCIONES NO AFECTA AL RESULTADO DE LOS COMANDOS##

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Propagación de eventos</title>
+	<meta charset="UTF-8" />
+</head>
+<body>
+
+
+<div onclick="alert('click DIV');">
+	<table id="tabla">
+		<tr id="fila">
+			<td id="columna">Click Me</td>
+		</tr>
+	</table>
+</div>
+
+<script>
+
+let tabla = document.getElementById("tabla");
+let fila = document.getElementById("fila");
+let columna = document.getElementById("columna");
+
+tabla.addEventListener("click", function() {alert("click Tabla");}, false);
+fila.addEventListener("click", function() {alert("click Fila");}, false);
+columna.addEventListener("click", function() {alert("click Columna");}, false);
+
+
+tabla.addEventListener("click", function() {alert("click2 Tabla");}, true);
+
+</script>
+
+</body>
+</html>

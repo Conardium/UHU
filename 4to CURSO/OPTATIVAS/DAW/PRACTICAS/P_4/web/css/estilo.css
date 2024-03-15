@@ -1,0 +1,160 @@
+
+
+header
+{
+    text-align: center;
+    margin : 0px;
+    padding : 0px;
+    background-color : black;
+    color: white;
+    height: 150px;
+}
+
+/* ============= MENU ===============*/
+nav
+{
+    width: auto;
+    height:30px;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #C0C0C0;
+}
+
+nav ul
+{
+    list-style: none;
+}
+
+nav ul li
+{
+    float:left;
+}
+
+nav ul li a
+{
+    text-decoration:none;
+    display:block;
+    margin: -10px 80px 10px 200px;
+    color: black;
+}
+
+nav ul li a:hover
+{
+    background-color: black;
+    color : #fff; 
+}
+
+section
+{
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 2px;
+    min-height: 243px;
+    background-color:#EEC57A;
+}
+
+section *
+{
+    margin: 15px;
+}
+
+section table {width: 96%;}
+
+section table, td, th {border: 3px solid darkred; border-collapse: collapse;}
+
+section table a{text-decoration: none; color: blue;}
+
+.porDefectoPar {background-color: lightgray;}
+
+.porDefectoImpar {background-color: white;}
+
+section table th {background-color: black; color: white;}
+
+footer
+{
+    margin : 0px auto ;
+    text-align : center;
+    background-color : black;
+    color:white;
+}
+
+#seccionCategoria div{background: black; color:white; width:80px}
+
+.ocultar
+{
+    display: none;
+}
+
+#seccionCategoria div:hover
+{
+    background: gray;
+    width: auto;
+}
+
+#seccionCategoria div:hover .ocultar
+{
+    display:block;
+    width: auto;
+    padding: 2px;
+}
+
+.centrado {text-align:center;}
+
+.formato
+{
+    color: darkslategrey;
+    font-family : Arial , sans-serif;
+}
+
+[required] {border: 3px solid red;}
+
+.opcional{border: 3px solid green;}
+
+#boton
+{
+    background: lightgray;
+    border: 2px solid black;
+    color: black;
+    font-size: 18px;
+    transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+#boton:hover
+{
+    background: darkgreen;
+    color: white;
+    border: 2px solid white;
+}
+
+[required]:valid
+{
+    background: lightgreen;
+}
+
+[required]:invalid
+{
+    background: lightpink;
+}
+
+.filaRojo
+{
+    background: red;
+    color: white;
+}
+
+.filaAzul
+{
+    background: blue;
+    color: yellow;
+}
+
+.obligatorio
+{
+    color:red;
+}
+
+#msgGeneral
+{
+    background: bisque;
+    width: 25%;
+}

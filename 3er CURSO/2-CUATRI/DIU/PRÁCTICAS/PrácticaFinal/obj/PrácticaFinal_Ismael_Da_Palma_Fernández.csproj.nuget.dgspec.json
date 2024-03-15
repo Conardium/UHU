@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\ismae\\OneDrive\\Escritorio\\DIU\\PRÁCTICAS\\PrácticaFinal_Ismael_Da_Palma_Fernández\\PrácticaFinal_Ismael_Da_Palma_Fernández.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ismae\\OneDrive\\Escritorio\\DIU\\PRÁCTICAS\\PrácticaFinal_Ismael_Da_Palma_Fernández\\PrácticaFinal_Ismael_Da_Palma_Fernández.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ismae\\OneDrive\\Escritorio\\DIU\\PRÁCTICAS\\PrácticaFinal_Ismael_Da_Palma_Fernández\\PrácticaFinal_Ismael_Da_Palma_Fernández.csproj",
+        "projectName": "PrácticaFinal_Ismael_Da_Palma_Fernández",
+        "projectPath": "C:\\Users\\ismae\\OneDrive\\Escritorio\\DIU\\PRÁCTICAS\\PrácticaFinal_Ismael_Da_Palma_Fernández\\PrácticaFinal_Ismael_Da_Palma_Fernández.csproj",
+        "packagesPath": "C:\\Users\\ismae\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ismae\\OneDrive\\Escritorio\\DIU\\PRÁCTICAS\\PrácticaFinal_Ismael_Da_Palma_Fernández\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ismae\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "DevExpress.Data": {
+              "target": "Package",
+              "version": "[21.2.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

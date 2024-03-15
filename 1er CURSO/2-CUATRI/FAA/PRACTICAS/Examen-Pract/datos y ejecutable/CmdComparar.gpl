@@ -1,0 +1,13 @@
+#ESTE ES UN SCRIP DE GNUPLOT PARA LA COMPARACION DE 2 METODOS
+set title "Comparacion tiempos Junio2020 y Burbuja"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo(ms)"
+
+plot "Junio2020.dat" using 1:2 with lines title "Junio2020", "Burbuja.dat" using 1:2 with lines title "Burbuja"
+
+set terminal pdf
+set output "Junio2020Burbuja.pdf"
+replot
+#pause -1 "Pulsa Enter para continuar..."

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Ejemplo 2 de ayuda para la práctica 4</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="css/estiloej2.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <h1>Gestion de Formulario</h1>
+
+        <form id="f" onsubmit="return validar();" method="post" action="ej.jsp" novalidate>
+            <div id="msgForm"></div>
+
+            <label for="name">Nombre</label>
+            <input id="name" type="text" name="name" /> <span id="spanName" class="obligatorio">*</span>
+            <label for="pass">Contraseña</label>
+            <input id="pass" type="password" name="clave" /> <span id="spanClave"  class="obligatorio">*</span>
+            <label for="cp">Código Postal</label>
+            <input id="cp" type="text" pattern="[0-9]{2}.[0-9]{3}" title="Formato 99.999" /> <br />
+
+            <input type="submit" value="Enviar" class="boton"/> 
+        </form>
+
+        <script src="js/func2.js"></script>
+
+    </body>
+</html>

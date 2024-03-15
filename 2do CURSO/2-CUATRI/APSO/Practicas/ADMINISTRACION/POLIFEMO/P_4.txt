@@ -1,0 +1,153 @@
+Vamos a ver variables, alias y a definir y personalizar nuestra forma de trabajar (ficheros de arranque)
+
+
+*Hay distintos tipos de intérpretes de comandos (bash es el de por defecto)
+ -Muestran la misma informacion pero de forma distinta (ej.: ls).
+ -Los comandos son los mismos en todos.
+
+· bash ------------> viene por defecto
+· ksh (k shell) ---> ejecuta el interprete "ksh"
+· csh -------------> ejecuta el interprete "csh"
+
+##Para salir de un intérprete se usa el comando "exit".
+
+
+############################### VARIABLES (no guarda comandos) ###############################
+
+*Guarda valores(conjunto de caracteres) en esas variables
+
+
+Sintaxis ==> nomVariable= + "lo que guarda" 
+
+EJEMPLO: A="/home/velez" (puede usarse "" o '')
+
+   *A la hora de usarla, hay que identificar cuando es una variable poniendo delante el '$'
+
+EJEMPLO: cd $A --> al tener el $, lo toma como una variable y no como un "fichero"
+
+*Para visualizar el contenido de una variable se puede hacer con 'echo' o con 'set'(muestra el contenido de todas las variables)
+   EJEMPLO: echo $A
+            echo $A $B &C
+            set
+
+*Para borrar una variable se usa "unset + nomVariable"
+   EJEMPLO: unset A	
+
+
+
+================ VARIABLES IMPORTANTISIMAS =====================
+                                                               =
+·HOME -> contiene: "/home/ismael.dapalma060"	               =
+·HOSTNAME -> contiene: "polifemo"                              =
+·PWD -> contiene la ruta de donde estas (se va actualizando)   =          
+·PS1 -> contiene nuestro 'promt' (se puede cambiar)            =
+·PS2 -> contiene nuestro promt secundario (se puede cambiar)   =
+·USER -> muestra el nombre del usuario 
+                                                               =
+*La mas importante                                             =
+·PATH -> contiene rutas de ficheros ejecutables(verdes) (si no = 
+         contiene la ruta donde se encuentre no lo ejecuta)    =
+                                                               =
+*Para añadir una nueva ruta se usa: PATH=$PATH:LaRuta          =
+================================================================
+
+**CONTENIDO DEL PATH:  
+
+*El promt secundario te avisa que el promt primario no ha terminado correctamente
+
+
+!!PROBLEMAS¡¡
+·Las variables solo se pueden usar en la sesión actual (Solución, meterlos en ficheros de arranque)
+
+
+
+#########################################################################
+
+### ALIAS (guarda comandos) ###
+ 
+*Hace lo mismo que las VARIABLES pero esta vez guarda !comandos¡, como cambiarle el alias a un comando
+
+SINTAXIS: alias + nomVariable= + "comando"
+
+   	EJEMPLO: alias a="ls -la"
+
+*Mostramos todos los alias con: alias
+*Borramos un alias con: unalias + nomVariable
+
+Mismo problemas que en las Variables
+
+
+
+
+############################### FICHEROS DE ARRANQUE ###############################
+
+USAREMOS el .profile o .bashrc (se encuentra en nuestro directorio personal) -> hay que usar "ls -a"
+
+· Se usa el fichero '.profile' -> ahí deben guardarse los alias y variables que queramos guardar
+   *Se añadade las variables y alias al final del '.profile' con el "joe"
+
+*Para ejecutar el .profile es: ". .profile"
+
+"" -> se ejecuta en el momento y se guarda el resultado
+'' -> no se ejecuta en el momento, se guarda en la variable
+
+                                      ---- PRACTICA 4 ----
+
+1) <Antes de nada creo las variables A, B, C para acortar codigo>
+   A="prac4/prac41"
+   B="prac4/prac42"
+   C="prac4/prac43"
+   mkdir -p $A $B/tmp1 $B/tmp2 $C
+
+2) cd $C
+   chmod go-rwx ../. ../prac42 ../prac42/tmp[1-2]
+
+3) cd ../prac42
+   cat >tmp1/prueba
+   cat >>tmp1/prueba
+
+4) set | head -n 52
+   echo $PATH
+
+5) ORIGEN="/home/so/velez/MI"
+   DESTINO1="/home/ismael.dapalma060/prac4/prac42/tmp1"
+   DESTINO2="/home/ismael.dapalma060/prac4/prac42/tmp2"
+   echo $DESTINO1 $DESTINO2
+   cp $ORIGEN/*p*.txt $DESTINO1
+   
+6) cd ../prac43
+   
+
+7) alias
+   alias dir="ls -la | sort | more"
+   alias dirinverso="ls -la | sort -r | more"
+   alias fecha='date "+Hoy es %A, %e de %B de %Y. Chao"'
+   alias hora='date "+Son las %H horas y %M minutos. Chao"'
+   alias cd..="cd .."
+
+8) who | sort >../prac42/tmp2/usuarios
+
+9) cd..
+   ksh
+   set
+   PS1="Comando::> "
+
+10) exit
+    who | wc -l
+
+11) PS1='$USER: $PWD> '
+
+12) PS2='cierra las comillas, por favor '
+
+13) joe $HOME/.profile
+    PATH="$PATH:."
+    ORIGEN="/home/so/velez/MI"
+    
+14) <Cierro la sesion>
+    joe $HOME/.profile
+    alias hora='date "+Son las %H horas y %M minutos. Chao"'
+    alias fecha='date "+Hoy es %A, %e de %B de %Y. Chao"'
+    <Para que se activen los alias sin cerrar sesion, ejecuto el .profile>
+    . .profile
+
+ 

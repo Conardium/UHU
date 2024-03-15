@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Probando CSS en formularios</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		form {
+			width: 20%;
+		}
+		fieldset {
+			border: 2px dotted red;
+			background: beige url('uhu.gif') left bottom no-repeat;
+
+		}
+		legend {
+			color: white;
+			background: blue ;
+			font-size: .8em;
+		}
+		li {
+			list-style-type: none;
+		}
+		label {
+			font-size: .9em;
+		}
+		.boton {
+			color:white;
+			background:blue;
+
+		}
+		.dcha {
+			text-align:right;
+		}
+	</style>
+
+</head>
+<body>
+
+
+<form>
+
+	<fieldset>
+		<legend>Acceso al sistema</legend>
+		<ul>
+		<li><label for="nombre">Nombre</label></li>
+		<li><input id="nombre" type="text" name="nombre" placeholder="Tu nombre aquí" /></li>
+		<li><label for="clave">Clave</label></li>
+		<li><input id="clave" type="password" name="clave" placeholder="Tu password aquí"/></li>
+		</ul>
+		<p class="dcha"><input class="boton" id="envio" type="submit" value="Enviar">
+		<input class="boton" id="borrar" type="reset" value="Borrar"></p>
+	</fieldset>
+
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+#ESTE ES UN SCRIPT DE GNUPLOT PARA COMPARACION DE LOS CASOS DE UN ALGORITMO
+set title " tiempos SecuencialPeorEmpirico , SecuencialMedioEmpirico y SecuencialMejorEmpirico"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo (ms)"
+set xrange [100:1000]
+set yrange [0:3000]
+plot "SecuencialPeorEmpirico.dat" using 1:2 with lines title"SecPeorEmpirico","SecuencialMedioEmpirico.dat" using 1:2 with lines title"SecMedioEmpirico","SecuencialMejorEmpirico.dat" using 1:2 with lines title"SecMejorEmpirico"
+set terminal pdf
+set output "SecuencialPeorSecuencialMedioSecuencialMejorEmpirico.pdf"
+replot
+pause -1 "Pulsa Enter para continuar..."

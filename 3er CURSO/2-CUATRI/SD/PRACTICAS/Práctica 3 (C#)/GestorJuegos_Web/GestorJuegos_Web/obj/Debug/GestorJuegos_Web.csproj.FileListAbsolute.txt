@@ -1,0 +1,7 @@
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\bin\Debug\GestorJuegos_Web.dll.config
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\bin\Debug\GestorJuegos_Web.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\bin\Debug\GestorJuegos_Web.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\obj\Debug\GestorJuegos_Web.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\obj\Debug\GestorJuegos_Web.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\obj\Debug\GestorJuegos_Web.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\GestorJuegos_Web\obj\Debug\GestorJuegos_Web.pdb

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo JS - Eventos</title>
+<meta charset="UTF-8" />
+</head>
+
+<body onload="entrar();">
+
+<h1>Ejemplos de onLoad y onClick</h1>
+
+<p id="par" onclick='tratarClick("link")'>Párrafo</p>
+
+<table id="tab" border="1" onclick='tratarClick("tab")'>
+<tr><td>Celda1</td><td>Celda2</td></tr></table>
+
+<form id="form" name="Formulario" method="" action="">
+<input type="checkbox" id="fcb" onclick='tratarClick("fcb")' /> CheckBox<br />
+<input id="fbt" type="button" value="Enviar" onclick='tratarClick("fbt")' />
+</form>
+
+<script type="text/javascript">
+
+function entrar(){
+	alert("¡¡¡Bienvenido a mi Web!!!");
+}
+
+function tratarClick(id){
+ switch(id) {
+   case "link" : alert("Click en Enlace");break;
+   case "tab" : alert("Click en Tabla");break;
+   case "fbt" : alert("Click en boton de formulario");break;
+   case "fcb" : alert("Click en checkbox de formulario");break;
+  }	
+}
+
+</script>
+</body>
+</html>
+

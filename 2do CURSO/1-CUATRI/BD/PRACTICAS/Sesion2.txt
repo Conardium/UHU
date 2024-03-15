@@ -1,0 +1,71 @@
+
+--MF 5
+SELECT T.tarifa, T.coste, C.nombre
+FROM MF.TARIFA T INNER JOIN MF.COMPAÑIA C ON T.COMPAÑIA = C.cif
+WHERE T.DESCRIPCION LIKE '% compañía';
+
+--MF 6
+SELECT Tf.numero, C.nombre
+FROM (MF.TELEFONO Tf INNER JOIN MF.TARIFA T USING(tarifa, compañia))
+      INNER JOIN MF.CLIENTE C ON Tf.cliente = c.dni
+WHERE Tf.tipo = 'C' AND T.coste < 0.20;
+
+--MF 7
+SELECT TARIFA, C.nombre, Tf.numero, Tf.puntos
+FROM (MF.TELEFONO Tf INNER JOIN MF.TARIFA T USING(tarifa, compañia))
+      INNER JOIN MF.COMPAÑIA C ON COMPAÑIA = C.cif
+WHERE EXTRACT(year FROM f_contrato)=2006 AND puntos > 200;
+
+--MF 8
+SELECT TfO.numero origen, TfO.tipo, TfD.numero destino, TfD.tipo 
+FROM (MF.LLAMADA LL INNER JOIN MF.TELEFONO TfO ON TfO.numero=LL.tf_origen)
+      INNER JOIN MF.TELEFONO TfD ON TfD.numero=LL.tf_destino
+WHERE EXTRACT(hour FROM LL.fecha_hora)>= 8 AND EXTRACT(hour FROM LL.fecha_hora)<10;
+
+--MF 9
+SELECT CO.nombre "Cliente origen", LL.tf_origen, CD.nombre "Cliente destino",
+      LL.tf_destino, LL.fecha_hora, LL.duracion
+FROM (((MF.CLIENTE CO INNER JOIN MF.TELEFONO TFO ON CO.DNI=TfO.cliente)
+        INNER JOIN MF.LLAMADA LL ON TfO.numero=LL.tf_origen)
+        INNER JOIN MF.TELEFONO TfD ON TfD.numero=LL.tf_destino)
+        INNER JOIN MF.CLIENTE CD ON CD.dni=TfD.cliente
+WHERE TfO.compañia <> TfD.compañia AND LL.duracion > 900; --15min en segundos
+
+--------------- CONSULTAS ANIDADAS O SUBCONSULTAS -----------------------
+--EJEMPLO 14
+SELECT nombre
+FROM EI.ALUMNO
+WHERE lugar = (SELECT lugar
+               FROM EI.ALUMNO
+               WHERE nombre='Samuel Toscano Villegas')
+      AND nH= (SELECT nH
+               FROM EI.ALUMNO
+               WHERE nombre = 'Beatriz Rico Vázquez');
+
+--EJEMPLO 15
+SELECT nombre
+FROM EI.ALUMNO
+WHERE nAl IN(SELECT M.alum
+             FROM EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING(idAsig)
+             WHERE A.nombre = 'Bases de Datos II')
+AND nAl NOT IN (SELECT M.alum
+                FROM EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING(idAsig)
+                WHERE A.nombre = 'Bases de Datos I');
+
+--EJEMPLO 16
+SELECT nombre
+FROM EI.PROFESOR
+WHERE despacho <> 'FC-7366' AND
+      ant <ANY(SELECT ant
+               FROM EI.PROFESOR
+               WHERE despacho = 'FC-7366');
+               
+--EJEMPLO 17
+SELECT AL.nombre
+FROM (EI.MATRICULA M INNER JOIN EI.ASIGNATURA A USING(idAsig))
+        INNER JOIN EI.ALUMNO AL ON AL.nAL=alum
+WHERE A.nombre = 'Bases de Datos I' AND año=2002
+      AND sep >ALL(SELECT feb_jun
+                   FROM EI.MATRICULA M INNER JOIN EI.ASIGNATURA A USING(idAsig)
+                   WHERE nombre = 'Bases de Datos I' AND año=2002 AND feb_jun IS NOT NULL);
+

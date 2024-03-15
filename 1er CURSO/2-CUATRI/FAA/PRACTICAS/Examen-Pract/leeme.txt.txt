@@ -1,0 +1,9 @@
+###################### MODIFICACIONES ############################
+
+
+·PRACTICA 3: 
+-Se ha mejorado la implementacion al generar la grafica, ahora no pide
+nada de antemano.
+
+-Y ahora muestra correctamente la posicion del valor encontrado en el vector en los
+ algoritmos de búsqueda, el error estaba en (pos+1).

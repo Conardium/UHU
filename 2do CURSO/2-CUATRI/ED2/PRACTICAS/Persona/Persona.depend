@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1647948626 source:c:\users\ismae\onedrive\escritorio\ed2\persona\persona.cpp
+	"Persona.h"
+
+1647947902 c:\users\ismae\onedrive\escritorio\ed2\persona\persona.h
+	<windows.h>
+	<string>
+

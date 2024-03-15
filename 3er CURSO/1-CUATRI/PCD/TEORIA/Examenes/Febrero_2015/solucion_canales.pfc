@@ -1,0 +1,92 @@
+
+program Febrero15;
+
+const
+	npA=5;
+	npB=5;
+	NORTE=0;
+	SUR=1;
+	SINSENTIDO=-1;
+
+var
+	entraNorte: array[1..npA] of channel of synchronous;
+	entraSur: array[1..npB] of channel of synchronous;
+	saleNorte: array[1..npA] of channel of synchronous;
+	saleSur: array[1..npB] of channel of synchronous;
+
+process Controlador;
+var
+	 c1, c2, c3, c4, c5:integer;
+	dentro, sentido:integer;
+
+begin
+	dentro:=0;
+	sentido:=SINSENTIDO;
+
+	repeat
+		pri select			
+			
+			for c1:=1 to npA replicate
+				when (dentro<2) and (sentido<>SUR) =>
+				entraNorte[c1] ? any;
+				dentro:=dentro+1;
+				sentido:=NORTE;	
+		or		
+			for c2:=1 to npB replicate
+				when (dentro<2) and (sentido<>NORTE) =>
+				entraSur[c2] ? any;
+				dentro:=dentro+1;
+				sentido:=SUR;	
+		or
+			for c3:=1 to npA replicate
+				saleNorte[c3] ? any;
+				dentro:=dentro-1;
+				if dentro = 0 then sentido:=SINSENTIDO;
+		or				
+			for c4:=1 to npB replicate
+				salesUR[c4] ? any;
+				dentro:=dentro-1;
+				if dentro = 0 then sentido:=SINSENTIDO;
+		or
+			terminate
+		end				
+	forever
+end;
+
+
+process type Tnorte(id:integer);
+begin
+	repeat
+		entraNorte[id] ! any;
+		writeln('Vehiculo ',id,' cruzando desde el norte'); 
+		sleep(2);
+		saleNorte[id] ! any;
+	forever
+end;
+
+process type Tsur(id:integer);
+var
+ cual: integer;
+begin
+	repeat
+		entraSur[id] ! any;
+		writeln('Vehiculo ',id,' cruzando desde el sur'); 
+		sleep(2);
+		saleSur[id] ! any;
+	forever
+end;
+
+
+var
+   i,j: integer;
+   Pnorte: array[1..npA] of Tnorte;
+   Psur: array[1..npB] of Tsur;
+
+begin
+  cobegin
+	Controlador;
+    for i := 1 to npA do Pnorte[i](i);
+    for j := 1 to npB do Psur[j](j);
+  coend
+end.
+

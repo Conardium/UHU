@@ -1,0 +1,19 @@
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\bin\Debug\netcoreapp3.1\Practica 3.exe
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\bin\Debug\netcoreapp3.1\Practica 3.deps.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\bin\Debug\netcoreapp3.1\Practica 3.runtimeconfig.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\bin\Debug\netcoreapp3.1\Practica 3.runtimeconfig.dev.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\bin\Debug\netcoreapp3.1\Practica 3.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\bin\Debug\netcoreapp3.1\Practica 3.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.csprojAssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3_MarkupCompile.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3_MarkupCompile.lref
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.g.resources
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.AssemblyInfoInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.AssemblyInfo.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 3\obj\Debug\netcoreapp3.1\Practica 3.genruntimeconfig.cache

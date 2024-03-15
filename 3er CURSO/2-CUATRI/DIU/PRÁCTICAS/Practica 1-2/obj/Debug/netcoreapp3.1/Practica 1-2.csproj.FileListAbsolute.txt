@@ -1,0 +1,19 @@
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\bin\Debug\netcoreapp3.1\Practica 1-2.exe
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\bin\Debug\netcoreapp3.1\Practica 1-2.deps.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\bin\Debug\netcoreapp3.1\Practica 1-2.runtimeconfig.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\bin\Debug\netcoreapp3.1\Practica 1-2.runtimeconfig.dev.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\bin\Debug\netcoreapp3.1\Practica 1-2.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\bin\Debug\netcoreapp3.1\Practica 1-2.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.csprojAssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2_MarkupCompile.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2_MarkupCompile.lref
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.g.resources
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.AssemblyInfoInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.AssemblyInfo.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\Practica 1-2\obj\Debug\netcoreapp3.1\Practica 1-2.genruntimeconfig.cache

@@ -1,0 +1,11 @@
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\bin\Debug\Servidor_SW.exe.config
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\bin\Debug\Servidor_SW.exe
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\bin\Debug\Servidor_SW.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\obj\Debug\Servidor_SW.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\obj\Debug\Servidor_SW.exe
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\obj\Debug\Servidor_SW.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\obj\Debug\Servidor_SW.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\bin\Debug\GestorJuegos_Web.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\bin\Debug\GestorJuegos_Web.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\bin\Debug\GestorJuegos_Web.dll.config
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_Web\Servidor_SW\obj\Debug\Servidor_SW.csproj.CopyComplete

@@ -1,0 +1,12 @@
+set title "SecuencialSecuencialPeorTeorico"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo (OE)"
+N(x) = a*x + b
+fit N(x) "SecuencialPeorTeorico.dat" using 1:2 via a,b
+plot "SecuencialPeorTeorico.dat" using 1:2 with lines title "SecuencialPeorTeorico", N(x)
+set terminal pdf
+set output "SecuencialPeorTeorico.pdf"
+replot
+pause 5 "Pulsa Enter para continuar..."

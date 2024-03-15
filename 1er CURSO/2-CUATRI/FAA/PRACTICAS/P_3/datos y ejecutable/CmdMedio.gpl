@@ -1,0 +1,15 @@
+#ESTE ES UN SCRIPT DE GNUPLOT PARA EL ESTUDIO DE 1 METODO
+set title " SecuencialIt"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo(ms)"
+
+Complejidad(x) = a+b*(log(x)/log(2))
+fit Complejidad(x) "SecuencialIt.dat" using 1:2 via a,b
+plot "SecuencialIt.dat" using 1:2 title "SecuencialIt", Complejidad(x) 
+
+set terminal pdf
+set output "SecuencialIt.pdf"
+replot
+#pause -1 "Pulsa Enter para continuar..."

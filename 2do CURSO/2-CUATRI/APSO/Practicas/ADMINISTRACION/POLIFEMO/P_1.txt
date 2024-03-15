@@ -1,0 +1,85 @@
+####### RUTAS (con el comando cd) ########
+
+Hay dos formas de dirigirse a los sitios: 
+
+
+·Rutas absolutas: Siempre empieza con "/", no depende del lugar en el que te encuentres (se empieza siempre desde el directorio raiz)
+  
+  EJEMPLO: cd /home
+
+
+·Rutas relativas: Nunca empieza por "/", va a depender del lugar en el que te encuentres (se empieza desde donde te encuentres)
+
+*Este tipo de ruta usa además el "."(para dirigirte al directorio actual) y ".."(para dirigirte al directorio padre)
+  cd . -> me dirijo al directorio en el que estoy
+  cd .. -> me dirijo al directorio padre con respecto en el que estoy (COMO IR HACIA ATRAS)
+
+-DIFERENCIA CON UN EJEMPLO (Ir a mi carpeta, estando en home)-
+  Ruta absoluta: cd /home/ismael.dapalma060
+  Ruta relativa: cd ismael.dapalma060
+
+
+!!OJO CON EQUIVOCARSE EN LAS RUTAS¡¡
+
+
+¡¡IMPORTANTE!!
+RUTA PARA HACER LAS PRACTICAS: /home/so/velez/MI 
+
+
+
+-- PRACTICA 1 --
+
+1) (estando en la carpeta personal) -> mkdir prac1
+
+2) cp /home/so/velez/MI/p1.txt /home/ismael.dapalma060/prac1
+
+3) cp prac1
+   joe /home/ismael.dapalma060/prac1/p1.txt
+   
+4) mkdir /home/ismael.dapalma060/prac1/prac11
+   cd prac1/prac11
+
+5) mkdir ../prac12 ../prac13 ../prac14 ../prac15
+
+6) cd /
+   more home/ismael.dapalma060/prac1/p1.txt
+   cd  home/ismael.dapalma060/prac1/prac13
+   more ../p1.txt
+
+7) joe /home/ismael.dapalma060/prac1/prac13/prueba13
+   "Esto es un fichero de prueba perteneciente al usuario (Ismael Da Palma
+   Fernandez)"
+   joe ../prac12/prueba12
+   "Esto es un fichero de prueba perteneciente al usuario (Ismael Da Palma
+   Fernandez)"
+
+8) joe ../prac11/ejemplo01
+   "Esto es un fichero ejemplo creado con el joe en la practica 1"
+
+9) cp ../prac12/prueba12 prueba13 ../prac11
+
+10) cp ../prac12/prueba12 ../prac14/prueba14 --> como prueba14 no existe, se crea en el momento y se copia el contenido de prueba12
+
+11) mkdir ../prac12/temp1 ../prac12/temp2
+
+12) cd ..
+    mv prac13/prueba13 prac12/temp1
+    cp prac12/prueba12 prac14/prueba14 prac12/temp1
+
+13) cp prac12/temp1/p*1[1-5] prac12/temp2
+    
+14) rm /home/ismael.dapalma060/prac1/prac12/temp1/*[0-9]?
+
+15) rmdir /home/ismael.dapalma060/prac1/prac12/temp1
+    rm -r prac12/temp2 ---> (-r) = borra el contenido del directorio junto con el directorio  
+   
+16) cd
+    pwd
+
+17) <Guardo con Ctrl + K y luego la D, sobrescribo el nombre de p1 con solp1>
+
+18) Ejecutamos ==> chmod 700 prac1/solp1.txt
+    
+
+
+

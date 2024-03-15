@@ -1,0 +1,74 @@
+--MF 22
+select co.nombre
+from (MF.TELEFONO tf INNER JOIN  MF.LLAMADA ll ON tf.numero=ll.tf_origen)
+        INNER JOIN MF.COMPAÑIA co ON co.cif=tf.compañia
+where to_char(ll.fecha_hora, 'dd/mm/yy')='16/10/06'
+group by co.nombre
+having count(*)>=all (select count(*)
+                      from MF.LLAMADA ll2 INNER JOIN MF.TELEFONO tf2 ON tf2.numero=ll2.tf_origen
+                      where to_char(ll2.fecha_hora, 'dd/mm/yy')='16/10/06'
+                      group by tf2.compañia);
+
+
+--MF 23
+select tf.numero, c.nombre
+from MF.CLIENTE c INNER JOIN MF.TELEFONO tf ON tf.cliente=c.dni
+where not exists (select *
+                  from MF.LLAMADA ll
+                  where tf_origen='654345345' and
+                    to_char(fecha_hora, 'mm/yy')='10/06' and
+                    not exists (select *
+                                from MF.LLAMADA ll2
+                                where tf.numero=ll2.tf_origen and ll2.tf_destino=ll.tf_destino
+                                    and ll2.tf_origen<>'654345345'));
+
+
+--MF 24
+SELECT C.nombre AS CLIENTE, CO.nombre AS COMPAÑIA, SUM(LL.duracion/60*T.coste) AS Coste_total
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO TF ON TF.cliente=C.dni
+        INNER JOIN MF.LLAMADA LL ON TF.numero=LL.tf_origen
+        INNER JOIN MF.COMPAÑIA CO ON CO.cif=TF.compañia
+        INNER JOIN MF.TARIFA T USING(tarifa)
+GROUP BY C.nombre, CO.nombre
+ORDER BY C.nombre DESC, CO.nombre ASC;
+
+
+--MF 25
+SELECT C.nombre, SUM(LL.duracion) AS duracion
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO TF ON TF.cliente=C.dni
+        INNER JOIN MF.LLAMADA LL ON LL.tf_origen=TF.numero
+WHERE C.provincia='La Coruña'
+    AND LL.tf_destino IN(SELECT TF2.numero
+                         FROM MF.TELEFONO TF2 INNER JOIN MF.CLIENTE C2 ON C2.dni=TF2.cliente
+                         WHERE C2.provincia='Jaén')
+GROUP BY C.nombre;
+
+
+--MF 26
+select c.nombre, count(*) as total
+from (MF.CLIENTE c INNER JOIN MF.TELEFONO tf ON tf.cliente=c.dni)
+        INNER JOIN MF.LLAMADA ll ON ll.tf_origen=tf.numero
+group by c.nombre
+having count(*)>5;
+
+
+
+--MF 27
+SELECT C.nombre AS cliente, AVG(T.coste) AS Media
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO TF ON TF.cliente=C.dni
+        INNER JOIN MF.TARIFA T USING(tarifa, compañia) 
+GROUP BY C.nombre
+HAVING AVG(T.coste)>=ALL(SELECT AVG(coste)
+                         FROM MF.TARIFA);
+
+
+--MF 28
+SELECT C.nombre AS cliente
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO TF ON TF.cliente=C.dni
+        INNER JOIN MF.LLAMADA LL ON LL.tf_origen=TF.numero
+        INNER JOIN MF.TARIFA T USING(tarifa, compañia)
+WHERE LL.tf_destino IN(SELECT TF2.numero
+                       FROM MF.TELEFONO TF2 INNER JOIN MF.COMPAÑIA CO ON CO.cif=TF2.compañia
+                       WHERE CO.nombre='Kietostar')
+GROUP BY C.nombre
+HAVING SUM(LL.duracion/60*T.coste)<100;

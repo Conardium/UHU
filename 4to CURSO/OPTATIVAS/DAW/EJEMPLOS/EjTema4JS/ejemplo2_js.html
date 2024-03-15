@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 2 JS</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<script type="text/javascript">
+  document.write("<h1>Ejemplo 3</h1>");
+</script>
+
+<input type="text" name="dato" id="dato" />
+<input type="button" value="Procesar" id="bProcesar"/>
+
+<p>Valor Insertado: <spam id="valor"></spam></p>
+
+
+<script type="text/javascript">
+
+	let boton, elto;
+
+	boton   = document.getElementById('bProcesar');
+   
+//Alternativa 1
+	function procesaDato() {
+  		var valor;
+  		valor=document.getElementById("dato").value;
+  		if ( valor=="" ) { 
+			alert("Debes insertar algún valor");
+			return false;
+  		}
+		var elto=document.getElementById("valor");
+		elto.innerText=valor;
+	} 
+
+   boton.addEventListener("click", procesaDato, false);
+
+
+// Alternativa 2
+/*
+
+	boton.onclick = function() {
+		let valor;
+		valor = document.getElementsByName("dato")[0].value;
+
+		if ( valor == "" ) { 
+			alert("Debes insertar algún valor en el campo");
+			return false;
+		}
+		var elto=document.getElementById("valor");
+		elto.innerText=valor;
+   }
+
+*/ 
+
+
+ 
+</script>
+
+</body>
+</html>

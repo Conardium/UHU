@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO INFORMATICA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header id="cabezera">
+            <h1> Tienda Online de Productos</h1>
+            <img src="img/imagentitulo.png" alt="imagen titulo"/>
+        </header>
+
+        <nav id="navegacion">
+            <p>
+                <a href="practica2template.html" title="Vuelve al inicio">Inicio</a> |
+                <a href="categorias.html" title="Redirige a las categorias">Categorias</a> |
+                <a href="articulos.html" title="Redirige a los articulos">Articulos</a> |
+                <a href="formulario.html" title="Redirige al formulario">Formulario</a>
+            </p>
+        </nav>
+
+        <section id="seccion">
+            <h2>Contenido de la página</h2>
+            <h3>Formulario</h3>
+            
+            <form>
+                <label for="correo">Correo Electrónico: </label>
+                <input type="email" id="correo" name="correo" required/> <br/> <br/>
+                
+                <label for="clave">Contraseña: </label>
+                <input type="password" id="clave" name="clave" required/> <br/> <br/>
+                <label for="Repclave">Repetir contraseña: </label>
+                <input type="password" id="Repclave" name="Repclave" required/> <br/> <br/>
+                
+                <label for="name">Nombre: </label>
+                <input type="text" id="name" name="name" required/> <br/> <br/>
+                
+                <label for="direccion">Dirección: </label>
+                <input type="text" id="direccion" name="direccion"/> <br/> <br/>
+                
+                <label for="postal">Código Postal: </label>
+                <input type="text" id="postal" name="postal" pattern="[0-9]{2}.[0-9]{3}" placeholder="Formato: 99.999"/> <br/> <br/>
+                
+                <label for="provincia">Provincia </label>
+                <select name="provincia" id="provincia">
+                    <option value="">Elige Provincia</option>
+                    <option value="Álava/Araba">Álava/Araba</option>
+                    <option value="Albacete">Albacete</option>
+                    <option value="Alicante">Alicante</option>
+                    <option value="Almería">Almería</option>
+                    <option value="Asturias">Asturias</option>
+                    <option value="Ávila">Ávila</option>
+                    <option value="Badajoz">Badajoz</option>
+                    <option value="Baleares">Baleares</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Burgos">Burgos</option>
+                    <option value="Cáceres">Cáceres</option>
+                    <option value="Cádiz">Cádiz</option>
+                    <option value="Cantabria">Cantabria</option>
+                    <option value="Castellón">Castellón</option>
+                    <option value="Ceuta">Ceuta</option>
+                    <option value="Ciudad Real">Ciudad Real</option>
+                    <option value="Córdoba">Córdoba</option>
+                    <option value="Cuenca">Cuenca</option>
+                    <option value="Gerona/Girona">Gerona/Girona</option>
+                    <option value="Granada">Granada</option>
+                    <option value="Guadalajara">Guadalajara</option>
+                    <option value="Guipúzcoa/Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
+                    <option value="Huelva">Huelva</option>
+                    <option value="Huesca">Huesca</option>
+                    <option value="Jaén">Jaén</option>
+                    <option value="La Coruña/A Coruña">La Coruña/A Coruña</option>
+                    <option value="La Rioja">La Rioja</option>
+                    <option value="Las Palmas">Las Palmas</option>
+                    <option value="León">León</option>
+                    <option value="Lérida/Lleida">Lérida/Lleida</option>
+                    <option value="Lugo">Lugo</option>
+                    <option value="Madrid">Madrid</option>
+                    <option value="Málaga">Málaga</option>
+                    <option value="Melilla">Melilla</option>
+                    <option value="Murcia">Murcia</option>
+                    <option value="Navarra">Navarra</option>
+                    <option value="Orense/Ourense">Orense/Ourense</option>
+                    <option value="Palencia">Palencia</option>
+                    <option value="Pontevedra">Pontevedra</option>
+                    <option value="Salamanca">Salamanca</option>
+                    <option value="Segovia">Segovia</option>
+                    <option value="Sevilla">Sevilla</option>
+                    <option value="Soria">Soria</option>
+                    <option value="Tarragona">Tarragona</option>
+                    <option value="Tenerife">Tenerife</option>
+                    <option value="Teruel">Teruel</option>
+                    <option value="Toledo">Toledo</option>
+                    <option value="Valencia">Valencia</option>
+                    <option value="Valladolid">Valladolid</option>
+                    <option value="Vizcaya/Bizkaia">Vizcaya/Bizkaia</option>
+                    <option value="Zamora">Zamora</option>
+                    <option value="Zaragoza">Zaragoza</option>
+                </select> <br/><br/>
+                
+                <label for="facebook">Facebook: </label>
+                <input type="url" id="facebook" name="facebook" title="Debe poner la URL de su Facebook"/> <br/> <br/>
+                
+                <label for="telf">Teléfono: </label>
+                <input type="text" id="telf" name="telf" pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}" placeholder="Formato: 999.999.999"/> <br/> <br/>
+                
+                <p>¿Qué categoría/s prefieres? <br/>
+                <input type="checkbox" name="categorias" id="electronica" value="Electronica"/>
+                <label for="electronica">Electronica</label> <br/>
+                <input type="checkbox" name="categorias" id="lectura" value="Lectura"/>
+                <label for="lectura">Lectura</label> <br/>
+                <input type="checkbox" name="categorias" id="juegos" value="Juegos"/>
+                <label for="juegos">Juegos</label> <br/>
+                <input type="checkbox" name="categorias" id="otros" value="Otros"/>
+                <label for="otros">Otros</label>
+                </p>
+                
+                <p>¿Cómo conociste este sitio web? <br/>
+                    <input type="radio" name="acceso" id="buscador" value="Buscador" checked/>
+                    <label for="buscador">Buscador</label> <br/>
+                    <input type="radio" name="acceso" id="amigo" value="Amigo"/>
+                    <label for="amigo">Amigo</label> <br/>
+                    <input type="radio" name="acceso" id="radio" value="Radio"/>
+                    <label for="radio">Radio</label> <br/>
+                    <input type="radio" name="acceso" id="tv" value="Televisión"/>
+                    <label for="tv">Televisión</label> <br/>
+                    <input type="radio" name="acceso" id="prensa" value="Prensa"/>
+                    <label for="prensa">Prensa</label> <br/>
+                </p> <br/>
+                
+                <input type="submit" value="Enviar"/>
+            </form>
+        </section>
+
+        <footer id="pieSeccion">
+            <p> &copy; 2022 Ismael Da Palma Fernández</p>
+        </footer>
+    </body>
+</html>

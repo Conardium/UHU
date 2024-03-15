@@ -1,0 +1,9 @@
+﻿<Application x:Class="PrácticaFinal_Ismael_Da_Palma_Fernández.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:PrácticaFinal_Ismael_Da_Palma_Fernández"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

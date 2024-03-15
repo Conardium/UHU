@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+#div1 {
+  width: 350px;
+  height: 70px;
+  padding: 0px;
+  border: 1px solid #aaaaaa;
+  background-color: blue;
+}
+#div2 {
+  width: 350px;
+  height: 70px;
+  padding: 0px;
+  border: 1px solid #aaaaaa;
+  background-color: yellow;
+}
+</style>
+
+<script>
+	// Requiere que el elemento receptor capture el evento ondragover para permitir el Drop
+	
+	// Función que permite el Drop en el objeto receptor
+	function allowDrop(ev) {
+	  ev.preventDefault();
+	}
+
+	// Requiere que el elemento desplazable capture el evento ondragstart para iniciar el desplazamiento
+	
+	// Función que inicia el desplazamiento del objeto
+	function drag(ev) {
+	  ev.dataTransfer.setData("text", ev.target.id);
+	}
+
+	// Requiere que el elemento receptor capture el evento ondrop para finalizar el proceso
+	
+	// Función que finaliza el proceso Drag and Drop
+	function drop(ev) {
+	  ev.preventDefault();
+	  let data = ev.dataTransfer.getData("text");
+	  ev.target.appendChild(document.getElementById(data));
+	}
+</script>
+</head>
+
+<body>
+
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div id="div2" draggable="true" ondragstart="drag(event)">
+
+</body>
+
+
+</html>

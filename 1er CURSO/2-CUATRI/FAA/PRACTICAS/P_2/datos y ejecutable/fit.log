@@ -1,0 +1,1274 @@
+
+
+*******************************************************************************
+Fri May 01 14:59:44 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.000482626
+rel. change during last iteration : -5.61616e-016
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00830341
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.89466e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.58836e-006     +/- 3.614e-008   (2.275%)
+b               = 0.000122239      +/- 4.079e-005   (33.37%)
+c               = -0.00329908      +/- 0.009766     (296%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 15:00:48 2020
+
+
+FIT:    data read from "Seleccion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.00142778
+rel. change during last iteration : -6.53047e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0142818
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000203968
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.06149e-006     +/- 6.215e-008   (5.855%)
+b               = 0.000144124      +/- 7.015e-005   (48.68%)
+c               = -0.0149281       +/- 0.0168       (112.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 15:01:07 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.00121115
+rel. change during last iteration : -7.55413e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0131538
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000173022
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.58267e-006     +/- 5.724e-008   (3.617%)
+b               = 0.00014339       +/- 6.461e-005   (45.06%)
+c               = -0.0054016       +/- 0.01547      (286.4%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 15:01:46 2020
+
+
+FIT:    data read from "Insercion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 9.99556e-006
+rel. change during last iteration : -1.38128e-013
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00119496
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.42794e-006
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 5.58346e-007     +/- 5.2e-009     (0.9314%)
+b               = 1.93267e-005     +/- 5.87e-006    (30.37%)
+c               = -0.00059965      +/- 0.001405     (234.4%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 15:03:09 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.000408149
+rel. change during last iteration : -9.29736e-016
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0076359
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.8307e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.56393e-006     +/- 3.323e-008   (2.125%)
+b               = 0.000130874      +/- 3.751e-005   (28.66%)
+c               = -0.00220518      +/- 0.008981     (407.3%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 15:04:17 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.00165141
+rel. change during last iteration : -5.6276e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0153595
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000235915
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.54506e-006     +/- 6.684e-008   (4.326%)
+b               = 0.000181899      +/- 7.545e-005   (41.48%)
+c               = -0.0132673       +/- 0.01807      (136.2%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 15:05:39 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 7.44626e-005
+rel. change during last iteration : -3.51269e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00326152
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.06375e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.57751e-006     +/- 1.419e-008   (0.8998%)
+b               = 0.000122724      +/- 1.602e-005   (13.05%)
+c               = 0.000234767      +/- 0.003836     (1634%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:16:07 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.00028598
+rel. change during last iteration : -2.08515e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00639173
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.08542e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.58442e-006     +/- 2.782e-008   (1.756%)
+b               = 0.000153184      +/- 3.14e-005    (20.5%)
+c               = -0.00622438      +/- 0.007518     (120.8%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:16:30 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.000432802
+rel. change during last iteration : -1.36527e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00786313
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.18288e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.6056e-006      +/- 3.422e-008   (2.131%)
+b               = 0.000141349      +/- 3.862e-005   (27.33%)
+c               = -0.00539817      +/- 0.009248     (171.3%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:16:41 2020
+
+
+FIT:    data read from "Insercion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 2.88952e-005
+rel. change during last iteration : -2.81414e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00203172
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.12788e-006
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 5.93622e-007     +/- 8.842e-009   (1.489%)
+b               = -5.8158e-006     +/- 9.98e-006    (171.6%)
+c               = 0.00289838       +/- 0.00239      (82.45%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:16:50 2020
+
+
+FIT:    data read from "Seleccion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 1.65809e-005
+rel. change during last iteration : -7.2132e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00153906
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.36869e-006
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.16378e-006     +/- 6.698e-009   (0.5755%)
+b               = 3.20909e-005     +/- 7.56e-006    (23.56%)
+c               = -0.000282617     +/- 0.00181      (640.5%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:19:39 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.00196162
+rel. change during last iteration : -4.74417e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0167401
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000280231
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.57963e-006     +/- 7.285e-008   (4.612%)
+b               = 0.000186892      +/- 8.223e-005   (44%)
+c               = -0.0139607       +/- 0.01969      (141%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:20:04 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.000186491
+rel. change during last iteration : -1.87492e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00516154
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.66415e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.72857e-006     +/- 2.246e-008   (1.299%)
+b               = 4.75683e-005     +/- 2.535e-005   (53.3%)
+c               = 0.00680353       +/- 0.006071     (89.23%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:20:25 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.000190751
+rel. change during last iteration : -2.37301e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00522017
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.72501e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.63231e-006     +/- 2.272e-008   (1.392%)
+b               = 0.000163208      +/- 2.564e-005   (15.71%)
+c               = -0.0107559       +/- 0.00614      (57.08%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:20:43 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.0310247
+rel. change during last iteration : -3.17929e-007
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.066574
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00443209
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.54442e-006     +/- 2.897e-007   (18.76%)
+b               = 0.000360318      +/- 0.000327     (90.76%)
+c               = -0.043772        +/- 0.0783       (178.9%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Fri May 01 19:21:00 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.00119973
+rel. change during last iteration : -7.35307e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0130916
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.00017139
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.71013e-006     +/- 5.697e-008   (3.332%)
+b               = 1.62552e-005     +/- 6.431e-005   (395.6%)
+c               = 0.0126884        +/- 0.0154       (121.4%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 12:56:35 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 0.000444628
+rel. change during last iteration : -9.38803e-015
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00796983
+variance of residuals (reduced chisquare) = WSSR/ndf   : 6.35182e-005
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.56263e-006     +/- 3.468e-008   (2.22%)
+b               = 0.00014601       +/- 3.915e-005   (26.81%)
+c               = -0.0053184       +/- 0.009374     (176.3%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:01:18 2020
+
+
+FIT:    data read from "Insercion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 6.10275e-006
+rel. change during last iteration : -1.11036e-013
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000933714
+variance of residuals (reduced chisquare) = WSSR/ndf   : 8.71821e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 5.57667e-007     +/- 4.063e-009   (0.7287%)
+b               = 1.89352e-005     +/- 4.587e-006   (24.22%)
+c               = -0.0005405       +/- 0.001098     (203.2%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:05:10 2020
+
+
+FIT:    data read from "Seleccion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 3.50509e-005
+rel. change during last iteration : -6.53443e-014
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.00223769
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.00728e-006
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.1573e-006      +/- 9.738e-009   (0.8415%)
+b               = 2.04481e-005     +/- 1.099e-005   (53.75%)
+c               = 0.00207382       +/- 0.002632     (126.9%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:16:25 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.59495e+008      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 2906.13
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 8 iterations the fit converged.
+final sum of squares of residuals : 1.32789e-007
+rel. change during last iteration : -8.7473e-012
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000137731
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.89699e-008
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.23159e-006     +/- 5.994e-008   (2.686%)
+b               = 2.05056e-005     +/- 6.766e-006   (32.99%)
+c               = -1.86333e-005    +/- 0.000162     (869.4%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:26:04 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.58208e+008      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 2906.13
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.473198
+rel. change during last iteration : -8.42383e-009
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.26
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0675998
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.00247765       +/- 0.0001132    (4.567%)
+b               = -0.000682879     +/- 0.01277      (1870%)
+c               = 0.3023           +/- 0.3058       (101.2%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:27:53 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.58225e+008      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 2906.13
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.297065
+rel. change during last iteration : -2.97208e-008
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.206004
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0424378
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.00224417       +/- 8.965e-005   (3.995%)
+b               = 0.0201768        +/- 0.01012      (50.15%)
+c               = -0.0191667       +/- 0.2423       (1264%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:31:28 2020
+
+
+FIT:    data read from "Insercion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.59108e+008      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 2906.13
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.0442162
+rel. change during last iteration : -1.06438e-007
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.079477
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0063166
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.000641136      +/- 3.459e-005   (5.395%)
+b               = 0.00666348       +/- 0.003904     (58.59%)
+c               = 0.245433         +/- 0.09348      (38.09%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:34:55 2020
+
+
+FIT:    data read from "Seleccion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.58721e+008      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 2906.13
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 0.149737
+rel. change during last iteration : -5.95198e-008
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.146257
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.021391
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.00114807       +/- 6.365e-005   (5.544%)
+b               = 0.0309258        +/- 0.007184     (23.23%)
+c               = -0.0233833       +/- 0.172        (735.7%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:48:00 2020
+
+
+FIT:    data read from "Burbuja.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53935e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 9 iterations the fit converged.
+final sum of squares of residuals : 0.00146343
+rel. change during last iteration : -6.17062e-006
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.014459
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000209061
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.57127e-006     +/- 6.292e-008   (4.005%)
+b               = 0.000139694      +/- 7.102e-005   (50.84%)
+c               = 0.00112957       +/- 0.01701      (1506%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 
+
+
+*******************************************************************************
+Sat May 02 13:50:31 2020
+
+
+FIT:    data read from "Insercion.dat" using 1:2
+        format = x:z
+        #datapoints = 10
+        residuals are weighted equally (unit weight)
+
+function used for fitting: Cuadrado(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.53936e+012      delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-005
+ lambda	  : 290592
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 10 iterations the fit converged.
+final sum of squares of residuals : 4.0325e-006
+rel. change during last iteration : -2.8441e-013
+
+degrees of freedom    (FIT_NDF)                        : 7
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.000758994
+variance of residuals (reduced chisquare) = WSSR/ndf   : 5.76072e-007
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 5.57925e-007     +/- 3.303e-009   (0.592%)
+b               = 1.77066e-005     +/- 3.728e-006   (21.06%)
+c               = -6.01667e-005    +/- 0.0008927    (1484%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.975  1.000 
+c               0.814 -0.909  1.000 

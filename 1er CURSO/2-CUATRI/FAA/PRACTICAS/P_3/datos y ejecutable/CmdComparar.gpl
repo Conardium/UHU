@@ -1,0 +1,12 @@
+#ESTE ES UN SCRIP DE GNUPLOT PARA LA COMPARACION DE 2 METODOSset title "Comparacion tiempos SecuencialIt y BinarioIt"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo(ms)"
+
+plot "SecuencialIt.dat" using 1:2 with lines title "SecuencialIt", "BinarioIt.dat" using 1:2 with lines title "BinarioIt"
+
+set terminal pdf
+set output "SecuencialItBinarioIt.pdf"
+replot
+#pause -1 "Pulsa Enter para continuar..."

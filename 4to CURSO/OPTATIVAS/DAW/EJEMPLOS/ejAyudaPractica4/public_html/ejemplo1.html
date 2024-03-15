@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo 2 de ayuda para la práctica 4</title>
+        <meta charset="utf-8" />
+        <link href="css/estiloej1.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="contenedor">
+            <header id="cabecera">
+                <h1>El Cajón de Satre</h1>
+                <h2>Artículos de Segunda Mano</h2>
+            </header>
+
+            <nav>
+
+            </nav>
+
+            <article id="principal">
+                <h1>Venta de artículos de Segunda Mano </h1>
+                <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.</p>
+            </article>
+
+            <aside>
+                <form id="f" onsubmit="return validar();" method="post" action="ej.jsp">
+                    <div id="msgForm"></div>
+
+                    <p id="msgName">Nombre:<br /> <input required id="name" type="text" name="name" />
+                        <span  id="spanName">*</span></p>
+                    <p id="msgClave">Contraseña:<br /> <input required id="pass" type="password" name="clave" />
+                        <span  id="spanClave">*</span></p>
+                    <p>Código Postal: <input id="cp" type="text" pattern="[0-9]{2}.[0-9]{3}" title="Formato 99.999" /> <br />
+                        Provincia: 
+                        <select name="provincia" id="prov">
+                            <option value="-1">Elige</option>
+                        </select>
+                    </p>
+                    <input type="submit" value="Enviar" /> 
+                </form>
+
+            </aside>
+
+
+            <footer id="pie">
+                <p>&copy; DAW - UHU 2018</p>
+            </footer>
+        </div>
+
+        <script src="js/func1.js"></script>
+        
+    </body>
+</html>

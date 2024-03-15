@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo JS - Eventos</title>
+<meta charset="UTF-8" />
+</head>
+
+<body>
+
+<h1>Ejemplo de onSubmit</h1>
+
+<form id="form" method="post" action="procesar.jsp" onsubmit="return validar()">
+Nombre: <input type="text" name="nombre" /><br />
+Apellido: <input type="text" name="apellido" /><br />
+Correo : <input type="text" name="email" /><br />
+<input type="submit" value="Enviar" />
+</form>
+
+
+<script type="text/javascript">
+
+function validar(){
+  var f = document.getElementById("form");	
+  if(f.nombre.value=="") {alert("Introduce Nombre"); return false;}
+  if(f.apellido.value=="") {alert("Introduce Apellido"); return false;}
+  if(f.email.value=="") {alert("Introduce Correo"); return false;}
+  if(f.email.value.indexOf("@", 0)==-1) {
+  	alert("Introduce Correo correcto"); return false;
+  }
+  return true;
+}
+
+</script>
+</body>
+</html>
+

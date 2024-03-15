@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo 11 JS. Objeto Date</title>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Ejemplo JS: Date</h1>
+
+<script type="text/javascript">
+
+let diasSemana = ["Domingo", "Lunes", "Martes", "Miércoles",
+                  "Jueves", "Viernes", "Sábado"];
+let meses = new Array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+	     "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+
+let fechaActual = new Date();
+
+let stringFecha = "Hoy es: ";
+
+stringFecha += diasSemana[fechaActual.getDay()] + ", ";
+stringFecha += fechaActual.getDate() + " de ";
+stringFecha += meses[fechaActual.getMonth()] + " de ";
+stringFecha += fechaActual.getFullYear();
+
+document.write(stringFecha);
+
+</script>
+
+</body>
+</html>

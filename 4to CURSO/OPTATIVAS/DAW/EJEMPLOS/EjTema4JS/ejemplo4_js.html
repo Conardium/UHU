@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo 4 JS. Estructuras de Control</title>
+<meta charset="utf-8" />
+
+
+<script>
+
+function entrar() {
+  let r, intentos=0, salir;
+  do {
+  	intentos++;
+	r=prompt("Introduce Palabra mágica ?");
+	if(r==null) continue;
+	if(r=="abracadabra") break;
+	let i = document.getElementById("intentos");
+	i.innerHTML=intentos;
+	if(intentos==3) {
+		salir=confirm("Quieres salir?");
+		if (salir) {
+			break;
+		}
+		intentos=0; i.innerHTML=intentos;
+	}
+
+  } while(true);
+  if (r=="abracadabra") {
+  	document.write("<h1>Has encontrado la palabra mágica</h1>");
+  }
+  else {
+  	document.write("<h1>No encontrate la palabra mágica</h1>");
+  }
+}
+
+</script>
+
+</head>
+<body onload="entrar()">
+
+<h1>Ejemplo JS: Bucles</h1>
+<p>Acierta la palabra mágica</p>
+<p>Intentos: <spam id="intentos">0</spam></p>
+
+</body>
+</html>

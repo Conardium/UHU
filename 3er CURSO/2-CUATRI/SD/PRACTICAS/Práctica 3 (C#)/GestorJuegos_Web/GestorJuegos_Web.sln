@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.33529.622
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestorJuegos_Web", "GestorJuegos_Web\GestorJuegos_Web.csproj", "{2117CB4B-BCA1-4845-ACDC-F468BDD77A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servidor_SW", "Servidor_SW\Servidor_SW.csproj", "{717F4A6C-2482-4A91-A9C1-9A90FDB02B62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2117CB4B-BCA1-4845-ACDC-F468BDD77A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2117CB4B-BCA1-4845-ACDC-F468BDD77A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2117CB4B-BCA1-4845-ACDC-F468BDD77A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2117CB4B-BCA1-4845-ACDC-F468BDD77A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717F4A6C-2482-4A91-A9C1-9A90FDB02B62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717F4A6C-2482-4A91-A9C1-9A90FDB02B62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717F4A6C-2482-4A91-A9C1-9A90FDB02B62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717F4A6C-2482-4A91-A9C1-9A90FDB02B62}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C7D7671-E2CF-4DB9-A884-D1B065F43C3F}
+	EndGlobalSection
+EndGlobal

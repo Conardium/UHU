@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo JS - DOM</title>
+<meta charset="UTF-8" />
+</head>
+
+<body>
+
+<div id="area">
+<p>Primer Párrafo</p>
+</div>
+
+<script type="text/javascript">
+
+let elto = document.createElement("p");
+let texto = document.createTextNode("Segundo Párrafo");
+elto.appendChild(texto);
+
+let area= document.getElementById("area");
+area.appendChild(elto);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo JS - Navigator.geolocation</title>
+<meta charset="UTF-8" />
+</head>
+
+<body>
+
+<p id="msg">Click para conocer tu geolocalización</p>
+<button onclick="getLocation()">Encuéntrame</button>
+
+<div id="mapa"></div>
+
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script>
+let m=document.getElementById("msg");
+function getLocation()
+  {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition,showError);
+  }
+  else{
+  	m.innerHTML="Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  let lat=position.coords.latitude;
+  let lon=position.coords.longitude;
+  let latlon=new google.maps.LatLng(lat, lon)
+  let mapa=document.getElementById('mapa')
+  mapa.style.height='250px';
+  mapa.style.width='500px';
+
+  let myOptions={
+  center:latlon,zoom:14,
+  mapTypeId:google.maps.MapTypeId.ROADMAP,
+  mapTypeControl:false,
+  navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+  };
+  let map=new google.maps.Map(mapa,myOptions);
+  let marker=new google.maps.Marker({position:latlon,map:map,title:"Estás aquí!"});
+  }
+
+function showError(error)
+  {
+  switch(error.code) 
+    {
+    case error.PERMISSION_DENIED:
+      m.innerHTML="El usuario ha denegado la Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      m.innerHTML="Información de localización no disponible."
+      break;
+    case error.TIMEOUT:
+      m.innerHTML="Petición fuera de tiempo."
+      break;
+    case error.UNKNOWN_ERROR:
+      m.innerHTML="Error desconocido."
+      break;
+    }
+  }
+</script>
+</body>
+</html>

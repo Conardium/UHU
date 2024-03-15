@@ -1,0 +1,250 @@
+
+## ESTRUCTURAS DE CONTROL ##
+
+*Para las condiciones se usa el comando "test".
+*La lista de comandos no hace falta ; pero cada comando debe estar en una linea.
+*Para hacer saltos de linea es con el comando "echo".
+
+*LA ZONA PARA PRACTICAR ES: /home/so/velez/ficheros
+
+
+· IF
+
+Sintaxis:  if condicion           ó         if condicion; then
+           then                               comandos
+              comandos                      else
+           else                               comandos
+              comandos                      fi
+           fi
+--------------------------------
+· IF ANIDADOS (Else if)
+
+Sintaxis:  if condicion
+           then
+             comandos
+	   elif condicion
+            then
+              comandos
+            else
+              comandos
+           fi
+
+
+---------------------------------------------
+
+· WHILE (bucles)
+
+Sintaxis:  while condicion             ó           while condicion; do
+           do                                         comandos
+              comandos                             done
+           done
+
+
+---------------------------------
+· UNTIL
+
+Sintaxis:  until condicion
+           do
+              comandos
+           done
+
+
+---------------------------------
+
+·FOR
+
+Sintaxis:  for variable in lista   -----------------------> formato de la lista es: variable variable variable
+           do                        
+              comandos                  
+           done
+
+
+*La lista va tomando cada unos de los valores que se pongan entre espacios. 
+*La lista es en realidad un conjunto de nombres separados por espacios.
+*El buble FOR se repite tantas veces como elementos haya en la lista.
+*Las variables suelen ir en MAYUS.
+*Para la lista se suele usar una SUSTITUCION DE COMANDOS (Practica_3)
+
+EJ.: for I in 1 2 3 -4 ---> "1, 2, 3, -4" es la lista
+
+EJ.: for FICH in $(find /home/so/ficheros -name "[aeiou]*[0-9]*")
+     do
+        more $FICH  -------> hace un more de cada fichero que pille la variable FICH
+        wc -w $FICH   -----> cuenta el numero de palabras de cada fichero
+        echo --------------> salto de linea (deja una linea en blanco)
+     done
+     
+     *El find va a devolver un conjunto de resultados separados por espacios (eso sería la lista)
+
+--------------------------------------
+
+· CASE
+
+Sintaxis:  case variable in
+              valor1)
+                  comandos;;   ------> OJO, hay que poner ";;"
+              valorN)
+                  comandos;;
+           esac
+
+-----------------------------------------
+
+*La condición se realiza con el comando test
+
+Sintaxis:  test valor operador valor         ó        [ valor operador valor ]  ---> incluyendo []
+
+
+*MUY IMPORTANTE RESPETAR LOS ESPACIOS (SINO DA ERROR)!!!!
+
+---
+*OPERADORES 
+
+valor = valor
+valor != valor
+valor < valor
+valor > valor
+
+valor -lt valor    (menor que)
+valor -le valor    (menor o igual que)
+valor -eq valor    (igual que)
+valor -ne valor    (no igual que)
+valor -gt valor    (mayor que)
+valor -ge valor    (mayor o igual que)
+
+*HAY QUE VER CUAL DE ELLOS USAR
+
+-d valor           (verdadero si el "valor" es un directorio)
+-f valor           (verdadero si el "valor" es un fichero)
+
+! -d valor         (verdadero si el "valor" NO es un directorio)
+
+
+*Para comprobar condiciones de más de una condición:
+
+&&   (AND logico)
+-a   (AND logico)
+
+||   (OR logico)
+-o   (Or logico)
+
+
+
+*Incremetar el valor de una variable:      NUM=$(($NUM +1))   ---> incrementa NUM en 1 
+ (El 1 puede ser cualquier otro numero)
+
+*Lee desde teclado (como el cin >>):       read NUM
+
+EJ.:
+read N     --------> pide un valor por teclado y lo mete en la variable N
+echo $N    --------> muestra por pantalla N
+N=$(($N +2)) ------> incrementa N en 2
+echo $N    --------> vuelve a mostrar N
+
+
+
+                                   ------ PRACTICA 6 ------
+
+1) mkdir -p prac6/prac6 prac6/fuentes/tmp1 prac6/fuentes/tmp2 prac6/guiones
+
+2) joe .profile
+   GUION="$HOME/prac6/guiones"
+   . .profile
+   cp $(find . -name "*.txt") prac6/fuentes/tmp1
+
+3) cd $GUION
+   joe tratafichero
+   if test -f $1
+   then
+     more $1
+   elif test -d $1
+    then
+       ls -la $1
+    else
+       echo $1
+   fi
+   chmod u+x tratafichero
+
+4) cd ../prac6
+   $GUION/tratafichero $HOME/prac2/f1.txt
+   $GUION/tratafichero $GUION
+
+5) cd $GUION
+   joe fpfinal
+     if test $# -lt 3
+     then
+        echo "Se necesitan al menos 3 parametros"
+     elif [ -d $1 ] && [ -d $3 ]
+        then
+          find $1 -type l -name "$2" -printf "%f\n" >$3/enlaces.txt 2>/dev/null
+     else
+          echo "El primer y tercer parametro han de ser directorios"
+     fi
+   chmod u+x fpfinal
+   fpfinal /home "[A-Z]*" ../fuentes
+   
+6) joe mtam
+
+   if [ $# -lt 2 ]
+   then
+      echo "Debe de haber 2 parametros."
+   elif [ -d $1 ]
+     then
+       for I in $(find $1 -name "$2")
+       do
+         wc -c $I
+       done
+     else
+        echo "El primer parametro a de ser un directorio"
+   fi
+
+   chmod u+x mtam
+   mtam ../fuentes "s*.*"
+
+7) joe anida
+   
+   if [ $# = 1 ]
+   then
+     echo "Introduce un numero por teclado: "
+     read NUM
+     DIR=""
+     while [ $NUM -gt 0 ]
+       do
+         DIR=$DIR$1/
+         NUM=$(($NUM-1))
+       done
+       mkdir -p $DIR
+   else
+      echo "Se necesita solo un parametro"
+   fi   
+
+   chmod u+x anida 
+   cd ../fuentes/tmp2
+   $GUION/anida p6
+   <Tecleamos el numero 2>
+
+8) cd $GUION
+   joe opcion
+   
+   FINAL=1
+   until [ $FINAL -eq 0 ]
+   do
+     echo "Teclee una palabra: "
+     read PALABRA
+     case $PALABRA in
+           [0-9]*)
+              echo $PALABRA >>numero;;
+           [aeiouAEIOU]*)
+              echo $PALABRA >>vocal;;
+           .) ---------------------------> OJO!! hay que poner .) antes que *) ya que si es al revés provoca un bucle infinito
+              FINAL=0;;
+           *)
+              echo $PALABRA >>otro;; 
+  esac
+  done
+
+  chmod u+x opcion
+   
+9) chmod 641 ../fuentes/tmp1 ../fuentes/tmp2
+
+10) ps -l | wc -l
+

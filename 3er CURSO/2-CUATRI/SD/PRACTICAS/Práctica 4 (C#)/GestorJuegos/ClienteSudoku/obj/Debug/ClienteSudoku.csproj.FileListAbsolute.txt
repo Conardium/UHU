@@ -1,0 +1,20 @@
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\bin\Debug\ClienteSudoku.exe.config
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\bin\Debug\ClienteSudoku.exe
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\bin\Debug\ClienteSudoku.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\bin\Debug\GestorJuegos.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\bin\Debug\GestorJuegos.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.csproj.CopyComplete
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.exe
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\bin\Debug\ClienteSudoku.exe.config
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\bin\Debug\ClienteSudoku.exe
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\bin\Debug\ClienteSudoku.pdb
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\bin\Debug\GestorJuegos.dll
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\bin\Debug\GestorJuegos.pdb
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.csproj.CopyComplete
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.exe
+C:\Users\ismae\OneDrive\Escritorio\CURSO ACTUAL\SD\PRACTICA\Práctica 3\GestorJuegos\ClienteSudoku\obj\Debug\ClienteSudoku.pdb

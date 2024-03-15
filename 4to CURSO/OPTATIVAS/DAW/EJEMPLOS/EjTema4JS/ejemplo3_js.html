@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 3 JS. Estructuras de Control IF</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Ejemplo JS: Condicionales</h1>
+
+<form id="f" action="" method="">
+	<label for="v1">Valor 1:</label>
+	<input type="number" id="v1" name="v1"/>
+	<label for="v2">Valor 2:</label>
+	<input type="number" id="v2" name="v2" />
+	<label for="op">Operación</label>
+	<select id="op" name="op">
+		<option>Elige opcion</option>
+		<option value="+" selected>Sumar</option>
+  		<option value="-">Restar</option>
+  		<option value="*" >Multiplicar</option>
+  		<option value="/" >Dividir</option>
+	</select>
+	<h2><label for="result">Resultado:</label>
+	<output id="result" name="result" size="3"></output>
+	</h2>
+	<br />
+	<input id="b" type="button" value="Calcular" />
+</form>
+
+<script>
+function operar() {
+	let f = document.getElementById("f");
+	let resultado = 0;
+	let operacion = f.op.value;
+	let op1 = parseFloat(f.v1.value);
+	let op2 = parseFloat(f.v2.value);
+	if (isNaN(op1) || isNaN(op2)) {
+		alert("Introduce valores numéricos");
+	}
+	else {
+		switch (operacion) {
+   			case ("+") :  resultado=op1+op2;break;
+   			case ("-") :  resultado=op1-op2;break;
+   			case ("*") :  resultado=op1*op2;break;
+   			case ("/") :  resultado=op1/op2;break;
+   			default    :  resultado="Error";
+		}
+		f.result.value=resultado;
+	}
+	return false;
+}
+
+let b = document.getElementById("b");
+b.addEventListener("click", operar, false);
+</script>
+
+
+</body>
+</html>

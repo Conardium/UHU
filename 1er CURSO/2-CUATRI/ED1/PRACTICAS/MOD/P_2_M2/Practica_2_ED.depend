@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1622803946 source:c:\users\ismae\onedrive\escritorio\practica_2_ed\main.cpp
+	<iostream>
+	<stdlib.h>
+	"TTipos.h"
+	"TAlmacen.h"
+	"TTienda.h"
+
+1622375761 c:\users\ismae\onedrive\escritorio\practica_2_ed\ttipos.h
+	<string.h>
+	<iostream>
+	<fstream>
+
+1622378702 c:\users\ismae\onedrive\escritorio\practica_2_ed\talmacen.h
+	"TTipos.h"
+	"TADcola.h"
+	"TADlista.h"
+
+1620985015 c:\users\ismae\onedrive\escritorio\practica_2_ed\ttienda.h
+	"TTipos.h"
+
+1621268621 source:c:\users\ismae\onedrive\escritorio\practica_2_ed\tadcola.cpp
+	"TADcola.h"
+
+1622135451 c:\users\ismae\onedrive\escritorio\practica_2_ed\tadcola.h
+	"TTipos.h"
+
+1620993630 source:c:\users\ismae\onedrive\escritorio\practica_2_ed\tadlista.cpp
+	"TADlista.h"
+
+1623410114 source:c:\users\ismae\onedrive\escritorio\practica_2_ed\talmacen.cpp
+	"TAlmacen.h"
+	<stdlib.h>
+
+1622202588 source:c:\users\ismae\onedrive\escritorio\practica_2_ed\ttienda.cpp
+	"TTienda.h"
+
+1621251782 c:\users\ismae\onedrive\escritorio\practica_2_ed\tadlista.h
+	<iostream>
+	"TTipos.h"
+

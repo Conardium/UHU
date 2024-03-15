@@ -1,0 +1,25 @@
+RI-001 : Administrador
+RI-002 : Profesor
+RI-003 : Alumno
+RI-004 : Hora
+RI-005 : Horario
+RI-006 : Centro
+RI-007 : Departamento
+RI-008 : Tutoría
+RI-009 : Asignatura
+RI-010 : Titulación
+RI-011 : Despacho
+RI-012 : Carga de Trabajo
+RI-013 : Fecha
+
+
+RN-001 : Una tutoría no se podrá realizar un día no lectivo
+RN-002 : En Septiembre no se permiten las tutorías presenciales
+RN-003 : Solo un cargo por Profesor
+RN-004 : Máximo  de tres tutorías  por Alumno a la semana
+RN-005 : Mínimo dos horas de tutoría por turno
+
+
+RC-001 : Tutorías de máximo una hora
+RC-002 : Un Profesor no puede aceptar tutorías si no tiene al menos una Asignatura
+RC-003 : Permitir tutorías solamente de Asignaturas matriculadas

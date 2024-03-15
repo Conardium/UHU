@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1598460788 source:c:\users\ismae\desktop\programación\fp\guiones de la asignatura\guión 4 (tema 5)\ejercico 2\main.cpp
+	<iostream>
+	<stdlib.h>
+	<string.h>
+

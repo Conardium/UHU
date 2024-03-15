@@ -1,0 +1,13 @@
+NAME : huelva7.opt.tour
+TYPE : TOUR
+DIMENSION : 7
+SOLUTION: 17
+TOUR_SECTION
+1,2
+2,3
+4,5
+6,7
+1,4
+4,7
+-1
+EOF

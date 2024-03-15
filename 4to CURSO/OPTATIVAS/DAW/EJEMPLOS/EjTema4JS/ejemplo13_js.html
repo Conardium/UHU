@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ <title> Ejemplo Objeto Windows </title>
+ <meta charset="UTF-8" />
+ </head>
+ <body>
+ <h1>Ejemplo con Objeto Window</h1>
+ <script type="text/javascript">
+ var v;
+ function a()  {
+   let opciones = "left=100,top=100,width=250,height=150";
+   v = window.open("", "", opciones);
+   v.document.write("<h1>Nueva Ventana</h1>");
+   setTimeout("b()",2000); setTimeout("c()",4000); setTimeout("v.close()",6000);
+  }
+
+function b() {
+  	v.moveBy(200, 200);
+	v.document.write("<p>Movimiento desde función b().</p>");
+}
+function c() {
+ 	v.moveTo(500, 100);
+	v.document.write("<p>Movimiento desde función c().</p>");
+}
+ a(); 
+</script>
+</body>
+</html>	

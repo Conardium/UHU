@@ -1,0 +1,70 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecera {
+    background-image: url('../img/Colon.jpg');
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+}
+
+.logo {
+    width: 5rem;
+    height: 4rem;
+}
+
+.opciones {
+    display: flex;
+    list-style: none;
+    margin-right: 5rem;
+}
+
+.item {
+    margin-left: 1.5rem;
+    color: black;
+    font-size: 1.3rem;
+}
+
+.contenido {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 255, 255, 0.162);
+    width: 40%;
+    text-align: center;
+    padding: 1rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px #000;
+}
+
+.titulo {
+    font-size: 3rem;
+    color:white;
+}
+
+.descripcion {
+    font-size: 1.3rem;
+    color:white;
+    margin-bottom: 2rem;
+}
+
+.link {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.393), rgba(255, 166, 0, 0.411));
+    border-radius: 100px;
+    padding: 0.6rem 1.2rem;
+    text-decoration: none;
+    color: white;
+    display:inline-block;
+    margin-bottom: 1rem;
+}

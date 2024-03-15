@@ -1,0 +1,20 @@
+
+
+label {
+    display: block;
+}
+
+.obligatorio {
+    color: red;
+}
+
+.boton {
+    display: block;
+    margin: 1em 0;
+}
+
+#msgForm {
+    border: 1px solid red;
+    background-color:beige;
+    display: none;
+}

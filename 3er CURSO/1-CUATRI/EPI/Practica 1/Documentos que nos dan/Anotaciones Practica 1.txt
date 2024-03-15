@@ -1,0 +1,87 @@
+Reuniones:
+
+	29 noviembre
+
+	13 diciembre
+
+	27 diciembre
+
+	10 enero (por ahora no)
+
+
+Falta poner el 10% de contingencia de los precios
+
+
+
+----- Proyecto_1 (Sin horas extra y sin Serafín) -----
+
+·Nº de dias = 35,35 días -> (contingencia del 10%) -> 3,5 aprox. 4 dias extra
+
+·Horas de trabajo = 1.004 horas
+
+·Dia de fin = Miercoles 5 enero ----> +4 dias extra ---> Miercoles 12 Enero
+
+·Costo = 73.580,41€ ---> (contingencia del 10%) ---> 80.938,45€ -------> (beneficio del 18%) --> 14.568,92€ ---> 95.507,37€ (mucho dinero)
+
+
+
+
+
+
+
+----- Proyecto_2 (Reducir los costos del Proyecto_1 sin pasarse de la fecha) -----
+
+·Nº de dias = 41,15 fías -> (contingencia del 10%) -> 4,1 aprox. 5 dias extra
+
+·Horas de trabajo = 1.0004 horas
+
+·Dia de fin = Viernes 14 enero ----> +5 dias extra ---> Viernes 21 enero
+
+·Costo = 72.656,39€ ---> (contingencia del 10%) ---> 79.922,03€ -----> (beneficio del 18%) --> 14.385,96€ ---> 94.307,99€
+
+·Diferencia de costo con respecto al anterior: 1.200€ se han reducido
+
+
+
+
+
+
+
+----- Proyecto_3 (Llegar al dia 10 con horas extras y sin Serafin) -----
+
+·Nº de dias = 31,22 días -> (contingencia del 10%) -> 3,1 aprox. 4 días 
+
+·Horas de trabajo = 1.0004 horas + 130,92h extra = 1.130,92 h totales
+
+·Dia de fin = Jueves 30 diciembre ----> +4 dias extra ---> Miercoles 5 enero
+
+·Costo = 73.388,73€ ---> (contingencia del 10%) ---> 80.727,60€ -----> (beneficio del 18%) --> 14.530,97€ ---> 95.258,57€
+
+
+
+
+
+
+
+----- Proyecto_4 (Llegar al dia 10 con Serafin y sin Horas extra) -----
+
+·Nº de dias = 30,31 días -> (contingencia del 10%) -> 3 días 
+
+·Horas de trabajo = 1.0010 horas 
+
+·Dia de fin = Miercoles 29 diciembre ----> +3 dias extra ---> Lunes 3 enero
+
+·Costo = 73.857,36€ ---> (contingencia del 10%) ---> 81.243,10€ -----> (beneficio del 18%) --> 14.623,76€ ---> 95.866,86€
+
+
+
+
+
+
+
+
+
+
+
+
+

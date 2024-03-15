@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1619782263 source:c:\users\ismae\onedrive\escritorio\practica_1_ed\main.cpp
+	<iostream>
+	<stdlib.h>
+	"TTipos.h"
+	"TAlmacen.h"
+	"TTienda.h"
+
+1619779547 source:c:\users\ismae\onedrive\escritorio\practica_1_ed\talmacen.cpp
+	"TAlmacen.h"
+	<stdlib.h>
+
+1619778074 c:\users\ismae\onedrive\escritorio\practica_1_ed\talmacen.h
+	"TTipos.h"
+
+1619624561 c:\users\ismae\onedrive\escritorio\practica_1_ed\ttipos.h
+	<string.h>
+	<iostream>
+	<fstream>
+
+1619782059 source:c:\users\ismae\onedrive\escritorio\practica_1_ed\ttienda.cpp
+	"TTienda.h"
+
+1619780700 c:\users\ismae\onedrive\escritorio\practica_1_ed\ttienda.h
+	"TTipos.h"
+

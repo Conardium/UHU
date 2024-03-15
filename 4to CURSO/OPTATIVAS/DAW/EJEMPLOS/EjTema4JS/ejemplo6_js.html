@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo 8 JS. Clases</title>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<h1>Ejemplo JS: Clases</h1>
+
+
+<canvas id="miCanvas" width="200" height="100" 
+        style="border:1px solid red;">
+Tu navegador no soporta Canvas.
+</canvas>
+
+
+<script type="text/javascript">
+	function punto(x, y)  {
+		this.x = x; 
+		this.y = y;
+ 	};
+
+ 	punto.prototype.damePunto = function() {
+ 		return "("+ this.x + ", " + this.y + ")";
+ 	};
+
+ 	var linea1 = new Object();
+ 	linea1.nombre="Mi Polígono";
+ 	linea1.p1=new punto(10, 40); linea1.p2=new punto(100, 95);
+ 	linea1.p3=new punto(150, 90); linea1.color="#00FF00";
+
+ 	var linea2 = {
+ 		p1: new punto(100, 50), p2: new punto(180, 70),
+ 		p3: new punto(160, 20),	p4: new punto(10, 20),
+ 		ancho:2
+ 	}
+
+	var c=document.getElementById("miCanvas");
+	var ctx=c.getContext("2d");
+	// Línea 1
+	ctx.beginPath();
+	ctx.strokeStyle = linea1.color;
+	ctx.moveTo(linea1.p1.x,linea1.p1.y);
+	ctx.lineTo(linea1.p2.x,linea1.p2.y);
+	ctx.lineTo(linea1.p3.x,linea1.p3.y);
+	ctx.font="8px Arial";
+	ctx.fillText(linea1.p1.damePunto(),linea1.p1.x,linea1.p1.y);
+	ctx.fillText(linea1.p2.damePunto(),linea1.p2.x,linea1.p2.y);
+	ctx.fillText(linea1.p3.damePunto(),linea1.p3.x,linea1.p3.y);
+	ctx.stroke();
+	// Línea 2
+	ctx.beginPath();
+	ctx.moveTo(linea2.p1.x, linea2.p1.y);
+	ctx.lineTo(linea2.p2.x,linea2.p2.y);
+	ctx.lineTo(linea2.p3.x,linea2.p3.y);
+	ctx.lineTo(linea2.p4.x,linea2.p4.y);
+	ctx.lineWidth = linea2.ancho;
+	ctx.stroke();
+
+</script>
+</body>
+</html>

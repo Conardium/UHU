@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1652800222 source:c:\users\ismae\onedrive\escritorio\ed2\práctica_3\cartelera.cpp
+	"cartelera.h"
+	<iostream>
+
+1652795852 c:\users\ismae\onedrive\escritorio\ed2\práctica_3\cartelera.h
+	<map>
+	<utility>
+	<string>
+
+1652797280 source:c:\users\ismae\onedrive\escritorio\ed2\práctica_3\usuariop3.cpp
+	<cstdlib>
+	<iostream>
+	"cartelera.h"
+

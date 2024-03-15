@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo 1 JS</title>
+	<meta charset="utf-8" />
+	<script>
+		function procesaDato() {
+  			let valor, elto;
+  			valor = document.getElementById("dato").value;
+  			if ( valor=="" ) { 
+				alert("Debes insertar algún valor en el campo");
+				return false;
+  			}
+			elto = document.getElementById("valor");
+			elto.innerText=valor;
+		} 
+
+
+	</script>
+</head>
+<body>
+
+<script>
+  document.write("<h1>Ejemplo 3</h1>");
+</script>
+
+<input type="text" name="dato" id="dato" />
+<input type="button" value="Procesar" id="bProcesar" onclick="procesaDato();" />
+
+<p>Valor Insertado: <spam id="valor"></spam></p>
+
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+--------PARTE SQL---------------
+--El aparatado 1 podemos hacerlo con SELECT INTO o con Cursores
+
+--¿Que hay que hacer?
+--Probar consulta que cuenta las llamadas en una fecha
+
+SELECT count(*)
+FROM MF.LLAMADA 
+WHERE TO_CHAR(fecha_hora, 'dd/mm/yy')='09/10/06';
+
+###########################################################
+
+--Apartado 2 (Se usaran 2 cursores, 1 para obtener los telefonos y el otro para los calculos)
+--#PRIMER CURSOR
+SELECT TF.numero
+FROM MF.TELEFONO TF INNER JOIN MF.COMPAÑIA CO ON CO.cif=TF.compañia
+WHERE CO.nombre='Aotra';
+
+--#SEGUNDO CURSOR
+SELECT tf_destino, duracion
+FROM MF.LLAMADA
+WHERE tf_origen='678234234' AND TO_CHAR(fecha_hora, 'dd/mm/yy')='01/10/06';
+
+
+
+-----------------------------------------------PARTE PL------------------------------------------------------
+SET serveroutput ON;
+
+CREATE OR REPLACE
+PROCEDURE llamadas_cia(cia MF.COMPAÑIA.nombre%TYPE, fecha DATE) IS
+
+existe_fecha INTEGER;
+no_existe_fecha EXCEPTION;
+num_Total INTEGER; --Numero de Llamadas totales de una compañia
+num_LL_100 INTEGER; --Numero de llamadas que tienen +100 segundos
+num_LL_Total INTEGER; --Numero total de llamadas de cada telefono
+porcentaje NUMBER(5,2);
+
+--####Parte del apartado 2--
+CURSOR c_telefonos_cia IS
+        SELECT TF.numero
+        FROM MF.TELEFONO TF INNER JOIN MF.COMPAÑIA CO ON CO.cif=TF.compañia
+        WHERE CO.nombre=cia;
+        
+CURSOR c_llamadas_tf (tlf MF.LLAMADA.tf_origen%TYPE) IS
+        SELECT tf_destino, duracion
+        FROM MF.LLAMADA
+        WHERE tf_origen=tlf AND TO_CHAR(fecha_hora, 'dd/mm/yy')=fecha;
+--##################################
+BEGIN
+    SELECT count(*) INTO existe_fecha
+    FROM MF.LLAMADA 
+    WHERE TO_CHAR(fecha_hora, 'dd/mm/yy')=fecha;
+    
+    --Vemos el valor de existe_fecha
+    IF existe_fecha=0 THEN RAISE no_existe_fecha; END IF;
+        
+-----------Apartado 2---------------
+
+     dbms_output.put_line('Llamadas realizadas por los teléfonos de la Compañía '|| cia);
+     dbms_output.put_line('-------------------------------------------------');
+     dbms_output.put_line('Tlf. Origen      Num_LL      Num_100         %');
+     dbms_output.put_line('-------------------------------------------------');
+     num_Total:=0;
+     FOR v_telefonos IN c_telefonos_cia LOOP
+         num_LL_100:=0;
+         num_LL_Total:=0;
+         FOR v_llamadas IN c_llamadas_tf(v_telefonos.numero) LOOP
+            IF (v_llamadas.duracion > 100) THEN
+                num_LL_100:=num_LL_100+1;
+            END IF;
+            num_LL_Total:=num_LL_Total+1;
+            num_Total:=num_Total+1;
+         END LOOP;
+         IF (num_LL_100 <>0) THEN
+            porcentaje:=(num_LL_100/num_Total)*100;
+         ELSE
+            porcentaje:=0;
+        END IF;
+         dbms_output.put_line(v_telefonos.numero||'           '||num_ll_total||'            '||num_ll_100||'           '||porcentaje||'%');
+     END LOOP;
+      dbms_output.put_line('-------------------------------------------------');
+      dbms_output.put_line('Número Llamadas Realizadas: '||num_total);
+
+--##################################
+    EXCEPTION
+        WHEN no_existe_fecha THEN
+            dbms_output.put_line('No hay llamadas en la fecha '|| fecha || ' en la BD');
+        WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Se a producido el error - '||SQLCODE||' -ERROR- '||SQLERRM);
+
+END;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-----------------PARTE DE LA SESIÓN SOBRE DISPARADORES (NO ENTRA)----------------------------//
+
+
+
+CREATE OR REPLACE
+TRIGGER nueva_llamada BEFORE INSERT ON MF.LLAMADA
+FOR EACH ROW
+DECLARE
+  v_llamadas_orig INTEGER;
+  v_llamadas_dest INTEGER;
+
+BEGIN
+--PARA EL QUE LLAMA(ORIGEN)
+  SELECT count(*) INTO v_llamadas_orig
+  FROM MF.LLAMADA
+  WHERE (tf_origen=:new.tf_origen AND fecha_hora=:new.fecha_hora) OR
+        (tf_destino=:new.tf_origen AND fecha_hora=:new.fecha_hora);
+  
+  IF v_llamadas_orig > 0 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'El telefono origen '||:new.tf_origen||'está realiando o recibiendo una llamada a las '||:new.fecha_hora);
+  END IF;
+  
+--PARA EL QUE RECIBE LA LLAMADA(DESTINO)
+  SELECT count(*) INTO v_llamadas_dest
+  FROM MF.LLAMADA
+  WHERE (tf_origen=:new.tf_destino AND fecha_hora=:new.fecha_hora) OR
+        (tf_destino=:new.tf_destino AND fecha_hora=:new.fecha_hora);
+  
+  IF v_llamadas_dest > 0 THEN
+    RAISE_APPLICATION_ERROR(-20002, 'El telefono destino '||:new.tf_destino||'está realiando o recibiendo una llamada a las '||:new.fecha_hora);
+  END IF;
+  
+  
+END;

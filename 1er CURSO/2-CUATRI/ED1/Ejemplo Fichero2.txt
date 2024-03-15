@@ -1,0 +1,119 @@
+#include <iostream>
+#include <fstream>
+#include <string.h>
+#include <stdlib.h>
+#include <conio.h>
+
+using namespace std;
+#define MAX_STR 30
+typedef char cadena[MAX_STR];
+
+// ------ Definimos la clase coche -----
+class Coche
+{
+    long NumKm;
+    cadena Matricula;
+public:
+    void setMat(cadena mat) {strcpy(Matricula, mat);}
+    void setNumKm(long num) {NumKm=num;}
+    const char *getMat() {return Matricula;}
+    long getNumKm() {return NumKm;}
+};
+
+
+int main()
+{
+    Coche C;
+
+    char op;
+    int indice;
+    cadena mat;
+    long km;
+    fstream f;
+    f.open("datos1.dat", ios::in|ios::out|ios::binary);
+    //Comprobamos que existe "datos1.txt", sino lo creamos, el fail() solo
+    //aparecera la primera vez, puesto que no existe el fichero en principio, pero luego si
+    if(f.fail())
+    {
+        cout << "\nEl fichero no existe, pues lo creamos.\n\n";
+        f.close();
+        f.clear();
+        f.open("datos1.dat", ios::out|ios::binary); //Crea el fichero
+        f.close(); //Lo cerramos para poder volver a abrirlo
+        f.open("datos1.dat", ios::in|ios::out|ios::binary);
+        if(!f.fail())
+            cout << "Fichero creado desde cero correctamente.\n";
+    }
+
+    if(f) //Si f existe, entonces:
+    {
+        do
+        {
+            system("cls");
+            cout << "\n1.- Ver Matricula y Km de un Coche\n";
+            cout << "2.- Asignar Matricula y Km a un Coche\n";
+            cout << "3.- Salir\n";
+            cout << "\nElije una opcion: ";
+            op = getch();
+
+            switch(op)
+            {
+            case '1':
+                cout << "\n\nIndique Num de vehiculo a consultar: ";
+                cin >> indice;
+                if(indice > 0)
+                {
+                    f.seekg(sizeof(Coche)*(indice-1), ios::beg);
+                    //Me desplazo el tamaño de un coche por el numero que indico
+                    //desde el inicio del fichero
+                    if((f.tellg() != sizeof(Coche)*(indice-1)) || (f.fail()))
+                    {
+                        cout << "\nSe ha producido un Error\n";
+                        f.clear();
+                    }
+                    else //SI lo encuentra
+                    {
+                        f.read((char*) &C, sizeof(Coche));
+                        if(!f.fail())
+                            cout << "\nMatricula: " << C.getMat() << " Km: " << C.getNumKm() << endl;
+                        else
+                        {
+                            cout << "\nSe ha producido un Error.\n";
+                            f.clear();
+                        }
+                    }
+                    getch();
+                }
+                break;
+        //-----------------------------
+            case '2':
+                cout << "\n\nIntroduce matricula: ";
+                cin >> mat;
+                C.setMat(mat);
+                cout << "\nIntroduce sus Kms: ";
+                cin >> km;
+                C.setNumKm(km);
+                cout << "\nIntroduce el Num del vehiculo: ";
+                cin >> indice;
+                if(indice > 0)
+                {
+                    f.seekp(sizeof(Coche)*(indice-1), ios::beg);
+                    if(f.tellp()!=sizeof(Coche)*(indice-1))
+                        cout << "\nSe produce un Error.\n";
+                    else
+                        f.write((char*) &C, sizeof(Coche));
+                }
+                break;
+        //---------------------------
+            case '3': break;
+            default: cout << "\nOpcion Incorrecta.";
+            }
+        }while(op != '3');
+        f.close();
+    }
+    else
+        cout << "Fichero no abierto";
+
+    system("pause");
+    return 0;
+}

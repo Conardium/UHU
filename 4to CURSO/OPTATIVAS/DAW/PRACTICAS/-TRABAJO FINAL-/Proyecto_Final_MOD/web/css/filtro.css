@@ -1,0 +1,44 @@
+
+#filtrar{
+
+    padding: 15px;
+    display: flex;
+    border-top: 3px solid #f1f1ef;
+    justify-content: center;
+    background: #2f414f;
+}
+
+#filtrar #fnombre{
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #c7dad7;
+    font-size: 18px;
+    text-indent: 10px;
+}
+
+#filtrar select{
+    font-family: Nunito Sans;
+    margin-left: 50px;
+    margin-right: 5px;
+    width: auto;
+    font-size: 18px;
+}
+
+#filtrar #buscar, #borrar{
+    font-family: Nunito Sans;
+    background: #3894a3;
+    border: 1px solid #f1f1ef;
+    color: #f1f1ef;
+    font-size: 16px;
+    margin-left: 50px;
+    height: 35px;
+    transition: 0.3s;
+    width: 100px;
+    text-transform: uppercase;
+}
+
+#filtrar #buscar:hover, #borrar:hover{
+    background: #c7dad4;
+    color: #3894a3;
+    border-radius: 5px;
+}

@@ -1,0 +1,19 @@
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\bin\Debug\netcoreapp3.1\Práctica 7.exe
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\bin\Debug\netcoreapp3.1\Práctica 7.deps.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\bin\Debug\netcoreapp3.1\Práctica 7.runtimeconfig.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\bin\Debug\netcoreapp3.1\Práctica 7.runtimeconfig.dev.json
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\bin\Debug\netcoreapp3.1\Práctica 7.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\bin\Debug\netcoreapp3.1\Práctica 7.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.csprojAssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7_MarkupCompile.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7_MarkupCompile.lref
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.g.resources
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.AssemblyInfoInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.AssemblyInfo.cs
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.dll
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.pdb
+C:\Users\ismae\OneDrive\Escritorio\DIU\PRÁCTICAS\Práctica 7\obj\Debug\netcoreapp3.1\Práctica 7.genruntimeconfig.cache

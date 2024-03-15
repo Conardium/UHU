@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Practica_1_2</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pan.png" />
+    <None Remove="Panaderia.jpg" />
+    <None Remove="twitter.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Imagenes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Pan.png" />
+    <Resource Include="Panaderia.jpg" />
+    <Resource Include="twitter.png" />
+  </ItemGroup>
+
+</Project>

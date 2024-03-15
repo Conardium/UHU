@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1647962969 source:c:\users\ismae\onedrive\escritorio\ed2\multiconjunto\multiconjunto.cpp
+	"Multiconjunto.h"
+
+1647966203 c:\users\ismae\onedrive\escritorio\ed2\multiconjunto\multiconjunto.h
+	"../Persona/Persona.h"
+
+1647947902 c:\users\ismae\onedrive\escritorio\ed2\multiconjunto\persona.h
+	<windows.h>
+	<string>
+
+1647947902 c:\users\ismae\onedrive\escritorio\ed2\persona\persona.h
+	<windows.h>
+	<string>
+
+1647964065 source:c:\users\ismae\onedrive\escritorio\ed2\persona\persona.cpp
+	"Persona.h"
+
+1647964065 c:\users\ismae\onedrive\escritorio\ed2\persona\persona.cpp
+	"Persona.h"
+

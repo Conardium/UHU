@@ -1,0 +1,12 @@
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\GestorJuegos\bin\Debug\GestorJuegos.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\GestorJuegos\bin\Debug\GestorJuegos.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\GestorJuegos\obj\Debug\GestorJuegos.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\GestorJuegos\obj\Debug\GestorJuegos.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\GestorJuegos\obj\Debug\GestorJuegos.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos\GestorJuegos\obj\Debug\GestorJuegos.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_MOD\GestorJuegos\bin\Debug\GestorJuegos.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_MOD\GestorJuegos\bin\Debug\GestorJuegos.pdb
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_MOD\GestorJuegos\obj\Debug\GestorJuegos.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_MOD\GestorJuegos\obj\Debug\GestorJuegos.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_MOD\GestorJuegos\obj\Debug\GestorJuegos.dll
+C:\Users\ismae\OneDrive\Escritorio\GestorJuegos_MOD\GestorJuegos\obj\Debug\GestorJuegos.pdb

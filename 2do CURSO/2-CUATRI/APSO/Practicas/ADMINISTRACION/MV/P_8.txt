@@ -1,0 +1,148 @@
+
+
+ 			-------- PRACTICA 8 --------
+
+1) more /etc/passwd
+   #El primer campo muestra el nombre del usuario
+   #El segundo campo muestra la contraseña encriptada del usuario
+   #El tercer campo muestra el identificador del usuario
+   #El cuarto campo muestra el identificador del grupo al que pertenece el usuario
+   #El quinto campo muestra detalles opcionales del usuario
+   #El sexto campo muestra el directorio de trabajo del usuario
+   #El septimo campo muestra la shell asociada al usuario
+   
+   sudo more /etc/shadow
+   #El primer campo muestra el nombre de usuario (debe de aparecer tb en "/etc/passwd")
+   #El segundo campo muestra la contraseña encriptada
+   #El tercer campo muestra la ultima fecha de modificacion
+   #El cuarto campo muestra el numero minimo de dias para cambiar la contraseña
+   #El quinto campo muestra el numero de dias hasta que expire la contraseña
+   #El sexto campo muestra el numero de dias con antelacion que avisara al usuario para cambiar la contraseña
+   #El septimo campo muestra si la cuenta se va a bloquear si no se ha cambiado la contraseña
+   #El octavo campo muestra cuando expira la cuenta
+
+
+2) more /etc/group
+   #El primer campo muestra el nombre del grupo
+   #El segundo campo muestra la contraseña del grupo
+   #El tercer campo muestra numero(ID) del grupo
+   #El cuarto campo muestra los usuarios que tienen ese grupo como grupo secundario
+
+
+3) more /etc/adduser.conf
+   #DSHELL: la shell que se le asigna a los nuevos usuarios
+   #DHOME: el directorio donde se deben de crear los nuevos directorios del usuario
+   #GROUPHOMES: si es "yes", los directorios personales se crearan como "/home/[nombregrupo]/usuario". Por defecto es "no"
+   #LETTERHOMES: si es "yes", los directorios colgaran de un directorio extra que empieza por la primera letra del usuario. Por defecto es "no"
+   #SKEL: contiene el directorio de donde se copian los ficheros de configuracion esqueleto del usuario
+   #FIRST_SYSTEM_UID y LAST_SYSTEM_UID: el rango de UIDs para usuarios del sistema [por defecto es de 100-999]
+   #FIRST_UID y LAST_UID: el rango de UIDs para usuarios normales [por defecto es de 1000-29999]
+   #USERGROUPS: si es "yes" cada usuario tendra su propio grupo y su directorio personal sera g+u. Si es "no" cada usuario creado tendrá como grupo aquel cuyo GID es USER_GID
+   #USERS_GID: si USERGROUPS es "no" entonces USERS_GID añadira a los nuevos usuarios al GID indicado [por defecto es 100]
+   #DIR_MODE: si es un valor valido (0755 o 755), los directorios creados tendran los permisos especificados
+   #SETGID_HOME: si es "yes", los directorios personales para los usuarios con su propio grupo tendran activado el bit "setgid"
+   #QUOTAUSER: si el valor es no nulo, los nuevos usuarios tendran las mismas cuotas que ese usuario
+   #NAME_REGEX: el nombre de usuario y/o grupo debe satisfacer la expresion indicada en NAME_REGEX
+   #SKEL_IGNORE_REGEX: los ficheros de /etc/skel no se copian al directorio de usuario si su nombre coincide con esta expresion 
+   #ADD_EXTRA_GROUPS: Si el valor es distinto de 0, los usuarios creados se añadiran a la lista de grupos definidos por EXTRA_GROUPS
+   #EXTRA_GROUPS: lista de grupos extra(secundarios) a las que los nuevos usuarios seran añadidos
+
+
+4) sudo adduser --system usuariosistema
+   more /etc/passwd
+
+
+5) sudo adduser --group practica8
+   more /etc/group
+
+
+6) sudo joe /etc/adduser.conf
+   #USERGROUPS=no
+   #USERS_GID=1001
+   
+
+7) sudo adduser user1
+   sudo adduser user2
+   more /etc/passwd
+
+
+8) sudo adduser user1 users
+   sudo adduser user2 users
+   more /etc/group
+
+
+9) sudo usermod -m -d /home/user2b user2
+
+
+10) su user2   ---> (su) es para acceder a otra cuenta desde la cuenta actual
+    cd
+    echo $HOME
+    exit
+
+
+11) sudo deluser --remove-all-files --backup --backup-to /home user1
+
+
+12) sudo adduser --uid 1005 user3
+
+
+13) sudo apt-get install ksh
+    sudo usermod -s /bin/ksh user3
+    su user3
+    exit
+
+
+14) sudo more /etc/shadow
+
+
+15) sudo usermod -e 2019-6-1 user2
+
+
+16) sudo delgroup practica8
+    #No se puede borrar porque 'user2' tiene ese grupo como grupo primario
+
+
+17) sudo apt-get install quota
+
+
+18) mount
+
+
+19) sudo joe /etc/fstab
+    #Se añade en la 4a columna usrquota 
+
+
+20) quotacheck -augmv
+
+
+21) ls /aquota.user
+    #Si existe
+
+
+22) sudo quotaon -uv /
+
+
+23) sudo adduser user4
+
+
+24) sudo edquota -u user4
+    #cambiamos las columnas soft y hard por su numero correspondiente 
+
+
+25) sudo repquota /
+
+
+26) sudo edquota -t
+
+
+27) su user4
+
+
+28) quota
+
+
+29) cd
+    for(i=1;i<=200;i++)
+    do 
+       touch $i
+    done

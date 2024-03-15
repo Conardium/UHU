@@ -1,0 +1,7 @@
+Datasets con los siguientes ficheros para el problema del trío de puntos más cercanos y el problema de las conexiones mínimas (árbol de recubrimiento mínimo):
+
+• berlin52: Tamaño 52 ciudades. Coste de la solución óptima: (700.0, 580.0), (685.0, 595.0), (685.0, 610.0)
+• ch130: Tamaño 130 ciudades. Coste de la solución óptima: (561.4775136009, 357.3543930067), (571.7371050025, 375.7575350833), (572.7630641427, 373.3208821255)
+• ch150: Tamaño 150 ciudades. Coste de la solución óptima: (334.350832971, 153.796923804), (352.3140807211, 140.3273323662), (334.2748764383, 152.1494569394)
+• d493: Tamaño 493 ciudades. Coste de la solución óptima: (3364.2, 1834.6), (3351.5, 1821.9), (3351.5, 1802.9)
+• d657: Tamaño 657 ciudades. Coste de la solución óptima: (3281.7, 2863.3), (3269.0, 2876.0), (3256.3, 2888.7)

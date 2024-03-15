@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejemplo JS - DOM</title>
+	<meta charset="UTF-8" />
+	<style type="text/css">
+	.blackWhite {
+		background-color: black;
+		color:white;
+	}
+	</style>
+
+</head>
+<body>
+
+<p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean adipiscing nibh vitae urna condimentum, ut commodo elit auctor. Quisque eu aliquet nisl. Proin pharetra, ligula ac posuere lobortis, ligula mauris semper justo, quis luctus purus nisl et tortor. Ut nec rutrum risus. Phasellus accumsan leo dolor, non molestie enim dapibus in. Donec eu dui cursus dolor congue hendrerit vitae ut augue. Aenean posuere dolor auctor sem rutrum porttitor. Sed dapibus id quam volutpat tincidunt. Nullam vel ipsum nisl. Sed tincidunt diam elit. Nulla sollicitudin lorem at massa gravida, a vulputate lectus placerat. Ut erat leo, venenatis sit amet libero interdum, pretium cursus nisi. Praesent consequat metus vel placerat sagittis. Sed pellentesque elit vitae odio eleifend viverra. Sed convallis nibh ut ligula volutpat venenatis. Ut mollis odio vel dui tristique, non condimentum magna placerat.</p>
+<p>
+Suspendisse laoreet, ligula et facilisis pulvinar, neque est porta est, suscipit dictum nisi leo tincidunt risus. Aenean ac orci enim. Donec accumsan sapien sem, eget rutrum nibh consequat ac. Curabitur facilisis iaculis augue, vitae tristique diam malesuada eu. Phasellus pretium, justo a accumsan tincidunt, metus sapien pellentesque tellus, sed dignissim felis ipsum sed quam. In hac habitasse platea dictumst. Integer metus elit, adipiscing in ligula viverra, lobortis euismod tellus. Aliquam sed lacus in neque aliquam dignissim. Aliquam id mi ut est condimentum luctus.</p>
+<p>
+Vestibulum aliquam lobortis mi in convallis. Maecenas a tincidunt libero. Suspendisse tempor elit diam, a congue magna congue vitae. Sed non malesuada lectus. Duis nibh ipsum, aliquam at tempus id, pretium non urna. Suspendisse ut nunc nunc. Sed ultricies faucibus tempus. Maecenas rutrum augue sit amet ligula convallis tincidunt. Fusce condimentum felis sed turpis suscipit malesuada. Suspendisse elementum metus nec leo sollicitudin lacinia. </p>
+
+<button onclick="cambiarParrafos()">Click para cambiar éstilo de los párrafos</button>
+
+<script type="text/javascript">
+function cambiarParrafos() {
+	let parrafos = document.getElementsByTagName("p");
+	for (p in parrafos) {
+		parrafos[p].className = "blackWhite";
+	}
+}
+</script>
+
+
+</body>
+</html>

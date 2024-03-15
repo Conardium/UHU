@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FondoInicio.png" />
+    <None Remove="LogoSesion.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Data" Version="21.2.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="FondoInicio.png" />
+    <Resource Include="LogoSesion.png" />
+  </ItemGroup>
+
+</Project>

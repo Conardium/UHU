@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO INFORMATICA</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div>
+            <header id="cabezera">
+                <h1> Tienda Online de Productos</h1>
+                <img src="img/imagentitulo.png" alt="imagen titulo"/>
+            </header>
+
+            <nav id="navegacion">
+                
+            </nav>
+
+            <section id="seccion">
+                <br/><h2>Artículos en stock</h2>
+
+                <!-- Tabla -->
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Categoría</th>
+                            <th>Precio</th>
+                            <th>Detalles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="1" class="porDefectoImpar">
+                            <td class="centrado">
+                                <img src="img/cablesUTP.png" alt="cablesUTP" width="100" height="100"/>
+                            </td>
+                            <td class="centrado">Cable UTP cat.6e</td>
+                            <td class="centrado">Electrónica </td>
+                            <td class="centrado" onclick="cambiarColorFila(1)">20€</td>
+                            <td class="centrado">
+                                <a href="">(Más detalles)</a>
+                            </td>
+                        </tr>
+                        <tr id="2" class="porDefectoPar">
+                            <td class="centrado">
+                                <img src="img/Quijote.png" alt="Quijote" width="100" height="100"/>
+                            </td>
+                            <td class="centrado">El Quijote de Cervantes</td>
+                            <td class="centrado">Lectura</td>
+                            <td class="centrado" onclick="cambiarColorFila(2)">30€</td>
+                            <td class="centrado">
+                                <a href="">(Más detalles)</a>
+                            </td>
+                        </tr>
+                        <tr id="3" class="porDefectoImpar">
+                            <td class="centrado">
+                                <img src="img/Minecraft.png" alt="Minecraft" width="100" height="100"/>
+                            </td>
+                            <td class="centrado">Minecraft - Java Edition</td>
+                            <td class="centrado">Juegos</td>
+                            <td class="centrado" onclick="cambiarColorFila(3)">25€</td>
+                            <td class="centrado">
+                                <a href="">(Más detalles)</a>
+                            </td>
+                        </tr>
+                        <tr id="4" class="porDefectoPar">
+                            <td class="centrado">
+                                <img src="img/Darksouls.png" alt="DarkSouls" width="100" height="100"/>
+                            </td>
+                            <td class="centrado">Dark Souls 1</td>
+                            <td class="centrado">Juegos</td>
+                            <td class="centrado" onclick="cambiarColorFila(4)">60€</td>
+                            <td class="centrado">
+                                <a href="">(Más detalles)</a>
+                            </td>
+                        </tr>
+                        <tr id="5" class="porDefectoImpar">
+                            <td class="centrado">
+                                <img src="img/Balanza.png" alt="Balanza" width="100" height="100"/>
+                            </td>
+                            <td class="centrado">Balanza Antigua</td>
+                            <td class="centrado">Otros</td>
+                            <td class="centrado" onclick="cambiarColorFila(5)">150€</td>
+                            <td class="centrado">
+                                <a href="">(Más detalles)</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <footer id="pieSeccion">
+                <p> &copy; 2022 Ismael Da Palma Fernández</p>
+            </footer>
+        </div>
+        
+        <script src="js/funciones.js"></script>
+        
+    </body>
+</html>

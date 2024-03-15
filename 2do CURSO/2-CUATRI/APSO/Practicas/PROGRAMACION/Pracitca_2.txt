@@ -1,0 +1,46 @@
+				-- PRACTICA 2 --
+
+Para usar programas con hilos hay que poner la librearia "pthread.h".
+
+¡¡¡Solo se van a ver los hilos en esta practica!!!
+
+Para ejecutar programas ".c" con hilos hay que poner al final del cc "-lpthread":
+
+  EJ.:   cc nombre_fichero.c -o nombre_fichero -lpthread
+
+
+
+###### COMANDOS DE HILOS ######
+
+pthread_create() ---> crea un hilo (tiene 4 parametros)
+EJ.: int pthread_create(pthread_t * thread, pthread_attr_t * attr, void * (*start_routine)(void*), void *arg)
+
+·El primer parametro es una variable de tipo hilo(pthread), se pasa por referencia(&).
+
+·El segundo parametro sirve para ejecutar un hilo con parametros por defecto, nosotros vamos a poner siempre (NULL).
+
+·El tercer parametro es la función que queremos que ejecute el hilo, el tipo devuelto va entre parentesis y la función se pasa por referencia(&)
+EJ.: (void *)&hilo1 --> si devuelve algo se cambia el void por el tipo devuelto
+
+·El cuarto parametro es para que el programa principal pueda pasar parametros a los hilos (NULL si no se pasa ningun parametro)
+
+
+
+#pthread_join() y pthread_detach()# --> los ejecuta el proceso principal (Hay que hacer tantos "join" o "detach" como hilos se hayan creado)
+
+
+pthread_join() ---> funcion que detiene al proceso que hace el join y se queda esperando a que el hilo termine (tiene 2 parametros, el segundo es opcional).
+
+·El primer parametro es la variable de tipo hilo (pthread).
+
+·El segundo parametro es un parametro que el hilo le pasa a su proceso principal (NULL si no se quiere pasar parametro). Se pasa por referencia(&) y lo que devuelva
+el hilo los pasa a ese parametro por referencaia.
+
+
+
+pthread_detach() ---> no espera a que termine el hilo, por lo que no puede recoger parametro (tiene 1 parametro, que es el hilo)
+
+
+
+
+pthread_exit() ---> lo ejecuta el hilo y sirve para que el hilo le pase parametros al proceso principal (tiene 1 parametro, que es el parametro que devuelve).

@@ -1,0 +1,19 @@
+-Cuando haya un COMPROBAR en el enunciado (usar o intentar usar un SELECT INTO),
+esto provocará que habrá que crear EXCEPCIONES también por si la comprobacion falla.
+
+-La parte de cálculo requerirá minimo 1 cursor o más, atendiendo a los parametros
+que queremos mostrar (intentar evitar un solo cursor si éste se puede dividir).
+   ·Buscar el dato más genérico(cursor principal)
+   ·El 2do o 3er Cursor lo más seguro es que necesite que le pases un parámetro (que sería
+    el valor que toma el 1er Cursor), es decir, el 2do cursor comprueba lo que le 
+    pasa el 1ro.
+   ·Si no usamos FOR para los cursores, al abrir(OPEN) un cursor no olvidarse de
+    cerrarlo (CLOSE nombre_del_cursor). El FETCH lee, el OPEN abre y el CLOSE cierra
+   ·El IF y los SUMATORIOS dentro del FOR del cursor ya dependen del enunciado del ejercicio
+   
+   ·NO OLVIDARSE DEL set serveroutput ON
+   
+   ·# OJO CON LAS INICIALIZACIONES #
+   
+
+-La parte de mostrar por pantalla no hay gran complicacion (dbms_output.put_line)

@@ -1,0 +1,7 @@
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\bin\Debug\Cliente_SW_Sudoku.exe.config
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\bin\Debug\Cliente_SW_Sudoku.exe
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\bin\Debug\Cliente_SW_Sudoku.pdb
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\obj\Debug\Cliente_SW.csproj.AssemblyReference.cache
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\obj\Debug\Cliente_SW.csproj.CoreCompileInputs.cache
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\obj\Debug\Cliente_SW_Sudoku.exe
+C:\Users\ismae\OneDrive\Escritorio\Cliente_SW_Sudoku\Cliente_SW_Sudoku\obj\Debug\Cliente_SW_Sudoku.pdb

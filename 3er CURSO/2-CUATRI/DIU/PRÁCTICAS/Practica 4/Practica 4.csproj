@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Practica_4</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DarkSouls 4.jpg" />
+    <None Remove="Escudo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Imágenes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DarkSouls 4.jpg" />
+    <Resource Include="Escudo.png" />
+  </ItemGroup>
+
+</Project>

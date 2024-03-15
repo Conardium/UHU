@@ -1,0 +1,104 @@
+					--- PRACTICA 3 ---
+
+### CREACIÓN DE PROCESOS ###
+
+Vamos a aprender a crear y lanzar un proceso a partir de otro proceso
+
+
+Comandos:
+
+·fork()
+		Sintaxis: int fork()  -----------> devuelve un entero y no lleva parametros
+		Libreria: #include <unistd.h>
+
+-Cuando un proceso hace una llamada a fork(), crea una copia identica del proceso que hace la llamada. Pero el PID del nuevo proceso es distinto al del original.
+
+    Ej.: si un proceso P1(original) llama al fork(), se crea una copia exacta de P1(copia).
+
+-El nuevo proceso comenzará a ejecutarse despues de la instruccion "fork()".
+
+-El entero que devuelve el "fork()" del original es el PID de el proceso copia.
+
+-El entero que devuelve el "fork()"  de la copia es siempre 0.
+
+-Lo que se suele hacer despues del "x = fork()" es una condición (if). Con eso conseguimos que con el "if" el (P1 original) haga una cosa y el (P1 copia) haga otra cosa.
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+·execl()
+		Sintaxis: int execl(ruta, fichero, parametro1, parametro2, ..., 0) --> en vez de 0 pones NULL  
+		Libreria: #include <unistd.h>
+
+-Este es el comando que realmente crea un proceso nuevo.
+
+-execl() reemplaza el proceso que realiza la llamada por el fichero que indicamos como segundo parametro. Dicho fichero deberá ser un ejecutable.
+
+-Todo proceso que hace execl() muere.
+
+-Para evitar que muera el original, se hace una copia de este "fork()" y desde la condicion del "if" de la copia hacemos el "execl()", de ese modo, morira solo la copia.
+
+-Cuando un proceso ejecuta el "execl()" el nuevo proceso hereda el PID del proceso que llama al "execl()". 
+
+
+PARAMETROS DE EXECL:
+
+-ruta: es la ruta al fichero ejecutable que vamos a sustituir, si está en la misma carpeta se pone 
+       solo el nombre del fichero entre comillas dobles.
+
+-fichero: nombre del fichero "ejecutable" entre comillas dobles.
+
+-parametros[1...n]: si el proceso que se va a borrar quiere pasar parametros al otro proceso. Cuando no haya 
+                    más parametros se pone 0 o NULL.
+
+## NO VAMOS A USAR LOS PARAMETROS[1...n]. Eso se hará con tuberías, etc.
+
+Ej.: execl("P2", "P2", NULL);
+
+
+
+
+
+IMPORTANTE TENER EN CUENTA LOS PID
+
+
+getpid() ---> devuelve el PID del proceso que lo ejecute
+
+
+
+
+### REDIRECCIOAMIENTO ###
+
+Tabla de canales original:
+0 --> Teclado
+1 --> Pantalla
+2 --> Errores(Pantalla)
+
+Cuando se hace un fork, la copia hereda la tabla de canales entera del proceso que llama al fork.
+
+Cuando se hace un execl, el nuevo proceso solo copia las 3 primeras posiciones de la tabla de canales.
+
+Si se quiere cambiar solo la tabla de canales de la copia, se debe de hacer dentro del "if(x==0)".
+
+
+
+Para cambiar los canales:
+
+·close(pos) ---> cierra la posicion "pos".
+  Si se cierra la pos 1, el proceso no podrá mostrar nada por pantalla
+
+·open("fichero", O_WRONLY | O_CREAT)  ---> abre un fichero y lo pone en la primera posicion libre que encuentre.
+                                           en la tabla de canales.
+
+-O_WRONLY ---> abre el fichero solo para escritura
+-O_CREAT ----> si el fichero no existe lo crea  
+
+Si se hiciera un open f1 despues de hacer un close en pos 1, entonces la salida por pantalla
+lo guardará en el fichero f1  
+
+
+
+
+
+

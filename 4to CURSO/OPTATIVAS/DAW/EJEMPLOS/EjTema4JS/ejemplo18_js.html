@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ejemplo JS - Eventos</title>
+<meta charset="UTF-8" />
+<style type="text/css">
+.sinRaton {
+	color: #FFFFFF;
+	background-color: #999999;
+	border: thin ridge #006666;
+}
+
+.conRaton {
+	color: #999999;
+	background-color: #993300;
+	border: thin inset #00CC66;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Ejemplo onMouserOver / onMouseOut </h1>
+
+<p id="par" class="sinRaton" 
+	onMouseOver="colorFondo(true)"
+	onMouseout="colorFondo(false)">
+Pasa el ratón por aquí
+</p>
+
+
+<script type="text/javascript">
+function colorFondo(bool) {
+	var p=document.getElementById("par");
+	if (bool) p.className = "conRaton";
+	else p.className = "sinRaton";
+}
+</script>
+</body>
+</html>
+

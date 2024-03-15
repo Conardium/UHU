@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Practica_3</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DarkSouls 1.jpg" />
+    <None Remove="DarkSouls 2.jpg" />
+    <None Remove="DarkSouls 3.jpg" />
+    <None Remove="DarkSouls 4.jpg" />
+    <None Remove="DarkSouls 5.jpg" />
+    <None Remove="joujou.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="DarkSouls 1.jpg" />
+    <Resource Include="DarkSouls 2.jpg" />
+    <Resource Include="DarkSouls 3.jpg" />
+    <Resource Include="DarkSouls 4.jpg" />
+    <Resource Include="DarkSouls 5.jpg" />
+    <Resource Include="joujou.gif" />
+  </ItemGroup>
+
+</Project>

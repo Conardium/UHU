@@ -1,0 +1,8 @@
+-5 Tecnicos				JefeA -> 41,98€
+-4 Analistas 			        AnalistaW -> 32,56€
+-5 Programadores			AnalistaD -> 29,60€
+-2 de Datos 				AnalistaP -> 26,64€
+-2 Web					Administrativo -> 19,76€
+-1 Jefe de Proyecto			ProgramadorJr -> 16,22€
+-1 Administrador
+

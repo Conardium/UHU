@@ -1,0 +1,86 @@
+# depslib dependency file v1.0
+1615550060 source:c:\users\ismae\onedrive\escritorio\practica 0\quebrado.cpp
+	"quebrado.h"
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1615549799 c:\users\ismae\onedrive\escritorio\practica 0\quebrado.h
+
+1615550294 source:c:\users\ismae\onedrive\escritorio\practica 0\practica0.cpp
+	<iostream>
+	<conio.h>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"quebrado.h"
+	"complejo.h"
+	"matriz.h"
+
+1615550152 c:\users\ismae\onedrive\escritorio\practica 0\complejo.h
+
+1615550460 c:\users\ismae\onedrive\escritorio\practica 0\matriz.h
+	"quebrado.h"
+	"complejo.h"
+
+1615550169 source:c:\users\ismae\onedrive\escritorio\practica 0\complejo.cpp
+	"complejo.h"
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1615550372 source:c:\users\ismae\onedrive\escritorio\practica 0\matriz.cpp
+	"matriz.h"
+	"quebrado.h"
+	"complejo.h"
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1615550169 source:c:\users\ismae\onedrive\escritorio\ed1\practica 0\complejo.cpp
+	"complejo.h"
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1615550152 c:\users\ismae\onedrive\escritorio\ed1\practica 0\complejo.h
+
+1615551708 source:c:\users\ismae\onedrive\escritorio\ed1\practica 0\matriz.cpp
+	"matriz.h"
+	"quebrado.h"
+	"complejo.h"
+	<iostream>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1615551677 c:\users\ismae\onedrive\escritorio\ed1\practica 0\matriz.h
+	"quebrado.h"
+	"complejo.h"
+
+1615549799 c:\users\ismae\onedrive\escritorio\ed1\practica 0\quebrado.h
+
+1615551795 source:c:\users\ismae\onedrive\escritorio\ed1\practica 0\quebrado.cpp
+	"quebrado.h"
+	<iostream>
+	<stdlib.h>
+
+1615551548 source:c:\users\ismae\onedrive\escritorio\ed1\practica 0\practica0.cpp
+	<iostream>
+	<conio.h>
+	<fstream>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"matriz.h"
+

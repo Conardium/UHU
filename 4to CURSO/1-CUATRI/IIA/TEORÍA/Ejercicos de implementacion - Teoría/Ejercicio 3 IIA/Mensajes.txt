@@ -1,0 +1,22 @@
+Al salir y entrar del CRM1,CRM2 y CRM3
+
+<AltasBajas>
+    <Cliente> 
+	<Nombre> "Nombre" </Nombre>
+	<Dirección> "Dirección" </Dirección>
+    </Cliente>
+</AltasBajas>
+
+
+
+Al salir de nuestra BD
+
+<AltasBajas>
+    <Cliente> 
+	<Nombre> "Nombre" </Nombre>
+	<Dirección> "Dirección" </Dirección>
+	<Estado> "Estado" </Estado>
+    </Cliente>
+</AltasBajas>
+
+

@@ -1,0 +1,92 @@
+## Vamos a usar redireccion de comandos, las tuberías y la sustitución de comandos ##
+Usaremos mucho el comando FIND
+
+* Para dejar de escribir por teclado se usa: Ctrl + D
+
+-- REDIRECCIÓN DE COMANDOS --
+
+Posición 0 -> lectura
+Posición 1 -> escritura
+Posición 2 -> Error
+
+Par cambiar las entradas y las salidas se utiliza:
+< -> modificacion estandar de la entrada
+> -> modificacion estandar de la salida
+2> -> para que la salida de los errores vayan a parar a cualquier fichero que se indique
+>> -> redirecciona la salida, pero esta vez sin cargarse el fichero (si este ya existe) sino que lo añade al final del fichero 
+
+  EJEMPLOS: ls >f1  -> la salida no la muestra por pantalla, sino que crea un fichero nuevo donde 
+                       muestra la salida del comando, si se pone el nombre de un fihcero existente
+                       borrará el existente y creará uno nuevo.
+
+            cat <f1.txt -> redireccionamos la entrada estandar para que lea desde fichero, en vez de la salida estandar
+          
+            cat >f1.txt -> obtiene carácteres a través de teclado y los escribe en el fichero
+
+            cat <f1.txt >prueba.txt -> obtiene los caracteres de f1.txt y los copia en prueba.txt (Es como una copia)
+
+            cat <f1.txt >>prueba.txt -> añade al final de prueba.txt el contenido del fichero f1.txt 
+
+
+-- TUBERÍAS --
+
+· com1|com2 + ruta -> redirecciona la salida del comando1 a la entrada del comando2
+
+  EJEMPLO: ls /home|more -> el "ls /home" en vez de salir por pantalla se la pasa al "more" como entrada
+
+
+
+
+-- SUSTITUCIÓN DE COMANDOS --
+
+· com2 $(com1) + ruta -> cada uno de los resultados del comando1 van a ser los !parámetros! del comando2
+
+*Se ejecuta priemro lo que hay entre ().
+
+  EJEMPLO: cp $(find . -name "s*") prac1 -> primero ejecuta el find, todas esas salidas del find van a ser
+                                           copiados(con el cp) en la carpeta prac1.
+
+
+
+*Es dificil saber cuando usar Tuberías o Sustitución de Comandos
+
+
+
+                                          
+                                      --- PRACTICA 3 ---
+
+1) mkdir -p prac3/prac31/tmp1 prac3/prac32/tmp2 prac3/prac33/tmp3
+
+2) chmod 700 prac3 prac3/prac31 prac3/prac32 prac3/prac33
+
+3) ls -la
+
+4) find . -type d -name "*[m0-9]*"|wc -l
+
+5) find /bin ! -type d -name "[aeiou]*" -mtime +1 >prac3/prac31/tmp1/comandos 2>/dev/null
+
+6) find / -name "[aeiou0-9][!0-9]??.[cp]" 2>/dev/null | more
+
+7) cp $(find . -name "sol*p*") prac3/prac32/tmp2
+
+8) cd prac3/prac33
+   mv $(find ../.. -name "*~") tmp3
+   rm tmp3/*~
+   
+9) cd ..
+   cal -m 3 >prac32/2_cuatrimestre
+   cal -m 4 >>prac32/2_cuatrimestre
+   cal -m 5 >>prac32/2_cuatrimestre
+   cal -m 6 >>prac32/2_cuatrimestre
+
+10) sort >prac32/ciudades
+    <Introduzco la lista por teclado>
+
+11) find /home -maxdepth 1 -mindepth 1 -printf "%f\n" | sort -r >prac32/usuarios
+
+12) id -nu >prac32/personal
+    id -u >>prac32/personal
+    id -ng >>prac32/personal
+    id -g >>prac32/personal
+
+

@@ -1,0 +1,45 @@
+#include <iostream>
+#include <fstream>
+
+using namespace std;
+
+
+struct ficha {
+    char nombre[50];
+    float nota;
+};
+
+int main()
+{
+    ficha alumnos[3] = { {"Ana", 7.2} ,{"Juan", 6.3} ,{"Rodolfo", 8} };
+    int i;
+
+    ofstream salida("alumnos", ios::binary);
+    if(salida.fail())
+        cout << "\nNo se pudo abrir el fichero alumnos\n";
+    else
+    {
+        cout << "\nFichero abierto para escritura correctamente\n\n";
+        salida.write((char*)alumnos, sizeof(ficha)*2); //escribo solo el primer alumno
+        cout << "Escribimos en el fichero solo al primer alumno\n\n";
+        salida.close();
+        cout << "-- Cerramos el fichero --\n\n";
+
+        for(i=0; i<3; i++)
+        {
+            alumnos[i].nota = 0; //Ponemos a 0 las notas de los alumnos
+            cout << alumnos[i].nombre << " " << alumnos[i].nota << endl;
+        }
+
+
+        ifstream entrada("alumnos", ios::binary);
+        cout << "\nAbrimos ahora para lectura (guardamos en variables el contenido del fichero) correctamente\n\n";
+        entrada.read((char*)alumnos, sizeof(ficha)*3);
+        cout << "\n\nLeemos del fichero y escribimos su contenido en la tabla alumnos\n\n";
+        for(i=0; i<3; i++)
+            cout << alumnos[i].nombre << " " << alumnos[i].nota << endl;
+        entrada.close(); //Cuando dejemos de usar el fichero lo cerramos
+    }
+
+    return 0;
+}

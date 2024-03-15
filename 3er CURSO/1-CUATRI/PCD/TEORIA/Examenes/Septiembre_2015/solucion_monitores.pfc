@@ -1,0 +1,113 @@
+program Septiembre15; 
+
+const 
+	np1=5; 
+	np2=5;
+		
+{Definicion del monitor}
+monitor m;
+
+	export
+		pideT1, pideT2, pideT3, pideT12, liberaT1, liberaT2, liberaT3;
+	var
+
+		colaT1, colaT2, colaT3, colaT12: condition;
+		libereT1, libreT2, libreT3, pbent3: boolean;
+
+	procedure pideT1(id:integer);
+	begin
+		if not libreT1  then delay(colaT1);
+		libreT1 := false;
+	end; 
+
+	procedure pideT2(id:integer);
+	begin
+		if not libreT2  then delay(colaT2);
+		libreT2 := false;
+	end; 
+
+	procedure pideT3(id:integer, esb:boolean);
+	begin
+		if not libreT3  then delay(colaT3);
+		libreT3 := false;
+		pbent3 := esb;
+	end; 
+
+	procedure pideT12(id:integer);
+	begin
+
+		if not libreT1 or not libreT2  or pbent3 then delay(colaT12);
+		libreT1 := false;
+		libreT2 := false;
+	end; 
+
+	procedure liberaT1(id:integer);
+	begin
+		libreT1 := true;
+		if libreT2 and not empty(colaT12) and not pbent3 then resume(colaT12)
+		else resume(colaT1);
+	end
+
+	procedure liberaT2(id:integer);
+	begin
+		libreT2 := true;
+		if libreT1 and not empty(colaT12) and not pbent3 then resume(colaT12)
+		else resume(colaT2);
+	end
+	
+	procedure liberaT3(id:integer, esb:boolean);
+	begin
+		libreT3 := true;
+		pbent3 := esb;
+		resume(colaT3);
+	end
+
+	procedure liberaT12(id:integer);
+	begin
+		libreT1 := true;
+		libreT2 := true;
+		if not empty(colaT12) and not pbent3 then resume(colaT12)
+		else begin
+			resume(colaT1);
+			resume(colaT2);	
+		end;		
+	end
+
+	begin 
+		libereT1:=false;
+		libereT2:=false;
+		libereT3:=false;
+		pbent3:=false;
+	end; 
+(* Fin del monitor *)
+
+ process type OperarioA(id:integer); 
+ begin 
+	m.pideT1(id);
+	m-liberaT1(id);
+	m.pideT2(id);
+	m-liberaT2(id);
+	m.pideT3(id, false);
+	m-liberaT3(id, false);
+ end; 
+
+ process type OperarioB(id:integer); 
+ begin 
+	m.pideT12(id);
+	m-liberaT12(id);
+	m.pideT3(id, true);
+	m-liberaT3(id, false);
+	
+ end; 
+
+ var 
+	i,j: integer; 
+	PA: array[1..np1] of OperarioA; 
+	PB: array[1..np2] of OperarioB;   
+
+ begin 
+	cobegin 
+		for i := 1 to np1 do PA[i](i); 
+		for j := 1 to np2 do PB[j](j); 
+	coend 
+ end. 

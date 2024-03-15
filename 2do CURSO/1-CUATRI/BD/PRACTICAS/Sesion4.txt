@@ -1,0 +1,133 @@
+--MF 17 (Con consultas correlacionadas [EXISTS])
+SELECT nombre
+FROM MF.CLIENTE C INNER JOIN MF.TELEFONO Tf ON C.dni=Tf.cliente
+WHERE EXISTS (SELECT *
+	      FROM MF.LLAMADA LL
+	      WHERE TO_CHAR(LL.fecha_hora, 'dd/mm/yy')='16/10/06' --No esta correlacionado todavia
+	        AND LL.tf_origen=Tf.numero); --Aqui hacemos la correlacion);
+
+--MF 18
+select nombre
+from MF.CLIENTE C INNER JOIN MF.TELEFONO Tf ON C.dni=Tf.cliente
+where exists (select *
+              from MF.LLAMADA LL
+              where LL.duracion<90 AND LL.tf_origen=Tf.numero);
+
+--MF 19
+select Tf.numero, C.nombre
+from (MF.TELEFONO Tf inner join MF.CLIENTE C ON C.dni=Tf.cliente)
+        inner join MF.COMPAÑIA CO ON CO.cif=Tf.compañia
+where CO.nombre='Kietostar' AND  not exists (select *
+                                             from MF.LLAMADA LL
+                                             where extract(month from fecha_hora)='9'
+                                              and Tf.numero=LL.tf_origen);
+
+--MF 20
+select *
+from MF.TELEFONO Tf
+where exists (select *
+              from MF.LLAMADA LL
+              where LL.tf_destino='654234234' and LL.tf_origen=Tf.numero) --correlacion
+    
+ and not exists (select *
+              from MF.LLAMADA LL
+              where LL.tf_destino='666789789' and LL.tf_origen=Tf.numero) --correlacion
+
+
+--MF 21
+select C.nombre, Tf.numero
+from (MF.TELEFONO Tf inner join MF.CLIENTE C ON C.dni=Tf.cliente)
+        inner join MF.COMPAÑIA CO ON CO.cif=Tf.compañia
+where CO.nombre='Kietostar' 
+  and not exists(select *
+                 from (MF.LLAMADA LL inner join MF.TELEFONO  Tf2 on Tf2.numero=LL.tf_destino)
+                        inner join MF.COMPAÑIA CO2 on CO2.cif=Tf2.compañia
+                 where CO2.nombre='Kietostar' and Tf.numero=LL.tf_origen);
+
+
+-T-E-O-R-I-A-(concatenacion externa){
+·LEFT/RIGHT/FULL (OUTER) JOIN -> el OUTER no hace falta ponerlo
+·(En el enunciado suele poner TODOS)
+
+--EI 21
+select p.nombre, a.nombre
+from EI.PROFESOR p left join EI.ASIGNATURA a ON p.npr=a.prof;
+}
+
+
+-T-E-O-R-I-A-(funcion de agrupacion){
+·COUNT(*) //Cuenta lo que hay entre parentesis
+·SUM=suma
+·MAX=maximo
+·MIN=minimo
+·AVG=promedio o media
+
+--EI 22
+select count(distinct despacho)
+from EI.PROFESOR;
+
+--EI 23
+select count(*) as total, max(sep) as máxima, min(sep) as minima, avg(sep) as media
+from EI.ASIGNATURA a inner join EI.MATRICULA m using(idAsig) --USING se usa si la clave aj coincide con la primaria de la otra tabla
+where a.nombre='Bases de Datos I' and m.año=2002;
+
+--EI 24
+select a.nombre
+from EI.ASIGNATURA a
+where (select count(*)
+       from EI.RECOMENDACIONES r
+       where a.idAsig=r.idAsig1)>=2;
+
+--EI 25
+select p.nombre
+from EI.PROFESOR p
+where (select count(*)
+       from EI.PROFESOR p2
+       where p.ant<p2.ant)>=5
+
+·Si pone en el enunciado (por cada) o (para cada) -> Suele aparecer GROUP BY
+--EI 26
+select a.nombre, m.año, count(feb_jun) as Presentados, avg(feb_jun) as media
+from EI.ASIGNATURA a inner join EI.MATRICULA m using(idAsig)
+group by a.nombre, m.año;
+
+--EI 27 (Con HAVING, la condicion del GROUP BY (Cuando no se quiere monstrar todo en general))
+select A.nombre, Asig.nombre, count(*) as total_matr
+from (EI.ALUMNO A INNER JOIN EI.MATRICULA M ON M.alum=A.nAl)
+        INNER JOIN EI.ASIGNATURA Asig USING(idAsig)
+group by A.nombre, Asig.nombre
+having count(*)>=3;
+
+--EI 28
+select A.nombre
+from EI.ALUMNO A INNER JOIN EI.MATRICULA M ON A.nAl=M.alum
+where M.año=2002  --Primero el where
+group by A.nombre
+having avg(feb_jun)>5; --Luego el having
+
+
+--EI 29
+select A.nombre, count(*)
+from EI.ASIGNATURA A INNER JOIN EI.MATRICULA M USING(idAsig)
+where M.año=2002 
+group by A.nombre
+having count(*)>=ALL (select count(*)
+                      from EI.MATRICULA M
+                      where M.año=2002
+                      group by idAsig);
+
+
+--EI 30
+select a.nombre, count(*)
+from EI.ASIGNATURA a INNER JOIN EI.MATRICULA m USING(idAsig)
+--where m.año=2002 AND m.feb_jun<5
+--group by a.nombre
+--having count(*)>50 --Asignaturas con mas de 50 suspensos (no es lo que buscamos)
+where m.año=2002 AND m.feb_jun<5 AND
+    idAsig in(select m.idAsig
+              from EI.MATRICULA m
+              where m.año=2002
+              group by m.idAsig
+              having count(*)>50)
+group by a.nombre;
+}

@@ -1,0 +1,80 @@
+Turbo Assembler	 Version 3.2	    03/14/22 16:03:06	    Page 1
+P1.asm
+
+
+
+      1	0000			     .model small  ;1 segmento de memoria para datos + 1 segmento para codigo
+      2
+      3	0000			     .data ;(Segmento de Datos), para declarar las variables que se van	a usar
+      4
+      5	0000  02			 verde DB 02h
+      6
+      7
+      8	0001			     .code
+      9					 ;Inicializacion del segmento de datos (siempre	se pone)
+     10	0000  B8 0000s			 mov ax, seg verde
+     11	0003  8E D8			 mov ds, ax
+     12
+     13					 ;Establecemos el modo texto de	pantalla para imprimir el resultado
+     14	0005  B0 13			 mov al, 13h
+     15	0007  B4 00			 mov ah, 0
+     16	0009  CD 10			 int 10h
+     17
+     18	000B  B8 A000			 mov ax, 0A000h	;---> Direccion	de la memoria de video en modo grafico
+     19	000E  8E C0			 mov es, ax
+     20
+     21
+     22	0010  BE 0000			 mov SI,0
+     23
+     24	0013				 Bucle:
+     25
+     26	0013  8A 1E 0000r		 mov bl, verde
+     27	0017  26: 88 1C			 mov ES:[SI], bl
+     28	001A  83 C6 02			 add SI, 2
+     29
+     30	001D  81 FE FA00		 CMP SI, 64000
+     31	0021  72 F0			 JB Bucle
+     32
+     33
+     34					 ;Interrupcion que espera hasta	pulsar una tecla para cerrar la	pestania
+     35	0023  B4 00			 mov ah, 00h
+     36	0025  CD 16			 int 16h
+     37
+     38
+     39	0027  B4 4C			 mov ah, 4ch  ;Interrupcion para devolver el control al	S.O.
+     40	0029  CD 21			 int 21h
+     41
+     42				     end
+Turbo Assembler	 Version 3.2	    03/14/22 16:03:06	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "03/14/22"
+??FILENAME			  Text	 "P1	  "
+??TIME				  Text	 "16:03:06"
+??VERSION			  Number 0314
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 P1
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+BUCLE				  Near	 _TEXT:0013
+VERDE				  Byte	 DGROUP:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  16  0001 Word	  Public  DATA
+_TEXT				  16  002B Word	  Public  CODE
+

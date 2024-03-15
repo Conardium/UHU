@@ -1,0 +1,15 @@
+#ESTE ES UN SCRIPT DE GNUPLOT PARA EL ESTUDIO DE 1 METODO
+set title " Burbuja"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo(ms)"
+
+Cuadrado(x) = a*x*x + b*x + c
+fit Cuadrado(x) "Burbuja.dat" using 1:2 via a,b,c
+plot "Burbuja.dat" using 1:2 title "Burbuja", Cuadrado(x) 
+
+set terminal pdf
+set output "Burbuja.pdf"
+replot
+#pause -1 "Pulsa Enter para continuar..."

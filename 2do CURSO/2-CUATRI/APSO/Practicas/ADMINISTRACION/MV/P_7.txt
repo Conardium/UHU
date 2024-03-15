@@ -1,0 +1,121 @@
+###### APRENDER A INSTALAR SOFTWARE DE FORMA GRAFICA Y DESDE EL TERMINAL ####
+
+
+El software lo descargamos a partir de servidore (repositorios)
+
+
+###################### INSTALAR PAQUETES GRAFICAMENTE #########################
+
+
+Buscar en el buscador del ubuntu ---> Software y actualizaciones
+
+Hay 4 tipos de repositorios:
+
+·main -> (siempre tenerlo activo)
+·universe -> (hecho por la comunidad)
+·restricted -> (para los controladores)
+·multiverse -> Quitarlo
+
+·Codigo fuente -> para descargar ficheros fuentes
+
+
+## EN OTRO SOFTWARE (se almacena otro software de ubuntu) ##
+ Activarlo cuando lo necesitemos para un Software en concreto
+
+
+## ACTUALIZACIONES
+dejar las 2 primeras activas y la ultima activarla o desativarla
+
+
+## AUTENTICACION
+Contiene claves(llaves) de firma automatica para poder descargar software dependiendo
+del repositorio en el que se encuentre (si se encuentra en la pestaña de autenticacion lo puede descargar)
+
+
+
+-------- AÑADIR SERVIDORES (REPOSITORIOS PPA) ----------------
+
+·Nos vamos a 'Otro software' y le damos a añadir.
+·Añadimos la linea que queramos y le damos a 'añadir origen'.
+
+·Tambien se puede quitar o modificar una línea PPA.
+
+
+
+
+------- CENTRO DE SOFTWARE ----------
+
+Sirve para instalar paquetes(programas), desisntalar, etc. 
+
+
+
+
+###################### INSTALAR PAQUETES DESDE LA TERMINAL #########################
+
+APTGET -> instala paquetes
+
+APT-CACHE -> se encarga de buscar un paquete sin llegar a instalarlo
+
+APTITUDE -> más potente que el APTGET (hace lo mismo que el APTGET)
+
+
+
+¡¡¡¡¡ OJO !!!!!
+·Cada vez que se haga un cambio o se añada nuevos repositorios hay que poner:
+
+		sudo apt-get update
+
+
+·Para realizar comandos de ADMIN, poner delante del comando 'sudo'
+	[TE PEDIRA LA CONTRASEÑA DE ADMIN]
+
+
+
+
+
+			               ------- PRACTICA 7 -------
+
+### PARTE GRAFICA ###
+
+8) ppa:danielrichter2007/grub-customizer
+
+10) Version antes: 1:6.0.7-ubuntu0.18.04.10 	
+
+11) ppa:libreoffice/libreoffice-prereleases
+
+12) Version ahora: 1:7.0.4~rc2-0ubuntu0.18.04.2
+
+
+
+
+### PARTE DEL TERMINAL ###
+
+13) sudo apt-get install joe
+
+14) joe /etc/apt/source.list
+    <Comentar con # las lineas en las que aparece el multiverse>
+
+15) sudo apt-get update
+
+16) apt-cache search devede
+
+17) sudo apt-get install aptitude
+
+18) sudo aptitude install plank
+
+19) sudo apt-get autoremove
+
+20) apt-get download libncurses5-dev
+
+21) sudo dpkg -i libncurses5-dev_6.1-1ubuntu1.18.04_i386.deb --> no deja (error de dependencias)
+    sudo apt-get install -f   --------------------------------------> (-f) soluciona los errores de dependencias
+    sudo dpkg -i libncurses5-dev_6.1-1ubuntu1.18.04_i386.deb --> ahora no da error
+
+22) wget http://ardownload.adobe.com/pub/adobe/reader/unix/8.x/8.1.7/esp/AdobeReader_esp-8.1.7-1.i486.tar.gz
+
+23) tar xzf AdobeReader_esp-8.1.7-1.i486.tar.gz
+    cd AdobeReader
+    ./INSTALL
+    <Ponemos como directorio para instalarlo /home/ismael/>
+
+

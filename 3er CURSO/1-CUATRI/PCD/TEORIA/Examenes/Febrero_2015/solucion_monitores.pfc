@@ -1,0 +1,100 @@
+program Febrero15; 
+
+const 
+	np1=5; 
+	np2=5;
+	NORTE=0;
+	SUR=1;
+	SINSENTIDO=-1;
+		
+
+{Definicion del monitor}
+monitor m;
+
+	export
+		entranorte, entrasur, salenorte, salesur;
+	var
+
+		colanorte, colasur: condition;
+		dentro, sentido, cupo:integer;
+
+	procedure entranorte(id:integer);
+	begin
+		if (dentro = 2) or (sentido = SUR) or (cupo>4)  then delay(colanorte);
+		dentro := dentro + 1;
+		sentido := NORTE;
+		if not empty(colasur) then cupo := cupo + 1;
+	end; 
+
+	procedure salenorte(id:integer);
+	begin
+		dentro := dentro - 1;;            
+		if not empty(colanorte) and (cupo < 4) then resume(colanorte)
+		else if dentro=0 then begin
+				cupo:=0;
+				sentido:= SINSENTIDO;
+				resume(colasur);
+				resume(colasur);
+		end;
+	end;
+
+	procedure entrasur(id:integer);
+	begin
+		if (dentro = 2) or (sentido = NORTE) or (cupo > 4)   then delay(colasur);
+		dentro := dentro + 1;
+		sentido := SUR;
+		if not empty(colanorte) then cupo := cupo + 1;
+	end; 
+
+	procedure salesur(id:integer);
+	begin
+		dentro := dentro - 1;;            
+		if not empty(colasur) and (cupo < 4) then resume(colasur)
+		else if dentro=0 then begin
+				cupo:=0;
+				sentido:= SINSENTIDO;
+				resume(colanorte);
+				resume(colanorte);
+		end;
+	end;
+
+	begin 
+		dentro:=0;
+		sentido:= SINSENTIDO;
+		cupo:=0;
+	end; 
+(* Fin del monitor *)
+
+process type Tnorte(id:integer); 
+begin 
+	repeat	 
+		m.entranorte(id);
+		writeln('Vehiculo ',id,' cruzando desde el norte'); 
+		m.salenorte(id);
+		sleep(random(10));
+	forever 
+end; 
+
+process type Tsur(id:integer); 
+begin 
+	repeat 
+		m.entrasur(id);
+		writeln('Vehiculo ',id,' cruzando desde el sur'); 
+		m.salesur(id);
+		sleep(random(10));
+	forever 
+end; 
+
+var 
+   i,j: integer; 
+   Pnorte: array[1..np1] of Tnorte; 
+   Psur: array[1..np2] of Tsur; 
+   
+begin 
+  cobegin 
+    for i := 1 to np1 do Pnorte[i](i); 
+    for j := 1 to np2 do Psur[j](j); 
+  coend 
+end. 
+
+

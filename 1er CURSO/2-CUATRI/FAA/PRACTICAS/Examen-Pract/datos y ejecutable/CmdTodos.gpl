@@ -1,0 +1,13 @@
+#ESTE ES UN SCRIP DE GNUPLOT PARA LA COMPARACION ENTRE TODOS LOS METODOS (BUSQUEDA)
+set title "Comparacion tiempos -SecuecialIt-BinariaIt-InterpolacionIt"
+set key top left vertical inside
+set grid
+set xlabel "Talla (n)"
+set ylabel "Tiempo(ms)"
+
+plot "SecuencialBinarioInterpolacionIt.dat" using 1:2 with lines title "SecuencialIt", "SecuencialBinarioInterpolacionIt.dat" using 1:3 with lines title "BinarioIt", "SecuencialBinarioInterpolacionIt.dat" using 1:4 with lines title "InterpolacionIt"
+
+set terminal pdf
+set output "ComparativaTodos.pdf"
+replot
+#pause -1 "Pulsa Enter para continuar..."

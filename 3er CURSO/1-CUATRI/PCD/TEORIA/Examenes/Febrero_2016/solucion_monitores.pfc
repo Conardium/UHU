@@ -1,0 +1,114 @@
+program Trampolines; 
+
+const 
+	np1=5; 
+	np2=5;  
+
+{Definicion del monitor}
+monitor m;
+
+	export
+		saltadortrampolin, saltadortrampolin, cogepiscina, sueltapiscina;
+	var
+
+		colahombre, colamujer, piscina: condition;
+		esperahombre, esperamujer: integer;
+		libre1metro, libre3metros, librepiscina:boolean;
+
+	procedure saltadortrampolin(var cual:integer);
+	begin
+		esperahombre := esperahombre + 1;		
+		if (not libre1metro) and (not libre3metros) then delay(colahombre);
+		esperahombre := esperahombre + 1;
+		if libre3metros then begin
+			cual=3;
+			libre3metros=false;
+		end
+		else begin
+			cual=1;
+			libre1metro=false;
+		end
+
+	end
+
+	procedure saltadoratrampolin(var cual:integer);
+	begin
+		esperamujer := esperamujer + 1;		
+		if (not libre1metro) and (not libre3metros) then delay(colamujer);
+		esperamujer := esperamujer + 1;		
+		if libre3metros then begin
+			cual=3;
+			libre3metros=false;
+		end
+		else begin
+			cual=1;
+			libre1metro=false;
+		end; 
+
+	procedure cogepiscina(cual:integer);
+	begin
+		if not librepiscina then delay(piscina);
+		librepiscina=false;            
+		if cual=1 then libre1metro=true
+		else libre3metros=true;
+		if esperamujer>esperahombre then resume(colamujer)
+		else resume(colahombre);
+	end;
+
+	procedure sueltapiscina();
+	begin
+		librepiscina=true;
+		resume(piscina);            
+	end; 
+
+
+	begin 
+		libre1metro:=true;
+		libre3metros:=true;
+		librepiscina:=true;
+		esperahombre:=0;
+		esperamujer:=0;
+	end; 
+(* Fin del monitor *)
+
+
+process type TSaltador(id:integer); 
+var
+	cual:integer
+begin 
+	repeat	 
+		m.saltadortranpolin(cual);
+		m.cogepiscina(cual);
+		writeln('He saltado desde el trampolín de ..'+cual); 
+		m.sueltapiscina();
+		sleep(random(4));
+
+	forever 
+end; 
+
+process type TSaltadora(id:integer); 
+var
+	cual:integer
+begin 
+	repeat 
+		m.saltadoratranpolin(cual);
+		m.cogepiscina(id,cual);
+		writeln('He saltado desde el trampolín de ..'+cual); 
+		m.sueltapiscina(id);
+		sleep(random(4));
+	forever 
+end; 
+
+var 
+   i,j: integer; 
+   Saltador: array[1..np1] of Tsaltador;
+   Saltadora: array[1..np2] of Tsaltadora; 
+   
+begin 
+  cobegin 
+    for i := 1 to np1 do Saltador[i](i); 
+    for j := 1 to np2 do Saltadora[j](j); 
+
+  coend 
+end. 
+

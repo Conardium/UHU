@@ -1,0 +1,115 @@
+# TRABAJO CON PERMISOS #
+
+Como añadir atributos(permisos) a los ficheros
+
+*Tipos de permiso: R(lectura), W(escritura), X(ejecucion) siempre en este orden
+
+*** Hay dos formas de  dar permisos ***
+
+** Forma de adicion y substracción (chmod) **
+
+· chmod + a quien se lo das o quitas(u[propietario], g[grupo], o[otros], a[a todos]) + (+ o -) + rwx + ruta de los ficheros/directorios -> da(+) o quita(-) permisos a la persona sobre el fichero indicado
+EJEMPLO: chmod g+w f1.txt
+         chmod ug-r f1.txt
+         chmod go+wx f2.txt
+         chmod a-r f3.txt
+
+· ls -l -> muestra lo que contiene el directorio + detalles sobre los permisos de los ficheros
+EJEMPLO: ls -l
+         -rw-rw-r-- ismael.dapalma060          users 
+            ^              ^                     ^
+         permisos     Propietario        grupo al que pertenece   
+
+
+** Forma de aplicacion de permisos global (chmod pero con numeros), es necesario que me digan que permisos tiene cada uno de los grupos, sino no se podría aplicar esta forma**
+
+· chmod + numero1 + numero2 + numero3 + rutas de ficheros -> segun el numero1 le da permisos al propietario, segun el numero2 le da permisos al grupo y segun el numero3 le da permisos a otros
+EJEMPLO: chmod 640 f1.txt
+         chmod 541 f2.txt
+
+
+*En esta practica vamos a utilizar sobre todo el comando "find"
+
+· wc + [opcion] + ruta de ficheros-> (cuenta la cantidad de caracteres(bytes), palabras o lineas del fichero)
+· cal -> (muestra el calendario)
+· date -> (muestra la fecha y hora actual)
+· sort + ruta del fichero -> (ordena el fichero de menor a mayor por defecto), si no existe el fichero lo crea y pide entrada por teclado
+
+
+** Vamos a ver tb Enlaces (Hard Link y Soft Link) **
+· ln + [opciones] + origen + [destino]
+si se pone la opcion -s el enlace sera Soft LinK o enlace simbolico, por defecto es el Hard link
+
+
+· file + ruta fichero/s -> determina el tipo de fichero
+· who -> muestra quien esta conectado y cuantas conexiones tiene
+· ps -> muestra cuantos y cuales procesos(comandos) estan activos
+· tty -> muestra el terminal en el que estamos trabajando
+· id -> muestra nuestro identificador de la terminal
+· kill + identificador(PID) -> envia una señal al proceso indicado por PID, lo mata
+· write + usuario + mensaje -> envia un mensaje al usuario indicado
+· msg -> si quieres o no recibir mensajes(write)
+· grep + patron + ruta del fichero donde se va a buscar el patron -> busca el patron en el fichero indicado
+
+
+                                       -- PRACTICA 2 (Trabajo con permisos)--
+
+1) mkdir -p prac2/prac21/tmp1  prac2/prac22 prac2/prac23/tmp2
+
+2) cp /home/so/velez/MI/f1.txt /home/so/velez/MI/f2.txt .
+
+3) chmod go-rw .
+
+4) chmod 740 f1.txt f2.txt
+
+5) cd /home/ismael.dapalma060/prac2/prac21
+   cp ../f1.txt ../f2.txt tmp1
+   mv tmp1/f1.txt tmp1/f21.txt
+
+6) mv tmp1/f2.txt ../prac23/tmp2/f23.txt
+
+7) cd ../prac23/tmp2
+   find /home/ismael.dapalma060 -type d -name "?[rtRT]*[!0-9][0-9]"
+
+8) find /home/ismael.dapalma060 ! -type d -newer /home/ismael.dapalma060/prac1/solp1.txt -mtime -3
+
+9) grep -c [lL]"lama" ../../f1.txt ../../f2.txt
+
+10) wc -c ../../prac21/tmp1/f21.txt
+    <Tiene 1499 caracteres(bytes)>
+    <Esta el comando "wc -c" y el comando "ls -l" que muestra además de info. adicional, el tamaño que ocupa el fichero
+
+11) cal -m 7 1993
+    <fue el jueves>
+
+
+12) date "+Bienvenido. Son las %H horas y %M minutos del %A %d de %B. Ha sido un placer"
+
+13) cd
+    sort /home/so/velez/MI/usuarios04-05.txt -o prac2/prac22/usu.orden.pabajo
+    sort -r /home/so/velez/MI/usuarios04-05.txt -o prac2/prac22/usu.orden.parriba
+
+14) more prac2/f1.txt
+    tail -n 2 /home/so/velez/MI/solf1.txt
+
+15) cd prac2
+    wc -m prac23/tmp2/f23.txt
+    <8384 caracteres>
+
+16) ln ../prac1/solp1.txt solucionprac1
+
+17) ln -s prac23/tmp2  temporal
+
+18) file solucionprac1 temporal
+    <solucionprac1 es del mismo tipo que es solp1.txt, es decir, un archivo de texto>
+    <temporal es un Soft Link al fichero que apunta, que en este caso es un directorio(tmp2)>
+
+19) who -q
+
+20) joe inservible
+    ps -u
+    kill 25425
+
+21) write velez ejercicio 22
+
+22) chmod 600 solp2.txt 

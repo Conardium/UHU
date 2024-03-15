@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Servicio" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GestorJuegos_Web" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioJuegos_NuevoJuego_InputMessage">
+    <wsdl:part name="parameters" element="tns:NuevoJuego" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_NuevoJuego_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NuevoJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_BorrarJuego_InputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarJuego" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_BorrarJuego_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BorrarJuegoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_PonerValor_InputMessage">
+    <wsdl:part name="parameters" element="tns:PonerValor" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_PonerValor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PonerValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_ObtenerValor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerValor" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_ObtenerValor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_ComprobarValor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarValor" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_ComprobarValor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComprobarValorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_NumeroHuecos_InputMessage">
+    <wsdl:part name="parameters" element="tns:NumeroHuecos" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_NumeroHuecos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NumeroHuecosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_Ayuda_InputMessage">
+    <wsdl:part name="parameters" element="tns:Ayuda" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_Ayuda_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AyudaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_Correcto_InputMessage">
+    <wsdl:part name="parameters" element="tns:Correcto" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_Correcto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CorrectoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_GetSudoku_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSudoku" />
+  </wsdl:message>
+  <wsdl:message name="IServicioJuegos_GetSudoku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSudokuResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioJuegos">
+    <wsdl:operation name="NuevoJuego">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/NuevoJuego" message="tns:IServicioJuegos_NuevoJuego_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/NuevoJuegoResponse" message="tns:IServicioJuegos_NuevoJuego_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BorrarJuego">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/BorrarJuego" message="tns:IServicioJuegos_BorrarJuego_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/BorrarJuegoResponse" message="tns:IServicioJuegos_BorrarJuego_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PonerValor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/PonerValor" message="tns:IServicioJuegos_PonerValor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/PonerValorResponse" message="tns:IServicioJuegos_PonerValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerValor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/ObtenerValor" message="tns:IServicioJuegos_ObtenerValor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/ObtenerValorResponse" message="tns:IServicioJuegos_ObtenerValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarValor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/ComprobarValor" message="tns:IServicioJuegos_ComprobarValor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/ComprobarValorResponse" message="tns:IServicioJuegos_ComprobarValor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NumeroHuecos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/NumeroHuecos" message="tns:IServicioJuegos_NumeroHuecos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/NumeroHuecosResponse" message="tns:IServicioJuegos_NumeroHuecos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Ayuda">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/Ayuda" message="tns:IServicioJuegos_Ayuda_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/AyudaResponse" message="tns:IServicioJuegos_Ayuda_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Correcto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/Correcto" message="tns:IServicioJuegos_Correcto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/CorrectoResponse" message="tns:IServicioJuegos_Correcto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSudoku">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioJuegos/GetSudoku" message="tns:IServicioJuegos_GetSudoku_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioJuegos/GetSudokuResponse" message="tns:IServicioJuegos_GetSudoku_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicioJuegos" type="tns:IServicioJuegos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NuevoJuego">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/NuevoJuego" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BorrarJuego">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/BorrarJuego" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PonerValor">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/PonerValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerValor">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/ObtenerValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprobarValor">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/ComprobarValor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="NumeroHuecos">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/NumeroHuecos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ayuda">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/Ayuda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Correcto">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/Correcto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSudoku">
+      <soap:operation soapAction="http://tempuri.org/IServicioJuegos/GetSudoku" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicio">
+    <wsdl:port name="BasicHttpBinding_IServicioJuegos" binding="tns:BasicHttpBinding_IServicioJuegos">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/GestorJuegos_Web/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
